@@ -253,12 +253,12 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* SECTION: TRENDS */}
+          {/* SUPPLY HEADROOM (2D) */}
           <div className="section">
             <div className="sectionHead">
-              <h2 className="h2Big">Trends (last 7 days)</h2>
+              <h2 className="h2Big">Supply headroom (last 2 days)</h2>
               <div className="muted">
-                These charts explain <i>why</i> the status changed. If you just want the answer, the section above is enough.
+                Quick view of demand vs what ERCOT reports as available capability. This is the clearest “do we have enough supply?” check.
               </div>
             </div>
 
@@ -288,7 +288,25 @@ export default function HomePage() {
                 >
                   <SupplyDemandChart supply={state.supply} />
                 </ChartCard>
+              </div>
+            )}
+          </div>
 
+          {/* TRENDS (7D ONLY) */}
+          <div className="section">
+            <div className="sectionHead">
+              <h2 className="h2Big">Trends (last 7 days)</h2>
+              <div className="muted">
+                These charts explain <i>why</i> the status changed. If you just want the answer, the section above is enough.
+              </div>
+            </div>
+
+            {!showCharts ? (
+              <div className="notes">
+                <b>Charts are hidden.</b> Turn them back on with the button above.
+              </div>
+            ) : (
+              <div className="grid">
                 <ChartCard
                   title="Demand (Load) — last 7 days"
                   tooltipTitle="Why should I care about demand?"
