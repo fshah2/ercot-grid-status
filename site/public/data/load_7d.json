@@ -1,17 +1,16 @@
 {
   "meta": {
-    "updatedAt": "2026-02-04T20:37:10.703Z",
+    "updatedAt": "2026-02-04T21:04:54.944Z",
     "windowDays": 7,
     "source": "ERCOT Public Data API",
     "endpoint": "/np6-346-cd/act_sys_load_by_fzn",
-    "queryUsed": {},
+    "queryUsed": {
+      "operatingDayFrom": "2026-01-28",
+      "operatingDayTo": "2026-02-04"
+    },
     "notes": "System load is aggregated across rows per timestamp (if multiple zones are present)."
   },
   "points": [
-    {
-      "ts": "2026-01-28T21:00:00Z",
-      "value": 58137.26
-    },
     {
       "ts": "2026-01-28T22:00:00Z",
       "value": 58615.75
