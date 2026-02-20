@@ -1,18 +1,17 @@
 {
   "meta": {
-    "updatedAt": "2026-02-20T12:00:00.931Z",
+    "updatedAt": "2026-02-20T13:13:49.286Z",
     "windowDays": 7,
     "source": "ERCOT Public Data API",
     "endpoint": "/np6-788-cd/lmp_node_zone_hub",
-    "queryUsed": {},
+    "queryUsed": {
+      "SCEDTimestampFrom": "2026-02-13T01:13:49",
+      "SCEDTimestampTo": "2026-02-20T01:13:49"
+    },
     "headlineSettlementPoint": "HB_NORTH",
     "notes": "Price series is the selected settlement point if present (default HB_NORTH). If not present, we fall back to averaging available rows per timestamp."
   },
   "points": [
-    {
-      "ts": "2026-02-13T12:00:21Z",
-      "value": 23.31
-    },
     {
       "ts": "2026-02-13T14:05:17Z",
       "value": 14.784221105527632
@@ -5848,6 +5847,46 @@
     {
       "ts": "2026-02-19T23:30:17Z",
       "value": 25.71
+    },
+    {
+      "ts": "2026-02-20T00:25:16Z",
+      "value": 29.75889473684214
+    },
+    {
+      "ts": "2026-02-20T00:30:17Z",
+      "value": 18.22
+    },
+    {
+      "ts": "2026-02-20T00:35:17Z",
+      "value": 17.02
+    },
+    {
+      "ts": "2026-02-20T00:40:18Z",
+      "value": 16.45
+    },
+    {
+      "ts": "2026-02-20T00:45:17Z",
+      "value": 16.17
+    },
+    {
+      "ts": "2026-02-20T00:50:18Z",
+      "value": 16.33
+    },
+    {
+      "ts": "2026-02-20T00:55:18Z",
+      "value": 16.62
+    },
+    {
+      "ts": "2026-02-20T01:00:24Z",
+      "value": 18.14
+    },
+    {
+      "ts": "2026-02-20T01:05:22Z",
+      "value": 17.94
+    },
+    {
+      "ts": "2026-02-20T01:10:20Z",
+      "value": 17.95
     }
   ]
 }
