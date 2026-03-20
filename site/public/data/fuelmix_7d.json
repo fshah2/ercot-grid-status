@@ -1,41 +1,17 @@
 {
   "meta": {
-    "updatedAt": "2026-03-20T11:45:44.604Z",
+    "updatedAt": "2026-03-20T12:02:27.617Z",
     "windowDays": 7,
     "source": "ERCOT Public Data API",
     "endpoint": "/np3-910-er/2d_agg_gen_summary",
-    "queryUsed": {},
+    "queryUsed": {
+      "SCEDTimestampFrom": "2026-03-13T01:02:27",
+      "SCEDTimestampTo": "2026-03-20T01:02:27"
+    },
     "renewablesDefinition": "wind + solar + hydro + other renewables (best-effort key matching)",
     "thermalDefinition": "gas + coal + nuclear + other thermal (best-effort key matching)"
   },
   "points": [
-    {
-      "ts": "2026-03-13T11:50:16Z",
-      "wind": 8980.28422217,
-      "solar": 30064.84884284,
-      "otherRenew": 5370.1554704,
-      "thermal": 5024.3777061,
-      "storageDischarge": 43.88067317,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-03-13T11:55:17Z",
-      "wind": 8723.41361264,
-      "solar": 29854.47155879,
-      "otherRenew": 5375.32629353,
-      "thermal": 5151.12173047,
-      "storageDischarge": 46.50317413,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-03-13T12:00:18Z",
-      "wind": 8526.65712355,
-      "solar": 29761.50535129,
-      "otherRenew": 5347.99948432,
-      "thermal": 5296.33212369,
-      "storageDischarge": 32.94370911,
-      "storageCharge": 0
-    },
     {
       "ts": "2026-03-13T12:05:18Z",
       "wind": 8214.74845216,
