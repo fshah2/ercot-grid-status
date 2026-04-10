@@ -1,23 +1,23 @@
 {
-  "ts": "2026-04-10T04:50:20.168Z",
-  "gridStress": "Normal",
-  "priceStatus": "Normal",
-  "latestPrice": 44.36,
-  "priceP75": 33.08,
-  "priceP95": 52.75,
+  "ts": "2026-04-10T06:51:20.529Z",
+  "gridStress": "Watch",
+  "priceStatus": "Elevated",
+  "latestPrice": 150.29,
+  "priceP75": 33.5,
+  "priceP95": 53.93,
   "notes": [
-    "Latest real-time price is $44/MWh.",
+    "Latest real-time price is $150/MWh.",
     "Price status rules: Elevated if above max(75th percentile, $150); Spike if above max(95th percentile, $300) or above $500.",
-    "System Lambda is 51.",
+    "System Lambda is 118.",
     "Lambda rules: Watch at ≥300; Stressed at ≥500.",
     "Demand right now is 48795 MW.",
     "Demand rules: Watch above the 90th percentile; Stressed above the 95th percentile (based on the last 7 days).",
-    "Outages right now are 22913 MW.",
+    "Outages right now are 22743 MW.",
     "Outage rule: “Unusually high” if above the 90th percentile (last 7 days).",
     "This is a conservative indicator meant to answer: “Are conditions getting tight?” It is not an emergency alert system."
   ],
   "latestHeadroomMW": -3977.928670000001,
   "latestHeadroomPct": -9.229868807849256,
   "latestDemandMW": 47076.36,
-  "latestOutagesMW": 22913
+  "latestOutagesMW": 22743
 }
