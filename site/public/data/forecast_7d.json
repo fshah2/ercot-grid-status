@@ -1,20 +1,16 @@
 {
   "meta": {
-    "updatedAt": "2026-05-14T20:44:59.615Z",
+    "updatedAt": "2026-05-14T21:52:31.099Z",
     "windowDays": 7,
     "source": "ERCOT Public Data API",
     "endpoint": "/np3-565-cd/lf_by_model_weather_zone",
     "queryUsed": {
-      "postedDatetimeFrom": "2026-05-07T20:44:59",
-      "postedDatetimeTo": "2026-05-14T20:44:59"
+      "postedDatetimeFrom": "2026-05-07T21:52:31",
+      "postedDatetimeTo": "2026-05-14T21:52:31"
     },
     "notes": "Forecast is best-effort aggregated across rows per timestamp. If your dataset schema differs, adjust scripts/src/normalize.ts buildForecastPoints()."
   },
   "points": [
-    {
-      "ts": "2026-05-07T21:30:00Z",
-      "value": 49165.2302
-    },
     {
       "ts": "2026-05-07T22:30:00Z",
       "value": 51661.5103
@@ -625,7 +621,7 @@
     },
     {
       "ts": "2026-05-14T10:30:00Z",
-      "value": 53006.8195
+      "value": 56265.1209
     },
     {
       "ts": "2026-05-14T11:30:00Z",
@@ -645,6 +641,10 @@
     },
     {
       "ts": "2026-05-14T15:30:00Z",
+      "value": 53006.8195
+    },
+    {
+      "ts": "2026-05-14T16:30:00Z",
       "value": 53006.8195
     }
   ]
