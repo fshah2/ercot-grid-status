@@ -1,13 +1,3456 @@
 {
   "meta": {
-    "updatedAt": "2026-06-26T11:42:22.439Z",
+    "updatedAt": "2026-06-26T13:36:40.808Z",
     "windowDays": 2,
     "source": "ERCOT Public Data API",
     "endpoint": "/np3-910-er/2d_agg_gen_summary",
-    "queryUsed": {},
+    "queryUsed": {
+      "SCEDTimestampFrom": "2026-06-19T02:36:40",
+      "SCEDTimestampTo": "2026-06-26T02:36:40"
+    },
     "notes": "Supply = total HASL (High Sustained Limit) across NonIRR+WGR+PVGR+REMRES from 2D Agg Gen Summary. Demand aligns to the most recent hourly system load reading at-or-before each SCED timestamp."
   },
   "points": [
+    {
+      "ts": "2026-06-23T00:00:21Z",
+      "demandMW": null,
+      "genTelemMW": 64972.19945,
+      "availHASLMW": 64972.19945,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T00:05:19Z",
+      "demandMW": null,
+      "genTelemMW": 65034.77741,
+      "availHASLMW": 65034.77741,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T00:10:18Z",
+      "demandMW": null,
+      "genTelemMW": 64607.77756,
+      "availHASLMW": 64607.77756,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T00:15:18Z",
+      "demandMW": null,
+      "genTelemMW": 64393.28608,
+      "availHASLMW": 64393.28608,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T00:20:18Z",
+      "demandMW": null,
+      "genTelemMW": 64081.22698,
+      "availHASLMW": 64081.22698,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T00:25:18Z",
+      "demandMW": null,
+      "genTelemMW": 63695.23058,
+      "availHASLMW": 63695.23058,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T00:30:17Z",
+      "demandMW": null,
+      "genTelemMW": 63494.59751,
+      "availHASLMW": 63494.59751,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T00:35:18Z",
+      "demandMW": null,
+      "genTelemMW": 63288.34864,
+      "availHASLMW": 63288.34864,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T00:40:18Z",
+      "demandMW": null,
+      "genTelemMW": 63044.55689,
+      "availHASLMW": 63044.55689,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T00:45:18Z",
+      "demandMW": null,
+      "genTelemMW": 62876.00753,
+      "availHASLMW": 62876.00753,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T00:50:20Z",
+      "demandMW": null,
+      "genTelemMW": 62601.46667,
+      "availHASLMW": 62601.46667,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T00:55:17Z",
+      "demandMW": null,
+      "genTelemMW": 62123.0769,
+      "availHASLMW": 62123.0769,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T01:00:23Z",
+      "demandMW": null,
+      "genTelemMW": 61847.56203,
+      "availHASLMW": 61847.56203,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T01:05:21Z",
+      "demandMW": null,
+      "genTelemMW": 61687.59196,
+      "availHASLMW": 61687.59196,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T01:10:18Z",
+      "demandMW": null,
+      "genTelemMW": 61560.3954,
+      "availHASLMW": 61560.3954,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T01:15:18Z",
+      "demandMW": null,
+      "genTelemMW": 61347.03438,
+      "availHASLMW": 61347.03438,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T01:20:18Z",
+      "demandMW": null,
+      "genTelemMW": 61018.56838,
+      "availHASLMW": 61018.56838,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T01:25:17Z",
+      "demandMW": null,
+      "genTelemMW": 60857.26037,
+      "availHASLMW": 60857.26037,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T01:30:18Z",
+      "demandMW": null,
+      "genTelemMW": 60533.4418,
+      "availHASLMW": 60533.4418,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T01:35:18Z",
+      "demandMW": null,
+      "genTelemMW": 60515.78264,
+      "availHASLMW": 60515.78264,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T01:40:18Z",
+      "demandMW": null,
+      "genTelemMW": 60361.75828,
+      "availHASLMW": 60361.75828,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T01:45:17Z",
+      "demandMW": null,
+      "genTelemMW": 60169.42826,
+      "availHASLMW": 60169.42826,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T01:50:18Z",
+      "demandMW": null,
+      "genTelemMW": 60000.51148,
+      "availHASLMW": 60000.51148,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T01:55:18Z",
+      "demandMW": null,
+      "genTelemMW": 59909.90091,
+      "availHASLMW": 59909.90091,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T02:00:20Z",
+      "demandMW": null,
+      "genTelemMW": 59568.09284,
+      "availHASLMW": 59568.09284,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T02:05:20Z",
+      "demandMW": null,
+      "genTelemMW": 59591.61078,
+      "availHASLMW": 59591.61078,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T02:10:19Z",
+      "demandMW": null,
+      "genTelemMW": 59462.64138,
+      "availHASLMW": 59462.64138,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T02:15:21Z",
+      "demandMW": null,
+      "genTelemMW": 59242.44067,
+      "availHASLMW": 59242.44067,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T02:20:18Z",
+      "demandMW": null,
+      "genTelemMW": 58961.24901,
+      "availHASLMW": 58961.24901,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T02:25:18Z",
+      "demandMW": null,
+      "genTelemMW": 58828.12856,
+      "availHASLMW": 58828.12856,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T02:30:19Z",
+      "demandMW": null,
+      "genTelemMW": 58633.27028,
+      "availHASLMW": 58633.27028,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T02:35:17Z",
+      "demandMW": null,
+      "genTelemMW": 58456.3899,
+      "availHASLMW": 58456.3899,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T02:40:18Z",
+      "demandMW": null,
+      "genTelemMW": 58443.07734,
+      "availHASLMW": 58443.07734,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T02:45:18Z",
+      "demandMW": null,
+      "genTelemMW": 58206.38776,
+      "availHASLMW": 58206.38776,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T02:50:18Z",
+      "demandMW": null,
+      "genTelemMW": 58164.93282,
+      "availHASLMW": 58164.93282,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T02:55:18Z",
+      "demandMW": null,
+      "genTelemMW": 58176.74428,
+      "availHASLMW": 58176.74428,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T03:00:19Z",
+      "demandMW": null,
+      "genTelemMW": 57991.62888,
+      "availHASLMW": 57991.62888,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T03:05:17Z",
+      "demandMW": null,
+      "genTelemMW": 57774.03247,
+      "availHASLMW": 57774.03247,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T03:10:17Z",
+      "demandMW": null,
+      "genTelemMW": 57759.18352,
+      "availHASLMW": 57759.18352,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T03:15:18Z",
+      "demandMW": null,
+      "genTelemMW": 57693.46818,
+      "availHASLMW": 57693.46818,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T03:20:17Z",
+      "demandMW": null,
+      "genTelemMW": 57510.41812,
+      "availHASLMW": 57510.41812,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T03:25:16Z",
+      "demandMW": null,
+      "genTelemMW": 57588.95951,
+      "availHASLMW": 57588.95951,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T03:30:17Z",
+      "demandMW": null,
+      "genTelemMW": 57498.98787,
+      "availHASLMW": 57498.98787,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T03:35:16Z",
+      "demandMW": null,
+      "genTelemMW": 57257.60733,
+      "availHASLMW": 57257.60733,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T03:40:18Z",
+      "demandMW": null,
+      "genTelemMW": 57158.17143,
+      "availHASLMW": 57158.17143,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T03:45:19Z",
+      "demandMW": null,
+      "genTelemMW": 57041.19753,
+      "availHASLMW": 57041.19753,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T03:50:20Z",
+      "demandMW": null,
+      "genTelemMW": 56844.13448,
+      "availHASLMW": 56844.13448,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T03:55:17Z",
+      "demandMW": null,
+      "genTelemMW": 56976.8596,
+      "availHASLMW": 56976.8596,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T04:00:22Z",
+      "demandMW": null,
+      "genTelemMW": 56845.25762,
+      "availHASLMW": 56845.25762,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T04:05:17Z",
+      "demandMW": null,
+      "genTelemMW": 57060.68358,
+      "availHASLMW": 57060.68358,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T04:10:18Z",
+      "demandMW": null,
+      "genTelemMW": 57138.74064,
+      "availHASLMW": 57138.74064,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T04:15:17Z",
+      "demandMW": null,
+      "genTelemMW": 57049.756,
+      "availHASLMW": 57049.756,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T04:20:17Z",
+      "demandMW": null,
+      "genTelemMW": 57012.15252,
+      "availHASLMW": 57012.15252,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T04:25:17Z",
+      "demandMW": null,
+      "genTelemMW": 57005.37434,
+      "availHASLMW": 57005.37434,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T04:30:18Z",
+      "demandMW": null,
+      "genTelemMW": 57001.95616,
+      "availHASLMW": 57001.95616,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T04:35:18Z",
+      "demandMW": null,
+      "genTelemMW": 57027.39579,
+      "availHASLMW": 57027.39579,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T04:40:17Z",
+      "demandMW": null,
+      "genTelemMW": 57077.31528,
+      "availHASLMW": 57077.31528,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T04:45:17Z",
+      "demandMW": null,
+      "genTelemMW": 57025.57799,
+      "availHASLMW": 57025.57799,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T04:50:17Z",
+      "demandMW": null,
+      "genTelemMW": 57201.54944,
+      "availHASLMW": 57201.54944,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T04:55:18Z",
+      "demandMW": null,
+      "genTelemMW": 57065.93449,
+      "availHASLMW": 57065.93449,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T05:00:19Z",
+      "demandMW": null,
+      "genTelemMW": 57019.39054,
+      "availHASLMW": 57019.39054,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T05:05:17Z",
+      "demandMW": null,
+      "genTelemMW": 57172.92911,
+      "availHASLMW": 57172.92911,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T05:10:18Z",
+      "demandMW": null,
+      "genTelemMW": 57321.72054,
+      "availHASLMW": 57321.72054,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T05:15:17Z",
+      "demandMW": null,
+      "genTelemMW": 57365.49286,
+      "availHASLMW": 57365.49286,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T05:20:19Z",
+      "demandMW": null,
+      "genTelemMW": 57382.62342,
+      "availHASLMW": 57382.62342,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T05:25:17Z",
+      "demandMW": null,
+      "genTelemMW": 57572.16402,
+      "availHASLMW": 57572.16402,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T05:30:17Z",
+      "demandMW": null,
+      "genTelemMW": 57662.93533,
+      "availHASLMW": 57662.93533,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T05:35:17Z",
+      "demandMW": null,
+      "genTelemMW": 57555.0676,
+      "availHASLMW": 57555.0676,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T05:40:17Z",
+      "demandMW": null,
+      "genTelemMW": 57669.56151,
+      "availHASLMW": 57669.56151,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T05:45:16Z",
+      "demandMW": null,
+      "genTelemMW": 57656.85144,
+      "availHASLMW": 57656.85144,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T05:50:18Z",
+      "demandMW": null,
+      "genTelemMW": 57713.50312,
+      "availHASLMW": 57713.50312,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T05:55:17Z",
+      "demandMW": null,
+      "genTelemMW": 57858.34947,
+      "availHASLMW": 57858.34947,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T06:00:21Z",
+      "demandMW": null,
+      "genTelemMW": 57987.75572,
+      "availHASLMW": 57987.75572,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T06:05:19Z",
+      "demandMW": null,
+      "genTelemMW": 58535.76886,
+      "availHASLMW": 58535.76886,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T06:10:19Z",
+      "demandMW": null,
+      "genTelemMW": 58576.68013,
+      "availHASLMW": 58576.68013,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T06:15:18Z",
+      "demandMW": null,
+      "genTelemMW": 58607.49802,
+      "availHASLMW": 58607.49802,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T06:20:19Z",
+      "demandMW": null,
+      "genTelemMW": 58644.05352,
+      "availHASLMW": 58644.05352,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T06:25:17Z",
+      "demandMW": null,
+      "genTelemMW": 58566.76185,
+      "availHASLMW": 58566.76185,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T06:30:17Z",
+      "demandMW": null,
+      "genTelemMW": 58249.37656,
+      "availHASLMW": 58249.37656,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T06:35:15Z",
+      "demandMW": null,
+      "genTelemMW": 58309.21006,
+      "availHASLMW": 58309.21006,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T06:40:16Z",
+      "demandMW": null,
+      "genTelemMW": 58028.19629,
+      "availHASLMW": 58028.19629,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T06:45:16Z",
+      "demandMW": null,
+      "genTelemMW": 58004.34698,
+      "availHASLMW": 58004.34698,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T06:50:16Z",
+      "demandMW": null,
+      "genTelemMW": 58022.92319,
+      "availHASLMW": 58022.92319,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T06:55:15Z",
+      "demandMW": null,
+      "genTelemMW": 58094.17264,
+      "availHASLMW": 58094.17264,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T07:00:19Z",
+      "demandMW": null,
+      "genTelemMW": 58376.61174,
+      "availHASLMW": 58376.61174,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T07:05:17Z",
+      "demandMW": null,
+      "genTelemMW": 58572.23404,
+      "availHASLMW": 58572.23404,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T07:10:19Z",
+      "demandMW": null,
+      "genTelemMW": 58726.89392,
+      "availHASLMW": 58726.89392,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T07:15:17Z",
+      "demandMW": null,
+      "genTelemMW": 58730.88496,
+      "availHASLMW": 58730.88496,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T07:20:15Z",
+      "demandMW": null,
+      "genTelemMW": 58725.78122,
+      "availHASLMW": 58725.78122,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T07:25:15Z",
+      "demandMW": null,
+      "genTelemMW": 58834.32221,
+      "availHASLMW": 58834.32221,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T07:30:15Z",
+      "demandMW": null,
+      "genTelemMW": 59027.97721,
+      "availHASLMW": 59027.97721,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T07:35:15Z",
+      "demandMW": null,
+      "genTelemMW": 59220.6482,
+      "availHASLMW": 59220.6482,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T07:40:15Z",
+      "demandMW": null,
+      "genTelemMW": 59393.17286,
+      "availHASLMW": 59393.17286,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T07:45:15Z",
+      "demandMW": null,
+      "genTelemMW": 59523.68105,
+      "availHASLMW": 59523.68105,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T07:50:15Z",
+      "demandMW": null,
+      "genTelemMW": 59412.53311,
+      "availHASLMW": 59412.53311,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T07:55:15Z",
+      "demandMW": null,
+      "genTelemMW": 59993.87056,
+      "availHASLMW": 59993.87056,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T08:00:18Z",
+      "demandMW": null,
+      "genTelemMW": 60455.64834,
+      "availHASLMW": 60455.64834,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T08:05:16Z",
+      "demandMW": null,
+      "genTelemMW": 60829.76852,
+      "availHASLMW": 60829.76852,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T08:10:17Z",
+      "demandMW": null,
+      "genTelemMW": 60980.22491,
+      "availHASLMW": 60980.22491,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T08:15:15Z",
+      "demandMW": null,
+      "genTelemMW": 61320.52294,
+      "availHASLMW": 61320.52294,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T08:20:16Z",
+      "demandMW": null,
+      "genTelemMW": 61520.9826,
+      "availHASLMW": 61520.9826,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T08:25:17Z",
+      "demandMW": null,
+      "genTelemMW": 61806.29584,
+      "availHASLMW": 61806.29584,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T08:30:17Z",
+      "demandMW": null,
+      "genTelemMW": 62195.00685,
+      "availHASLMW": 62195.00685,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T08:35:17Z",
+      "demandMW": null,
+      "genTelemMW": 62351.3819,
+      "availHASLMW": 62351.3819,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T08:40:17Z",
+      "demandMW": null,
+      "genTelemMW": 62567.63187,
+      "availHASLMW": 62567.63187,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T08:45:16Z",
+      "demandMW": null,
+      "genTelemMW": 62943.23041,
+      "availHASLMW": 62943.23041,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T08:50:17Z",
+      "demandMW": null,
+      "genTelemMW": 63143.35045,
+      "availHASLMW": 63143.35045,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T08:55:18Z",
+      "demandMW": null,
+      "genTelemMW": 63083.90884,
+      "availHASLMW": 63083.90884,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T09:00:20Z",
+      "demandMW": null,
+      "genTelemMW": 63364.54006,
+      "availHASLMW": 63364.54006,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T09:05:20Z",
+      "demandMW": null,
+      "genTelemMW": 63692.50808,
+      "availHASLMW": 63692.50808,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T09:10:23Z",
+      "demandMW": null,
+      "genTelemMW": 63984.95423,
+      "availHASLMW": 63984.95423,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T09:15:20Z",
+      "demandMW": null,
+      "genTelemMW": 64286.03172,
+      "availHASLMW": 64286.03172,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T09:20:18Z",
+      "demandMW": null,
+      "genTelemMW": 64542.16492,
+      "availHASLMW": 64542.16492,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T09:21:44Z",
+      "demandMW": null,
+      "genTelemMW": 64641.05449,
+      "availHASLMW": 64641.05449,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T09:25:19Z",
+      "demandMW": null,
+      "genTelemMW": 65103.05185,
+      "availHASLMW": 65103.05185,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T09:30:18Z",
+      "demandMW": null,
+      "genTelemMW": 65376.22029,
+      "availHASLMW": 65376.22029,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T09:35:18Z",
+      "demandMW": null,
+      "genTelemMW": 65754.56979,
+      "availHASLMW": 65754.56979,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T09:40:18Z",
+      "demandMW": null,
+      "genTelemMW": 66048.76766,
+      "availHASLMW": 66048.76766,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T09:45:18Z",
+      "demandMW": null,
+      "genTelemMW": 66258.54121,
+      "availHASLMW": 66258.54121,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T09:50:19Z",
+      "demandMW": null,
+      "genTelemMW": 66562.44737,
+      "availHASLMW": 66562.44737,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T09:55:18Z",
+      "demandMW": null,
+      "genTelemMW": 66963.55389,
+      "availHASLMW": 66963.55389,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T10:00:21Z",
+      "demandMW": null,
+      "genTelemMW": 67118.44414,
+      "availHASLMW": 67118.44414,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T10:05:20Z",
+      "demandMW": null,
+      "genTelemMW": 67462.53235,
+      "availHASLMW": 67462.53235,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T10:10:21Z",
+      "demandMW": null,
+      "genTelemMW": 67544.96031,
+      "availHASLMW": 67544.96031,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T10:15:20Z",
+      "demandMW": null,
+      "genTelemMW": 68017.73624,
+      "availHASLMW": 68017.73624,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T10:20:19Z",
+      "demandMW": null,
+      "genTelemMW": 68226.86372,
+      "availHASLMW": 68226.86372,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T10:25:17Z",
+      "demandMW": null,
+      "genTelemMW": 68522.04687,
+      "availHASLMW": 68522.04687,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T10:30:19Z",
+      "demandMW": null,
+      "genTelemMW": 69046.87501,
+      "availHASLMW": 69046.87501,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T10:35:18Z",
+      "demandMW": null,
+      "genTelemMW": 69134.51551,
+      "availHASLMW": 69134.51551,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T10:40:18Z",
+      "demandMW": null,
+      "genTelemMW": 69296.50262,
+      "availHASLMW": 69296.50262,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T10:45:18Z",
+      "demandMW": null,
+      "genTelemMW": 69667.53818,
+      "availHASLMW": 69667.53818,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T10:50:18Z",
+      "demandMW": null,
+      "genTelemMW": 70084.78293,
+      "availHASLMW": 70084.78293,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T10:55:18Z",
+      "demandMW": null,
+      "genTelemMW": 70343.48944,
+      "availHASLMW": 70343.48944,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T11:00:20Z",
+      "demandMW": null,
+      "genTelemMW": 70741.64092,
+      "availHASLMW": 70741.64092,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T11:05:22Z",
+      "demandMW": null,
+      "genTelemMW": 70777.9027,
+      "availHASLMW": 70777.9027,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T11:10:19Z",
+      "demandMW": null,
+      "genTelemMW": 71301.52347,
+      "availHASLMW": 71301.52347,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T11:15:19Z",
+      "demandMW": null,
+      "genTelemMW": 71769.91478,
+      "availHASLMW": 71769.91478,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T11:20:21Z",
+      "demandMW": null,
+      "genTelemMW": 71969.14252,
+      "availHASLMW": 71969.14252,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T11:25:18Z",
+      "demandMW": null,
+      "genTelemMW": 72446.72454,
+      "availHASLMW": 72446.72454,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T11:30:19Z",
+      "demandMW": null,
+      "genTelemMW": 72836.81289,
+      "availHASLMW": 72836.81289,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T11:35:18Z",
+      "demandMW": null,
+      "genTelemMW": 73059.26986,
+      "availHASLMW": 73059.26986,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T11:40:19Z",
+      "demandMW": null,
+      "genTelemMW": 73412.18632,
+      "availHASLMW": 73412.18632,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T11:45:18Z",
+      "demandMW": null,
+      "genTelemMW": 73700.93022,
+      "availHASLMW": 73700.93022,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T11:50:21Z",
+      "demandMW": null,
+      "genTelemMW": 73953.31646,
+      "availHASLMW": 73953.31646,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T11:55:21Z",
+      "demandMW": null,
+      "genTelemMW": 74095.54887,
+      "availHASLMW": 74095.54887,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T12:00:22Z",
+      "demandMW": null,
+      "genTelemMW": 74472.78162,
+      "availHASLMW": 74472.78162,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T12:05:21Z",
+      "demandMW": null,
+      "genTelemMW": 74722.14191,
+      "availHASLMW": 74722.14191,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T12:10:22Z",
+      "demandMW": null,
+      "genTelemMW": 74860.57853,
+      "availHASLMW": 74860.57853,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T12:15:22Z",
+      "demandMW": null,
+      "genTelemMW": 75243.86986,
+      "availHASLMW": 75243.86986,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T12:20:19Z",
+      "demandMW": null,
+      "genTelemMW": 75376.07113,
+      "availHASLMW": 75376.07113,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T12:25:24Z",
+      "demandMW": null,
+      "genTelemMW": 75352.7714,
+      "availHASLMW": 75352.7714,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T12:30:21Z",
+      "demandMW": null,
+      "genTelemMW": 75644.8384,
+      "availHASLMW": 75644.8384,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T12:35:18Z",
+      "demandMW": null,
+      "genTelemMW": 75992.15301,
+      "availHASLMW": 75992.15301,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T12:40:18Z",
+      "demandMW": null,
+      "genTelemMW": 76230.76021,
+      "availHASLMW": 76230.76021,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T12:45:19Z",
+      "demandMW": null,
+      "genTelemMW": 76508.30838,
+      "availHASLMW": 76508.30838,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T12:50:20Z",
+      "demandMW": null,
+      "genTelemMW": 76929.495,
+      "availHASLMW": 76929.495,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T12:55:18Z",
+      "demandMW": null,
+      "genTelemMW": 76909.67154,
+      "availHASLMW": 76909.67154,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T13:00:25Z",
+      "demandMW": null,
+      "genTelemMW": 77209.69529,
+      "availHASLMW": 77209.69529,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T13:05:24Z",
+      "demandMW": null,
+      "genTelemMW": 77333.73437,
+      "availHASLMW": 77333.73437,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T13:10:22Z",
+      "demandMW": null,
+      "genTelemMW": 77575.40474,
+      "availHASLMW": 77575.40474,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T13:15:21Z",
+      "demandMW": null,
+      "genTelemMW": 77847.09595,
+      "availHASLMW": 77847.09595,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T13:20:20Z",
+      "demandMW": null,
+      "genTelemMW": 78231.17304,
+      "availHASLMW": 78231.17304,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T13:25:19Z",
+      "demandMW": null,
+      "genTelemMW": 78194.53663,
+      "availHASLMW": 78194.53663,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T13:30:20Z",
+      "demandMW": null,
+      "genTelemMW": 78424.3498,
+      "availHASLMW": 78424.3498,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T13:35:23Z",
+      "demandMW": null,
+      "genTelemMW": 78617.10873,
+      "availHASLMW": 78617.10873,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T13:40:24Z",
+      "demandMW": null,
+      "genTelemMW": 78734.47072,
+      "availHASLMW": 78734.47072,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T13:45:21Z",
+      "demandMW": null,
+      "genTelemMW": 79008.90014,
+      "availHASLMW": 79008.90014,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T13:50:21Z",
+      "demandMW": null,
+      "genTelemMW": 79115.892,
+      "availHASLMW": 79115.892,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T13:55:21Z",
+      "demandMW": null,
+      "genTelemMW": 79408.49323,
+      "availHASLMW": 79408.49323,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T14:00:24Z",
+      "demandMW": null,
+      "genTelemMW": 79795.64523,
+      "availHASLMW": 79795.64523,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T14:05:21Z",
+      "demandMW": null,
+      "genTelemMW": 79882.04946,
+      "availHASLMW": 79882.04946,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T14:10:21Z",
+      "demandMW": null,
+      "genTelemMW": 79886.49851,
+      "availHASLMW": 79886.49851,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T14:15:21Z",
+      "demandMW": null,
+      "genTelemMW": 80138.59392,
+      "availHASLMW": 80138.59392,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T14:20:20Z",
+      "demandMW": null,
+      "genTelemMW": 80338.50869,
+      "availHASLMW": 80338.50869,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T14:25:21Z",
+      "demandMW": null,
+      "genTelemMW": 80524.17715,
+      "availHASLMW": 80524.17715,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T14:30:21Z",
+      "demandMW": null,
+      "genTelemMW": 80584.80536,
+      "availHASLMW": 80584.80536,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T14:35:20Z",
+      "demandMW": null,
+      "genTelemMW": 80990.65013,
+      "availHASLMW": 80990.65013,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T14:40:21Z",
+      "demandMW": null,
+      "genTelemMW": 81020.6266,
+      "availHASLMW": 81020.6266,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T14:45:20Z",
+      "demandMW": null,
+      "genTelemMW": 81237.23696,
+      "availHASLMW": 81237.23696,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T14:50:21Z",
+      "demandMW": null,
+      "genTelemMW": 81327.53521,
+      "availHASLMW": 81327.53521,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T14:55:20Z",
+      "demandMW": null,
+      "genTelemMW": 81160.79346,
+      "availHASLMW": 81160.79346,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T15:00:25Z",
+      "demandMW": null,
+      "genTelemMW": 81307.87697,
+      "availHASLMW": 81307.87697,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T15:05:23Z",
+      "demandMW": null,
+      "genTelemMW": 81337.31529,
+      "availHASLMW": 81337.31529,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T15:10:21Z",
+      "demandMW": null,
+      "genTelemMW": 81546.56401,
+      "availHASLMW": 81546.56401,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T15:15:28Z",
+      "demandMW": null,
+      "genTelemMW": 81611.15252,
+      "availHASLMW": 81611.15252,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T15:20:27Z",
+      "demandMW": null,
+      "genTelemMW": 81736.49658,
+      "availHASLMW": 81736.49658,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T15:25:22Z",
+      "demandMW": null,
+      "genTelemMW": 81836.91388,
+      "availHASLMW": 81836.91388,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T15:30:22Z",
+      "demandMW": null,
+      "genTelemMW": 82022.55512,
+      "availHASLMW": 82022.55512,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T15:35:18Z",
+      "demandMW": null,
+      "genTelemMW": 81993.62303,
+      "availHASLMW": 81993.62303,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T15:40:20Z",
+      "demandMW": null,
+      "genTelemMW": 82113.93135,
+      "availHASLMW": 82113.93135,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T15:45:24Z",
+      "demandMW": null,
+      "genTelemMW": 82494.56644,
+      "availHASLMW": 82494.56644,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T15:50:22Z",
+      "demandMW": null,
+      "genTelemMW": 82260.30223,
+      "availHASLMW": 82260.30223,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T15:55:20Z",
+      "demandMW": null,
+      "genTelemMW": 82244.89322,
+      "availHASLMW": 82244.89322,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T16:00:27Z",
+      "demandMW": null,
+      "genTelemMW": 82298.59814,
+      "availHASLMW": 82298.59814,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T16:05:24Z",
+      "demandMW": null,
+      "genTelemMW": 82229.72882,
+      "availHASLMW": 82229.72882,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T16:10:26Z",
+      "demandMW": null,
+      "genTelemMW": 82343.07461,
+      "availHASLMW": 82343.07461,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T16:15:27Z",
+      "demandMW": null,
+      "genTelemMW": 82411.50638,
+      "availHASLMW": 82411.50638,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T16:20:26Z",
+      "demandMW": null,
+      "genTelemMW": 82489.57866,
+      "availHASLMW": 82489.57866,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T16:25:22Z",
+      "demandMW": null,
+      "genTelemMW": 82455.40317,
+      "availHASLMW": 82455.40317,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T16:30:25Z",
+      "demandMW": null,
+      "genTelemMW": 82304.36063,
+      "availHASLMW": 82304.36063,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T16:35:23Z",
+      "demandMW": null,
+      "genTelemMW": 82445.60463,
+      "availHASLMW": 82445.60463,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T16:40:25Z",
+      "demandMW": null,
+      "genTelemMW": 82452.65651,
+      "availHASLMW": 82452.65651,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T16:45:24Z",
+      "demandMW": null,
+      "genTelemMW": 82303.77178,
+      "availHASLMW": 82303.77178,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T16:50:24Z",
+      "demandMW": null,
+      "genTelemMW": 82565.16013,
+      "availHASLMW": 82565.16013,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T16:55:21Z",
+      "demandMW": null,
+      "genTelemMW": 81877.14816,
+      "availHASLMW": 81877.14816,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T17:00:28Z",
+      "demandMW": null,
+      "genTelemMW": 81628.16655,
+      "availHASLMW": 81628.16655,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T17:05:28Z",
+      "demandMW": null,
+      "genTelemMW": 81723.49871,
+      "availHASLMW": 81723.49871,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T17:10:29Z",
+      "demandMW": null,
+      "genTelemMW": 81679.93844,
+      "availHASLMW": 81679.93844,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T17:15:27Z",
+      "demandMW": null,
+      "genTelemMW": 81711.66816,
+      "availHASLMW": 81711.66816,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T17:20:28Z",
+      "demandMW": null,
+      "genTelemMW": 81540.86686,
+      "availHASLMW": 81540.86686,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T17:25:23Z",
+      "demandMW": null,
+      "genTelemMW": 81249.05678,
+      "availHASLMW": 81249.05678,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T17:30:25Z",
+      "demandMW": null,
+      "genTelemMW": 81354.67578,
+      "availHASLMW": 81354.67578,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T17:35:25Z",
+      "demandMW": null,
+      "genTelemMW": 81379.65088,
+      "availHASLMW": 81379.65088,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T17:40:23Z",
+      "demandMW": null,
+      "genTelemMW": 81215.42475,
+      "availHASLMW": 81215.42475,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T17:45:27Z",
+      "demandMW": null,
+      "genTelemMW": 80928.77779,
+      "availHASLMW": 80928.77779,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T17:50:25Z",
+      "demandMW": null,
+      "genTelemMW": 80671.16081,
+      "availHASLMW": 80671.16081,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T17:55:23Z",
+      "demandMW": null,
+      "genTelemMW": 80734.29707,
+      "availHASLMW": 80734.29707,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T18:00:26Z",
+      "demandMW": null,
+      "genTelemMW": 80499.84144,
+      "availHASLMW": 80499.84144,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T18:05:22Z",
+      "demandMW": null,
+      "genTelemMW": 80277.7194,
+      "availHASLMW": 80277.7194,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T18:10:23Z",
+      "demandMW": null,
+      "genTelemMW": 80339.71231,
+      "availHASLMW": 80339.71231,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T18:15:23Z",
+      "demandMW": null,
+      "genTelemMW": 80063.97246,
+      "availHASLMW": 80063.97246,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T18:20:24Z",
+      "demandMW": null,
+      "genTelemMW": 79728.51559,
+      "availHASLMW": 79728.51559,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T18:25:21Z",
+      "demandMW": null,
+      "genTelemMW": 79870.27584,
+      "availHASLMW": 79870.27584,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T18:30:20Z",
+      "demandMW": null,
+      "genTelemMW": 79659.67857,
+      "availHASLMW": 79659.67857,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T18:35:21Z",
+      "demandMW": null,
+      "genTelemMW": 79490.88323,
+      "availHASLMW": 79490.88323,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T18:40:19Z",
+      "demandMW": null,
+      "genTelemMW": 79387.70541,
+      "availHASLMW": 79387.70541,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T18:45:19Z",
+      "demandMW": null,
+      "genTelemMW": 79286.18606,
+      "availHASLMW": 79286.18606,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T18:50:20Z",
+      "demandMW": null,
+      "genTelemMW": 79192.39223,
+      "availHASLMW": 79192.39223,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T18:55:20Z",
+      "demandMW": null,
+      "genTelemMW": 79055.10668,
+      "availHASLMW": 79055.10668,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T19:00:25Z",
+      "demandMW": null,
+      "genTelemMW": 79069.08398,
+      "availHASLMW": 79069.08398,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T19:05:23Z",
+      "demandMW": null,
+      "genTelemMW": 78832.14654,
+      "availHASLMW": 78832.14654,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T19:10:23Z",
+      "demandMW": null,
+      "genTelemMW": 78395.53307,
+      "availHASLMW": 78395.53307,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T19:15:20Z",
+      "demandMW": null,
+      "genTelemMW": 78006.33598,
+      "availHASLMW": 78006.33598,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T19:20:23Z",
+      "demandMW": null,
+      "genTelemMW": 77687.71587,
+      "availHASLMW": 77687.71587,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T19:25:21Z",
+      "demandMW": null,
+      "genTelemMW": 77609.79308,
+      "availHASLMW": 77609.79308,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T19:30:19Z",
+      "demandMW": null,
+      "genTelemMW": 77511.82155,
+      "availHASLMW": 77511.82155,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T19:35:19Z",
+      "demandMW": null,
+      "genTelemMW": 77389.77403,
+      "availHASLMW": 77389.77403,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T19:40:22Z",
+      "demandMW": null,
+      "genTelemMW": 77261.86455,
+      "availHASLMW": 77261.86455,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T19:45:21Z",
+      "demandMW": null,
+      "genTelemMW": 77020.00818,
+      "availHASLMW": 77020.00818,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T19:50:22Z",
+      "demandMW": null,
+      "genTelemMW": 76839.67668,
+      "availHASLMW": 76839.67668,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T19:55:23Z",
+      "demandMW": null,
+      "genTelemMW": 76757.80845,
+      "availHASLMW": 76757.80845,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T20:00:28Z",
+      "demandMW": null,
+      "genTelemMW": 76608.98206,
+      "availHASLMW": 76608.98206,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T20:05:24Z",
+      "demandMW": null,
+      "genTelemMW": 76617.69285,
+      "availHASLMW": 76617.69285,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T20:10:27Z",
+      "demandMW": null,
+      "genTelemMW": 76253.71039,
+      "availHASLMW": 76253.71039,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T20:15:23Z",
+      "demandMW": null,
+      "genTelemMW": 76278.62566,
+      "availHASLMW": 76278.62566,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T20:20:23Z",
+      "demandMW": null,
+      "genTelemMW": 76172.90844,
+      "availHASLMW": 76172.90844,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T20:25:20Z",
+      "demandMW": null,
+      "genTelemMW": 76018.53348,
+      "availHASLMW": 76018.53348,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T20:30:22Z",
+      "demandMW": null,
+      "genTelemMW": 75628.1268,
+      "availHASLMW": 75628.1268,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T20:35:23Z",
+      "demandMW": null,
+      "genTelemMW": 75617.24718,
+      "availHASLMW": 75617.24718,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T20:40:22Z",
+      "demandMW": null,
+      "genTelemMW": 75661.10704,
+      "availHASLMW": 75661.10704,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T20:45:22Z",
+      "demandMW": null,
+      "genTelemMW": 75487.42229,
+      "availHASLMW": 75487.42229,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T20:50:25Z",
+      "demandMW": null,
+      "genTelemMW": 75480.47854,
+      "availHASLMW": 75480.47854,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T20:55:24Z",
+      "demandMW": null,
+      "genTelemMW": 75395.66948,
+      "availHASLMW": 75395.66948,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T21:00:23Z",
+      "demandMW": null,
+      "genTelemMW": 75109.1185,
+      "availHASLMW": 75109.1185,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T21:05:20Z",
+      "demandMW": null,
+      "genTelemMW": 74931.22086,
+      "availHASLMW": 74931.22086,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T21:10:21Z",
+      "demandMW": null,
+      "genTelemMW": 74698.80138,
+      "availHASLMW": 74698.80138,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T21:15:21Z",
+      "demandMW": null,
+      "genTelemMW": 74430.6253,
+      "availHASLMW": 74430.6253,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T21:20:21Z",
+      "demandMW": null,
+      "genTelemMW": 74060.91986,
+      "availHASLMW": 74060.91986,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T21:25:18Z",
+      "demandMW": null,
+      "genTelemMW": 73692.04951,
+      "availHASLMW": 73692.04951,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T21:30:20Z",
+      "demandMW": null,
+      "genTelemMW": 73555.70386,
+      "availHASLMW": 73555.70386,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T21:35:19Z",
+      "demandMW": null,
+      "genTelemMW": 73372.02301,
+      "availHASLMW": 73372.02301,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T21:40:21Z",
+      "demandMW": null,
+      "genTelemMW": 73154.51958,
+      "availHASLMW": 73154.51958,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T21:45:20Z",
+      "demandMW": null,
+      "genTelemMW": 72952.96012,
+      "availHASLMW": 72952.96012,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T21:50:21Z",
+      "demandMW": null,
+      "genTelemMW": 72564.99388,
+      "availHASLMW": 72564.99388,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T21:55:20Z",
+      "demandMW": null,
+      "genTelemMW": 72233.49632,
+      "availHASLMW": 72233.49632,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T22:00:23Z",
+      "demandMW": null,
+      "genTelemMW": 71597.98075,
+      "availHASLMW": 71597.98075,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T22:05:25Z",
+      "demandMW": null,
+      "genTelemMW": 71320.92247,
+      "availHASLMW": 71320.92247,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T22:10:23Z",
+      "demandMW": null,
+      "genTelemMW": 71215.4816,
+      "availHASLMW": 71215.4816,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T22:15:21Z",
+      "demandMW": null,
+      "genTelemMW": 70776.85192,
+      "availHASLMW": 70776.85192,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T22:20:23Z",
+      "demandMW": null,
+      "genTelemMW": 70243.6999,
+      "availHASLMW": 70243.6999,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T22:25:20Z",
+      "demandMW": null,
+      "genTelemMW": 69801.58995,
+      "availHASLMW": 69801.58995,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T22:30:32Z",
+      "demandMW": null,
+      "genTelemMW": 69298.5745,
+      "availHASLMW": 69298.5745,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T22:35:21Z",
+      "demandMW": null,
+      "genTelemMW": 68848.16243,
+      "availHASLMW": 68848.16243,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T22:40:21Z",
+      "demandMW": null,
+      "genTelemMW": 68741.94663,
+      "availHASLMW": 68741.94663,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T22:45:20Z",
+      "demandMW": null,
+      "genTelemMW": 68345.86484,
+      "availHASLMW": 68345.86484,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T22:50:19Z",
+      "demandMW": null,
+      "genTelemMW": 68085.23478,
+      "availHASLMW": 68085.23478,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T22:55:19Z",
+      "demandMW": null,
+      "genTelemMW": 67770.69296,
+      "availHASLMW": 67770.69296,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T23:00:21Z",
+      "demandMW": null,
+      "genTelemMW": 67471.00656,
+      "availHASLMW": 67471.00656,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T23:05:21Z",
+      "demandMW": null,
+      "genTelemMW": 67052.57008,
+      "availHASLMW": 67052.57008,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T23:10:19Z",
+      "demandMW": null,
+      "genTelemMW": 66632.72977,
+      "availHASLMW": 66632.72977,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T23:15:17Z",
+      "demandMW": null,
+      "genTelemMW": 66427.03719,
+      "availHASLMW": 66427.03719,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T23:20:18Z",
+      "demandMW": null,
+      "genTelemMW": 66198.40488,
+      "availHASLMW": 66198.40488,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T23:25:17Z",
+      "demandMW": null,
+      "genTelemMW": 65715.31313,
+      "availHASLMW": 65715.31313,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T23:30:19Z",
+      "demandMW": null,
+      "genTelemMW": 65476.57801,
+      "availHASLMW": 65476.57801,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T23:35:17Z",
+      "demandMW": null,
+      "genTelemMW": 64794.11995,
+      "availHASLMW": 64794.11995,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T23:40:18Z",
+      "demandMW": null,
+      "genTelemMW": 64597.80453,
+      "availHASLMW": 64597.80453,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T23:45:19Z",
+      "demandMW": null,
+      "genTelemMW": 64446.4182,
+      "availHASLMW": 64446.4182,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T23:50:17Z",
+      "demandMW": null,
+      "genTelemMW": 64312.13458,
+      "availHASLMW": 64312.13458,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-23T23:55:17Z",
+      "demandMW": null,
+      "genTelemMW": 64032.40862,
+      "availHASLMW": 64032.40862,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T00:00:32Z",
+      "demandMW": null,
+      "genTelemMW": 63754.15371,
+      "availHASLMW": 63754.15371,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T00:05:22Z",
+      "demandMW": null,
+      "genTelemMW": 63551.91227,
+      "availHASLMW": 63551.91227,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T00:10:26Z",
+      "demandMW": null,
+      "genTelemMW": 63377.43825,
+      "availHASLMW": 63377.43825,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T00:15:19Z",
+      "demandMW": null,
+      "genTelemMW": 63066.78364,
+      "availHASLMW": 63066.78364,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T00:20:18Z",
+      "demandMW": null,
+      "genTelemMW": 62678.63634,
+      "availHASLMW": 62678.63634,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T00:25:16Z",
+      "demandMW": null,
+      "genTelemMW": 62392.5224,
+      "availHASLMW": 62392.5224,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T00:30:17Z",
+      "demandMW": null,
+      "genTelemMW": 62159.28682,
+      "availHASLMW": 62159.28682,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T00:35:17Z",
+      "demandMW": null,
+      "genTelemMW": 61956.426,
+      "availHASLMW": 61956.426,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T00:40:19Z",
+      "demandMW": null,
+      "genTelemMW": 61672.08445,
+      "availHASLMW": 61672.08445,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T00:45:17Z",
+      "demandMW": null,
+      "genTelemMW": 61478.37764,
+      "availHASLMW": 61478.37764,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T00:50:17Z",
+      "demandMW": null,
+      "genTelemMW": 61233.95758,
+      "availHASLMW": 61233.95758,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T00:55:17Z",
+      "demandMW": null,
+      "genTelemMW": 60999.23418,
+      "availHASLMW": 60999.23418,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T01:00:23Z",
+      "demandMW": null,
+      "genTelemMW": 60852.51553,
+      "availHASLMW": 60852.51553,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T01:05:21Z",
+      "demandMW": null,
+      "genTelemMW": 60642.69498,
+      "availHASLMW": 60642.69498,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T01:10:20Z",
+      "demandMW": null,
+      "genTelemMW": 60351.89764,
+      "availHASLMW": 60351.89764,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T01:15:19Z",
+      "demandMW": null,
+      "genTelemMW": 60089.60197,
+      "availHASLMW": 60089.60197,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T01:20:19Z",
+      "demandMW": null,
+      "genTelemMW": 59785.094,
+      "availHASLMW": 59785.094,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T01:25:17Z",
+      "demandMW": null,
+      "genTelemMW": 59657.088,
+      "availHASLMW": 59657.088,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T01:30:18Z",
+      "demandMW": null,
+      "genTelemMW": 59489.27585,
+      "availHASLMW": 59489.27585,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T01:35:18Z",
+      "demandMW": null,
+      "genTelemMW": 59373.17473,
+      "availHASLMW": 59373.17473,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T01:40:18Z",
+      "demandMW": null,
+      "genTelemMW": 59036.99599,
+      "availHASLMW": 59036.99599,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T01:45:17Z",
+      "demandMW": null,
+      "genTelemMW": 58963.92394,
+      "availHASLMW": 58963.92394,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T01:50:17Z",
+      "demandMW": null,
+      "genTelemMW": 58892.24052,
+      "availHASLMW": 58892.24052,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T01:55:18Z",
+      "demandMW": null,
+      "genTelemMW": 58882.43382,
+      "availHASLMW": 58882.43382,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T02:00:22Z",
+      "demandMW": null,
+      "genTelemMW": 58746.52722,
+      "availHASLMW": 58746.52722,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T02:05:23Z",
+      "demandMW": null,
+      "genTelemMW": 58463.6637,
+      "availHASLMW": 58463.6637,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T02:10:22Z",
+      "demandMW": null,
+      "genTelemMW": 58112.70624,
+      "availHASLMW": 58112.70624,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T02:15:20Z",
+      "demandMW": null,
+      "genTelemMW": 58079.67536,
+      "availHASLMW": 58079.67536,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T02:20:17Z",
+      "demandMW": null,
+      "genTelemMW": 57839.16646,
+      "availHASLMW": 57839.16646,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T02:25:18Z",
+      "demandMW": null,
+      "genTelemMW": 57634.39472,
+      "availHASLMW": 57634.39472,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T02:30:17Z",
+      "demandMW": null,
+      "genTelemMW": 57561.66994,
+      "availHASLMW": 57561.66994,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T02:35:17Z",
+      "demandMW": null,
+      "genTelemMW": 57427.57526,
+      "availHASLMW": 57427.57526,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T02:40:20Z",
+      "demandMW": null,
+      "genTelemMW": 57301.40442,
+      "availHASLMW": 57301.40442,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T02:45:18Z",
+      "demandMW": null,
+      "genTelemMW": 56959.71216,
+      "availHASLMW": 56959.71216,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T02:50:18Z",
+      "demandMW": null,
+      "genTelemMW": 56803.33237,
+      "availHASLMW": 56803.33237,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T02:55:17Z",
+      "demandMW": null,
+      "genTelemMW": 56837.47758,
+      "availHASLMW": 56837.47758,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T03:00:21Z",
+      "demandMW": null,
+      "genTelemMW": 56859.41233,
+      "availHASLMW": 56859.41233,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T03:05:19Z",
+      "demandMW": null,
+      "genTelemMW": 56795.5868,
+      "availHASLMW": 56795.5868,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T03:10:19Z",
+      "demandMW": null,
+      "genTelemMW": 56593.1963,
+      "availHASLMW": 56593.1963,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T03:15:17Z",
+      "demandMW": null,
+      "genTelemMW": 56467.96998,
+      "availHASLMW": 56467.96998,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T03:20:17Z",
+      "demandMW": null,
+      "genTelemMW": 56504.35793,
+      "availHASLMW": 56504.35793,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T03:25:17Z",
+      "demandMW": null,
+      "genTelemMW": 56296.52498,
+      "availHASLMW": 56296.52498,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T03:30:16Z",
+      "demandMW": null,
+      "genTelemMW": 56206.83245,
+      "availHASLMW": 56206.83245,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T03:35:16Z",
+      "demandMW": null,
+      "genTelemMW": 56116.25522,
+      "availHASLMW": 56116.25522,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T03:40:19Z",
+      "demandMW": null,
+      "genTelemMW": 55886.56354,
+      "availHASLMW": 55886.56354,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T03:45:22Z",
+      "demandMW": null,
+      "genTelemMW": 55864.20617,
+      "availHASLMW": 55864.20617,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T03:50:21Z",
+      "demandMW": null,
+      "genTelemMW": 55861.36676,
+      "availHASLMW": 55861.36676,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T03:55:18Z",
+      "demandMW": null,
+      "genTelemMW": 55931.74766,
+      "availHASLMW": 55931.74766,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T04:00:21Z",
+      "demandMW": null,
+      "genTelemMW": 55864.15854,
+      "availHASLMW": 55864.15854,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T04:05:17Z",
+      "demandMW": null,
+      "genTelemMW": 55871.33319,
+      "availHASLMW": 55871.33319,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T04:10:17Z",
+      "demandMW": null,
+      "genTelemMW": 55986.71954,
+      "availHASLMW": 55986.71954,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T04:15:18Z",
+      "demandMW": null,
+      "genTelemMW": 55962.16762,
+      "availHASLMW": 55962.16762,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T04:20:17Z",
+      "demandMW": null,
+      "genTelemMW": 55996.64122,
+      "availHASLMW": 55996.64122,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T04:25:17Z",
+      "demandMW": null,
+      "genTelemMW": 55821.64228,
+      "availHASLMW": 55821.64228,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T04:30:17Z",
+      "demandMW": null,
+      "genTelemMW": 55696.77194,
+      "availHASLMW": 55696.77194,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T04:35:16Z",
+      "demandMW": null,
+      "genTelemMW": 55613.86957,
+      "availHASLMW": 55613.86957,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T04:40:17Z",
+      "demandMW": null,
+      "genTelemMW": 55796.02164,
+      "availHASLMW": 55796.02164,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T04:45:16Z",
+      "demandMW": null,
+      "genTelemMW": 55823.44872,
+      "availHASLMW": 55823.44872,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T04:50:16Z",
+      "demandMW": null,
+      "genTelemMW": 55615.11833,
+      "availHASLMW": 55615.11833,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T04:55:17Z",
+      "demandMW": null,
+      "genTelemMW": 55645.90748,
+      "availHASLMW": 55645.90748,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T05:00:21Z",
+      "demandMW": null,
+      "genTelemMW": 55646.09301,
+      "availHASLMW": 55646.09301,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T05:05:20Z",
+      "demandMW": null,
+      "genTelemMW": 55975.0025,
+      "availHASLMW": 55975.0025,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T05:10:18Z",
+      "demandMW": null,
+      "genTelemMW": 56017.31747,
+      "availHASLMW": 56017.31747,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T05:15:17Z",
+      "demandMW": null,
+      "genTelemMW": 56008.69615,
+      "availHASLMW": 56008.69615,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T05:20:16Z",
+      "demandMW": null,
+      "genTelemMW": 56126.34099,
+      "availHASLMW": 56126.34099,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T05:25:18Z",
+      "demandMW": null,
+      "genTelemMW": 56226.55585,
+      "availHASLMW": 56226.55585,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T05:30:16Z",
+      "demandMW": null,
+      "genTelemMW": 56183.2855,
+      "availHASLMW": 56183.2855,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T05:35:16Z",
+      "demandMW": null,
+      "genTelemMW": 56385.95337,
+      "availHASLMW": 56385.95337,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T05:40:17Z",
+      "demandMW": null,
+      "genTelemMW": 56331.22529,
+      "availHASLMW": 56331.22529,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T05:45:16Z",
+      "demandMW": null,
+      "genTelemMW": 56156.39144,
+      "availHASLMW": 56156.39144,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T05:50:17Z",
+      "demandMW": null,
+      "genTelemMW": 56107.36613,
+      "availHASLMW": 56107.36613,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T05:55:17Z",
+      "demandMW": null,
+      "genTelemMW": 56361.23028,
+      "availHASLMW": 56361.23028,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T06:00:20Z",
+      "demandMW": null,
+      "genTelemMW": 56452.9711,
+      "availHASLMW": 56452.9711,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T06:05:21Z",
+      "demandMW": null,
+      "genTelemMW": 56702.647,
+      "availHASLMW": 56702.647,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T06:10:19Z",
+      "demandMW": null,
+      "genTelemMW": 56965.4717,
+      "availHASLMW": 56965.4717,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T06:15:18Z",
+      "demandMW": null,
+      "genTelemMW": 56800.92622,
+      "availHASLMW": 56800.92622,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T06:20:17Z",
+      "demandMW": null,
+      "genTelemMW": 56781.02916,
+      "availHASLMW": 56781.02916,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T06:25:16Z",
+      "demandMW": null,
+      "genTelemMW": 56766.46747,
+      "availHASLMW": 56766.46747,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T06:30:17Z",
+      "demandMW": null,
+      "genTelemMW": 56711.9689,
+      "availHASLMW": 56711.9689,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T06:35:16Z",
+      "demandMW": null,
+      "genTelemMW": 56826.88136,
+      "availHASLMW": 56826.88136,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T06:40:17Z",
+      "demandMW": null,
+      "genTelemMW": 56849.16386,
+      "availHASLMW": 56849.16386,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T06:45:17Z",
+      "demandMW": null,
+      "genTelemMW": 56961.98611,
+      "availHASLMW": 56961.98611,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T06:50:17Z",
+      "demandMW": null,
+      "genTelemMW": 56909.55769,
+      "availHASLMW": 56909.55769,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T06:55:17Z",
+      "demandMW": null,
+      "genTelemMW": 56979.31758,
+      "availHASLMW": 56979.31758,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T07:00:19Z",
+      "demandMW": null,
+      "genTelemMW": 56970.40037,
+      "availHASLMW": 56970.40037,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T07:05:17Z",
+      "demandMW": null,
+      "genTelemMW": 57199.32159,
+      "availHASLMW": 57199.32159,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T07:10:17Z",
+      "demandMW": null,
+      "genTelemMW": 57227.5896,
+      "availHASLMW": 57227.5896,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T07:15:18Z",
+      "demandMW": null,
+      "genTelemMW": 57374.84923,
+      "availHASLMW": 57374.84923,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T07:20:17Z",
+      "demandMW": null,
+      "genTelemMW": 57553.78513,
+      "availHASLMW": 57553.78513,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T07:25:16Z",
+      "demandMW": null,
+      "genTelemMW": 57491.11533,
+      "availHASLMW": 57491.11533,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T07:30:17Z",
+      "demandMW": null,
+      "genTelemMW": 57435.66406,
+      "availHASLMW": 57435.66406,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T07:35:17Z",
+      "demandMW": null,
+      "genTelemMW": 57592.88162,
+      "availHASLMW": 57592.88162,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T07:40:17Z",
+      "demandMW": null,
+      "genTelemMW": 57756.93982,
+      "availHASLMW": 57756.93982,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T07:45:17Z",
+      "demandMW": null,
+      "genTelemMW": 58112.96744,
+      "availHASLMW": 58112.96744,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T07:50:16Z",
+      "demandMW": null,
+      "genTelemMW": 58254.11386,
+      "availHASLMW": 58254.11386,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T07:55:17Z",
+      "demandMW": null,
+      "genTelemMW": 58537.92578,
+      "availHASLMW": 58537.92578,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T08:00:21Z",
+      "demandMW": null,
+      "genTelemMW": 58832.93096,
+      "availHASLMW": 58832.93096,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T08:05:17Z",
+      "demandMW": null,
+      "genTelemMW": 59132.8774,
+      "availHASLMW": 59132.8774,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T08:10:18Z",
+      "demandMW": null,
+      "genTelemMW": 59418.26473,
+      "availHASLMW": 59418.26473,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T08:15:16Z",
+      "demandMW": null,
+      "genTelemMW": 59728.97712,
+      "availHASLMW": 59728.97712,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T08:20:18Z",
+      "demandMW": null,
+      "genTelemMW": 59982.48511,
+      "availHASLMW": 59982.48511,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T08:25:17Z",
+      "demandMW": null,
+      "genTelemMW": 60130.35925,
+      "availHASLMW": 60130.35925,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T08:30:17Z",
+      "demandMW": null,
+      "genTelemMW": 60412.43606,
+      "availHASLMW": 60412.43606,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T08:35:16Z",
+      "demandMW": null,
+      "genTelemMW": 60981.51724,
+      "availHASLMW": 60981.51724,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T08:40:17Z",
+      "demandMW": null,
+      "genTelemMW": 61221.5462,
+      "availHASLMW": 61221.5462,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T08:45:18Z",
+      "demandMW": null,
+      "genTelemMW": 61518.54004,
+      "availHASLMW": 61518.54004,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T08:50:16Z",
+      "demandMW": null,
+      "genTelemMW": 61781.52209,
+      "availHASLMW": 61781.52209,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T08:55:17Z",
+      "demandMW": null,
+      "genTelemMW": 62089.02496,
+      "availHASLMW": 62089.02496,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T09:00:23Z",
+      "demandMW": null,
+      "genTelemMW": 62469.73227,
+      "availHASLMW": 62469.73227,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T09:05:19Z",
+      "demandMW": null,
+      "genTelemMW": 62867.47959,
+      "availHASLMW": 62867.47959,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T09:10:21Z",
+      "demandMW": null,
+      "genTelemMW": 63254.32781,
+      "availHASLMW": 63254.32781,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T09:15:18Z",
+      "demandMW": null,
+      "genTelemMW": 63466.74187,
+      "availHASLMW": 63466.74187,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T09:20:17Z",
+      "demandMW": null,
+      "genTelemMW": 63783.52818,
+      "availHASLMW": 63783.52818,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T09:25:17Z",
+      "demandMW": null,
+      "genTelemMW": 63973.62199,
+      "availHASLMW": 63973.62199,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T09:30:17Z",
+      "demandMW": null,
+      "genTelemMW": 64421.50311,
+      "availHASLMW": 64421.50311,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T09:35:16Z",
+      "demandMW": null,
+      "genTelemMW": 64853.33391,
+      "availHASLMW": 64853.33391,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T09:40:18Z",
+      "demandMW": null,
+      "genTelemMW": 65029.2733,
+      "availHASLMW": 65029.2733,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T09:45:18Z",
+      "demandMW": null,
+      "genTelemMW": 65283.9463,
+      "availHASLMW": 65283.9463,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T09:50:18Z",
+      "demandMW": null,
+      "genTelemMW": 65645.34514,
+      "availHASLMW": 65645.34514,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T09:55:18Z",
+      "demandMW": null,
+      "genTelemMW": 65940.33509,
+      "availHASLMW": 65940.33509,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T10:00:19Z",
+      "demandMW": null,
+      "genTelemMW": 66140.75442,
+      "availHASLMW": 66140.75442,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T10:05:17Z",
+      "demandMW": null,
+      "genTelemMW": 66568.34961,
+      "availHASLMW": 66568.34961,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T10:10:18Z",
+      "demandMW": null,
+      "genTelemMW": 66801.56646,
+      "availHASLMW": 66801.56646,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T10:15:17Z",
+      "demandMW": null,
+      "genTelemMW": 67049.36147,
+      "availHASLMW": 67049.36147,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T10:20:18Z",
+      "demandMW": null,
+      "genTelemMW": 67441.9561,
+      "availHASLMW": 67441.9561,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T10:25:17Z",
+      "demandMW": null,
+      "genTelemMW": 67901.91507,
+      "availHASLMW": 67901.91507,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T10:30:18Z",
+      "demandMW": null,
+      "genTelemMW": 68073.8902,
+      "availHASLMW": 68073.8902,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T10:35:17Z",
+      "demandMW": null,
+      "genTelemMW": 68191.51226,
+      "availHASLMW": 68191.51226,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T10:40:18Z",
+      "demandMW": null,
+      "genTelemMW": 68532.34693,
+      "availHASLMW": 68532.34693,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T10:45:18Z",
+      "demandMW": null,
+      "genTelemMW": 68956.40559,
+      "availHASLMW": 68956.40559,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T10:50:16Z",
+      "demandMW": null,
+      "genTelemMW": 69482.76713,
+      "availHASLMW": 69482.76713,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T10:55:17Z",
+      "demandMW": null,
+      "genTelemMW": 69737.15462,
+      "availHASLMW": 69737.15462,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T11:00:20Z",
+      "demandMW": null,
+      "genTelemMW": 70157.02139,
+      "availHASLMW": 70157.02139,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T11:05:23Z",
+      "demandMW": null,
+      "genTelemMW": 70398.36308,
+      "availHASLMW": 70398.36308,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T11:10:20Z",
+      "demandMW": null,
+      "genTelemMW": 70613.92678,
+      "availHASLMW": 70613.92678,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T11:15:17Z",
+      "demandMW": null,
+      "genTelemMW": 71188.51864,
+      "availHASLMW": 71188.51864,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T11:20:17Z",
+      "demandMW": null,
+      "genTelemMW": 71607.17132,
+      "availHASLMW": 71607.17132,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T11:25:17Z",
+      "demandMW": null,
+      "genTelemMW": 71997.79642,
+      "availHASLMW": 71997.79642,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T11:30:17Z",
+      "demandMW": null,
+      "genTelemMW": 72206.42635,
+      "availHASLMW": 72206.42635,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T11:35:17Z",
+      "demandMW": null,
+      "genTelemMW": 72626.4631,
+      "availHASLMW": 72626.4631,
+      "headroomMW": null,
+      "headroomPct": null
+    },
+    {
+      "ts": "2026-06-24T11:40:20Z",
+      "demandMW": null,
+      "genTelemMW": 73046.00702,
+      "availHASLMW": 73046.00702,
+      "headroomMW": null,
+      "headroomPct": null
+    },
     {
       "ts": "2026-06-24T11:45:17Z",
       "demandMW": null,
