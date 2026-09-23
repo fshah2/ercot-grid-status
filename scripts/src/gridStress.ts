@@ -1,4 +1,5 @@
 import { GridStress, GridStressLatest, Point, PriceStatus } from "./types.js";
+import { marketTimeLabel } from "./time.js";
 
 function percentile(values: number[], p: number): number | null {
   const xs = values.filter((v) => Number.isFinite(v)).sort((a, b) => a - b);
@@ -75,7 +76,8 @@ export function computeGridStress(input: {
   const loadValues = input.loadPoints.map((p) => p.value);
   const loadP90 = percentile(loadValues, THRESHOLDS.loadWatchPct);
   const loadP95 = percentile(loadValues, THRESHOLDS.loadStressedPct);
-  const latestLoad = input.loadPoints.length ? input.loadPoints[input.loadPoints.length - 1].value : null;
+  const latestLoadPoint = input.loadPoints.length ? input.loadPoints[input.loadPoints.length - 1] : null;
+  const latestLoad = latestLoadPoint?.value ?? null;
 
   const outages = input.outagePoints ?? [];
   const outageValues = outages.map((p) => p.value);
@@ -143,7 +145,10 @@ export function computeGridStress(input: {
   }
 
   if (latestLoad != null && loadP90 != null && loadP95 != null) {
-    notes.push(`Demand right now is ${latestLoad.toFixed(0)} MW.`);
+    // ERCOT posts actual load once per operating day, so the latest hour can be up to ~a day old.
+    notes.push(
+      `Latest actual demand is ${latestLoad.toFixed(0)} MW (hour ending ${marketTimeLabel(new Date(latestLoadPoint!.ts))}). ERCOT publishes actual demand once a day, so this can be up to a day old.`
+    );
     notes.push(
       `Demand rules: Watch above the ${THRESHOLDS.loadWatchPct}th percentile; Stressed above the ${THRESHOLDS.loadStressedPct}th percentile (based on the last 7 days).`
     );

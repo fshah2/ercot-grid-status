@@ -59,4 +59,6 @@ jobs:
           fi
 
           git commit -m "chore(data): refresh ERCOT snapshots"
+          # main may have moved while this job ran (e.g. a manual push); replay the data commit on top.
+          git pull --rebase origin main
           git push

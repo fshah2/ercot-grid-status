@@ -353,7 +353,7 @@ async function main() {
         ? "Available capability is the total HASL (High Ancillary Service Limit) across NonIRR+WGR+PVGR+REMRES from the 2-Day Aggregated Generation Summary."
         : "ERCOT isn't currently publishing available-capacity (HASL) values in the 2-Day Aggregated Generation Summary; every HASL field is empty. Headroom is left blank rather than estimated from generation.",
       notes:
-        "Demand aligns to the most recent hourly system load reading at-or-before each SCED timestamp (both in UTC). This report lags real time by about 2 days."
+        "Demand is the hourly system load for the hour containing each SCED timestamp (both in UTC). This report lags real time by about 2 days."
     },
     points: mergedSupply
   };

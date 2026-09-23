@@ -161,3 +161,15 @@ export function marketDate(d: Date, timeZone: string = CONFIG.marketTimeZone): s
 export function marketDateTimeParam(d: Date, timeZone: string = CONFIG.marketTimeZone): string {
   return new Date(wallClockMs(d.getTime(), timeZone)).toISOString().slice(0, 19);
 }
+
+/** Human-readable market time, e.g. "Sep 23, 12:00 AM CDT" (for plain-English notes). */
+export function marketTimeLabel(d: Date, timeZone: string = CONFIG.marketTimeZone): string {
+  return d.toLocaleString("en-US", {
+    timeZone,
+    month: "short",
+    day: "numeric",
+    hour: "numeric",
+    minute: "2-digit",
+    timeZoneName: "short"
+  });
+}

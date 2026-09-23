@@ -18,6 +18,8 @@
 
 import { hourEndingToUtcIso, localTimeToUtcIso } from "./time.js";
 
+const HOUR_MS = 60 * 60 * 1000;
+
 type AnyRow = Record<string, any>;
 type ApiResponseLike = any;
 
@@ -403,7 +405,7 @@ export function splitAtNow<T extends { ts: string }>(
 
 /**
  * Build SUPPLY vs DEMAND points using 2D Agg Gen Summary (NP3-910-ER)
- * and align to the most recent LOAD point at-or-before each SCED timestamp.
+ * and align each SCED timestamp to the LOAD hour that contains it.
  *
  * Available capability = sum of HASL (High Ancillary Service Limit) across
  * NonIRR + WGR + PVGR + REMRES. ERCOT currently publishes these as null in
@@ -432,20 +434,22 @@ export function buildSupplyDemandPoints(
     .filter((p) => Number.isFinite(p.t))
     .sort((a, b) => a.t - b.t);
 
+  // Load ts is the hour ENDING instant: point `t` covers (t-1h, t]. The hour containing
+  // a SCED timestamp is therefore the first load point at-or-AFTER it, within 1 hour.
   // Binary search: independent of row order (the API returns SCED rows newest-first).
-  function demandAtOrBefore(ts: string): number | null {
+  function demandForHourContaining(ts: string): number | null {
     const t = Date.parse(ts);
     let lo = 0;
     let hi = lp.length - 1;
     let found = -1;
     while (lo <= hi) {
       const mid = (lo + hi) >> 1;
-      if (lp[mid].t <= t) {
+      if (lp[mid].t >= t) {
         found = mid;
-        lo = mid + 1;
-      } else hi = mid - 1;
+        hi = mid - 1;
+      } else lo = mid + 1;
     }
-    return found >= 0 ? lp[found].value : null;
+    return found >= 0 && lp[found].t - t < HOUR_MS ? lp[found].value : null;
   }
 
   const out: Array<{
@@ -465,7 +469,7 @@ export function buildSupplyDemandPoints(
     const ts = normalizeTs(String(tsRaw), isRepeatHour(r));
     if (!ts) continue;
 
-    const demandMW = demandAtOrBefore(ts);
+    const demandMW = demandForHourContaining(ts);
 
     const genTelemMW = toNumber(r.sumGenTelemMW);
 
