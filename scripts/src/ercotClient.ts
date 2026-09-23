@@ -33,8 +33,20 @@ export class ErcotClient {
       const json = JSON.parse(text) as ApiResponse;
       pages.push(json);
 
-      const nextHref = json._links?.next?.href;
-      if (!nextHref) break;
+      // ERCOT responses expose paging in _meta (no _links.next), so stop on totalPages.
+      const totalPages = json._meta?.totalPages;
+      const currentPage = json._meta?.currentPage ?? page;
+      if (typeof totalPages === "number") {
+        if (currentPage >= totalPages) break;
+      } else if (!json._links?.next?.href) {
+        break;
+      }
+
+      if (page === CONFIG.maxPagesPerEndpoint) {
+        console.warn(
+          `[WARN] ${path}: stopped at maxPagesPerEndpoint=${CONFIG.maxPagesPerEndpoint} of ${totalPages ?? "?"} pages; data is truncated.`
+        );
+      }
 
       page += 1;
 

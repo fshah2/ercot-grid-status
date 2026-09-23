@@ -29,6 +29,14 @@ export const CONFIG = {
   // Rolling window
   historyDays: 7,
 
+  // Bump when the shape or meaning of site/public/data/*.json changes.
+  // Existing files with a different schemaVersion are ignored (rebuilt from the fetch window).
+  // v2: timestamps are real UTC (ERCOT Central time converted with DST handling).
+  schemaVersion: 2,
+
+  // Load forecast: only pull recent postings (ERCOT posts hourly; each posting covers ~7 days ahead).
+  forecastPostedLookbackHours: 3,
+
   // API paging & rate-safety
   pageSize: 10000,
   maxPagesPerEndpoint: 50,
@@ -39,8 +47,7 @@ export const CONFIG = {
   // change this single value.
   headlineSettlementPoint: "HB_NORTH",
 
-  // Timezone assumptions for interpreting deliveryHour/interval:
-  // We store ISO timestamps in UTC in the website JSON, but many ERCOT fields
-  // are “local market time”. We do a best-effort conversion (see time.ts).
+  // ERCOT timestamps are Central Prevailing Time with no offset.
+  // We convert them to real UTC ISO for the website JSON (see time.ts).
   marketTimeZone: "America/Chicago"
 };

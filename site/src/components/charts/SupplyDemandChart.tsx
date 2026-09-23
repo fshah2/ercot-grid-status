@@ -6,6 +6,12 @@ import { EChart } from "./EChart";
 export function SupplyDemandChart(props: { supply: SupplyDemand2d }) {
   const pts = props.supply.points ?? [];
 
+  // Only trust headroom when the backend confirmed real capacity (HASL) data exists.
+  // Older files without the flag fall back to "any point has a positive capacity".
+  const headroomAvailable =
+    props.supply.meta?.headroomAvailable ??
+    pts.some((p) => typeof p.availHASLMW === "number" && p.availHASLMW > 0);
+
   // ECharts time axis can silently render nothing if timestamps aren't parseable.
   // Convert to epoch ms for maximum compatibility.
   const toX = (ts: string) => {
@@ -16,7 +22,7 @@ export function SupplyDemandChart(props: { supply: SupplyDemand2d }) {
   const hasAnyValue = pts.some(
     (p) =>
       (typeof p.demandMW === "number" && Number.isFinite(p.demandMW)) ||
-      (typeof p.availHASLMW === "number" && Number.isFinite(p.availHASLMW)) ||
+      (headroomAvailable && typeof p.availHASLMW === "number" && Number.isFinite(p.availHASLMW)) ||
       (typeof p.genTelemMW === "number" && Number.isFinite(p.genTelemMW))
   );
 
@@ -43,13 +49,16 @@ export function SupplyDemandChart(props: { supply: SupplyDemand2d }) {
         const avail = byName.get("Available capability (HASL)") ?? null;
         const gen = byName.get("Generation telemetry") ?? null;
         const headroom =
-          typeof demand === "number" && typeof avail === "number" ? avail - demand : null;
+          headroomAvailable && typeof demand === "number" && typeof avail === "number"
+            ? avail - demand
+            : null;
 
         const lines: string[] = [];
         if (typeof demand === "number") lines.push(`Demand: <b>${fmtNumber(demand)}</b> MW`);
         if (typeof avail === "number") lines.push(`Available: <b>${fmtNumber(avail)}</b> MW`);
         if (typeof gen === "number") lines.push(`Generation: <b>${fmtNumber(gen)}</b> MW`);
-        if (typeof headroom === "number")
+        // A negative "headroom" would mean the capacity data is wrong, not that the grid is short.
+        if (typeof headroom === "number" && headroom >= 0)
           lines.push(`Headroom: <b>${fmtNumber(headroom)}</b> MW`);
 
         return `<div><b>${fmtTime(ts)}</b><br/>${lines.join("<br/>")}</div>`;
@@ -66,12 +75,16 @@ export function SupplyDemandChart(props: { supply: SupplyDemand2d }) {
         showSymbol: false,
         data: pts.map((p) => [toX(p.ts), p.demandMW])
       },
-      {
-        name: "Available capability (HASL)",
-        type: "line",
-        showSymbol: false,
-        data: pts.map((p) => [toX(p.ts), p.availHASLMW])
-      },
+      ...(headroomAvailable
+        ? [
+            {
+              name: "Available capability (HASL)",
+              type: "line",
+              showSymbol: false,
+              data: pts.map((p) => [toX(p.ts), p.availHASLMW])
+            }
+          ]
+        : []),
       {
         name: "Generation telemetry",
         type: "line",
@@ -82,5 +95,15 @@ export function SupplyDemandChart(props: { supply: SupplyDemand2d }) {
     ]
   };
 
-  return <EChart option={option} />;
+  return (
+    <>
+      {!headroomAvailable && (
+        <div className="chartNote">
+          ERCOT isn’t currently publishing available-capacity data, so headroom can’t be shown. Demand and
+          generation are still plotted.
+        </div>
+      )}
+      <EChart option={option} />
+    </>
+  );
 }

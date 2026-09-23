@@ -5,6 +5,7 @@ import { EChart } from "./EChart";
 
 export function OutagesChart(props: { outages: Outages7d }) {
   const pts = props.outages.points ?? [];
+  const upcoming = props.outages.upcomingPoints ?? [];
 
   const toX = (ts: string) => {
     const t = Date.parse(ts);
@@ -17,6 +18,7 @@ export function OutagesChart(props: { outages: Outages7d }) {
       formatter: (items: any[]) => {
         const ts = items?.[0]?.data?.[0];
         const rows = (items ?? [])
+          .filter((it) => typeof it?.data?.[1] === "number")
           .map((it) => `${it.marker} ${it.seriesName}: <b>${fmtNumber(it.data[1])}</b> MW`)
           .join("<br/>");
         return `<div><b>${fmtTime(ts)}</b><br/>${rows}</div>`;
@@ -53,7 +55,20 @@ export function OutagesChart(props: { outages: Outages7d }) {
           const other = (p.totalResourceMW ?? 0) - (p.totalIRRMW ?? 0) - (p.totalNewEquipResourceMW ?? 0);
           return [toX(p.ts), Math.max(0, other)];
         })
-      }
+      },
+      // ERCOT's scheduled outlook for future hours (lighter, dashed), joined to the current hour.
+      ...(upcoming.length
+        ? [
+            {
+              name: "Scheduled total (upcoming)",
+              type: "line",
+              showSymbol: false,
+              lineStyle: { type: "dashed", opacity: 0.6 },
+              itemStyle: { opacity: 0.6 },
+              data: [...pts.slice(-1), ...upcoming].map((p) => [toX(p.ts), p.totalResourceMW])
+            }
+          ]
+        : [])
     ]
   };
 

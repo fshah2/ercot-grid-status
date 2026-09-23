@@ -5,6 +5,7 @@ export function StatusTile(props: {
   title: string;
   value: string;
   subvalue?: string;
+  footnote?: string; // small print under the subvalue (e.g. "as of …")
   tone: "good" | "warn" | "bad" | "neutral";
   tooltipTitle: string;
   tooltipBody: React.ReactNode;
@@ -29,6 +30,7 @@ export function StatusTile(props: {
       </div>
 
       {props.subvalue && <div className="tileSub">{props.subvalue}</div>}
+      {props.footnote && <div className="tileAsOf">{props.footnote}</div>}
     </div>
   );
 }
