@@ -24,7 +24,12 @@ const THRESHOLDS = {
   // Load/outage percentiles
   loadWatchPct: 90,
   loadStressedPct: 95,
-  outageHighPct: 90
+  outageHighPct: 90,
+
+  // Supply headroom (% of available capability above demand).
+  // Only applied when ERCOT publishes real capacity (HASL); never estimated.
+  headroomWatchPct: 10,
+  headroomStressedPct: 5
 };
 
 export function computePriceStatus(price7d: Point[]): {
@@ -57,8 +62,11 @@ export function computeGridStress(input: {
   nowIso: string;
   pricePoints: Point[];
   loadPoints: Point[];
+  // Past/current outage points only (last = hour in progress), never future projections.
   outagePoints?: Point[];
   lambdaPoints?: Point[];
+  // Latest headroom %, or null when capacity data isn't available.
+  headroomPct?: number | null;
 }): GridStressLatest {
   const notes: string[] = [];
 
@@ -86,23 +94,29 @@ export function computeGridStress(input: {
   const lambdaWatch = latestLambda != null && latestLambda >= THRESHOLDS.lambdaWatch;
   const lambdaStressed = latestLambda != null && latestLambda >= THRESHOLDS.lambdaStressed;
 
+  const headroomPct = input.headroomPct ?? null;
+  const headroomLow = headroomPct != null && headroomPct < THRESHOLDS.headroomWatchPct;
+  const headroomVeryLow = headroomPct != null && headroomPct < THRESHOLDS.headroomStressedPct;
+
   // Classification
   let gridStress: GridStress = "Normal";
 
-  // STRESSED: Spike prices OR very high lambda OR (very high load + high outages)
+  // STRESSED: Spike prices OR very high lambda OR (very high load + high outages) OR very low headroom
   if (
     price.status === "Spike" ||
     lambdaStressed ||
-    (loadStressed && outageHigh)
+    (loadStressed && outageHigh) ||
+    headroomVeryLow
   ) {
     gridStress = "Stressed";
   }
-  // WATCH: Elevated prices OR high lambda OR unusually high load OR unusually high outages
+  // WATCH: Elevated prices OR high lambda OR unusually high load OR unusually high outages OR low headroom
   else if (
     price.status === "Elevated" ||
     lambdaWatch ||
     loadWatch ||
-    outageHigh
+    outageHigh ||
+    headroomLow
   ) {
     gridStress = "Watch";
   }
@@ -142,6 +156,15 @@ export function computeGridStress(input: {
     );
   }
 
+  if (headroomPct != null) {
+    notes.push(`Supply headroom is ${headroomPct.toFixed(1)}% above demand.`);
+    notes.push(
+      `Headroom rules: Watch below ${THRESHOLDS.headroomWatchPct}%; Stressed below ${THRESHOLDS.headroomStressedPct}% (available capability minus demand, as a share of capability).`
+    );
+  } else {
+    notes.push("Supply headroom isn't used right now because ERCOT isn't publishing available-capacity data.");
+  }
+
   notes.push(
     "This is a conservative indicator meant to answer: “Are conditions getting tight?” It is not an emergency alert system."
   );
@@ -150,6 +173,13 @@ export function computeGridStress(input: {
     ts: input.nowIso,
     gridStress,
     priceStatus: price.status,
+    loadWatch,
+    loadStressed,
+    outageHigh,
+    lambdaWatch,
+    lambdaStressed,
+    headroomLow,
+    latestLambda,
     latestPrice: price.latestPrice,
     priceP75: price.p75,
     priceP95: price.p95,

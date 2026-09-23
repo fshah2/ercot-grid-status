@@ -7,7 +7,9 @@
     "node": ">=20"
   },
   "scripts": {
-    "fetch": "tsx src/index.ts"
+    "fetch": "tsx src/index.ts",
+    "test": "tsx --test src/time.test.ts",
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
     "@types/node": "^25.0.10",

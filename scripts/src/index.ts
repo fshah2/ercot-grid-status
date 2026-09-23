@@ -20,9 +20,11 @@ import {
   buildOutagePoints,
   buildPricePoints,
   buildSupplyDemandPoints,
-  buildForecastPoints
+  buildForecastPoints,
+  splitAtNow
 } from "./normalize.js";
 import { computeGridStress } from "./gridStress.js";
+import { marketDate, marketDateTimeParam } from "./time.js";
 import type {
   FuelMix7d,
   Load7d,
@@ -40,32 +42,19 @@ function mustEnv(name: string): string {
 }
 
 /**
- * ERCOT requires some datetime query params in:
- *   yyyy-MM-ddThh:mm:ss
- * i.e., no milliseconds and no trailing timezone "Z".
+ * Read an existing frontend file only if it was written with the current schema.
+ * Older files (e.g. v1 with Central times mislabeled as UTC) are ignored so their
+ * points never mix with corrected ones; the fetch window rebuilds them.
  */
-function toErcotDateTimeParam(isoUtc: string): string {
-  return isoUtc.replace(/\.\d{3}Z$/, "").replace(/Z$/, "");
+function readVersioned<T extends { meta?: unknown }>(p: string): T | null {
+  const existing = readJsonIfExists<T>(p);
+  const version = (existing?.meta as { schemaVersion?: unknown } | undefined)?.schemaVersion;
+  if (existing && version !== CONFIG.schemaVersion) {
+    console.log(`[MIGRATE] Ignoring ${path.basename(p)} (schemaVersion ${String(version)} != ${CONFIG.schemaVersion}).`);
+    return null;
+  }
+  return existing;
 }
-
-function toMarketLocalParam(d: Date, timeZone: string): string {
-  const parts = new Intl.DateTimeFormat("en-US", {
-    timeZone,
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit",
-    hour12: false
-  }).formatToParts(d);
-
-  const get = (t: string) => parts.find((p) => p.type === t)?.value ?? "00";
-
-  // ERCOT expects: YYYY-MM-DDTHH:mm:ss  (NO timezone suffix)
-  return `${get("year")}-${get("month")}-${get("day")}T${get("hour")}:${get("minute")}:${get("second")}`;
-}
-
 
 async function main() {
   const username = mustEnv("ERCOT_USERNAME");
@@ -96,12 +85,19 @@ async function main() {
   const idToken = await getIdToken({ username, password });
   const client = new ErcotClient(idToken, subscriptionKey);
 
-  // Time window formats
-  const dateFrom = cutoff.slice(0, 10); // YYYY-MM-DD
-  const dateTo = nowIso.slice(0, 10);   // YYYY-MM-DD
+  // Time window formats. ERCOT query params are Central time (no zone suffix),
+  // so build them from Central dates/times, not UTC.
+  const cutoffDate = new Date(cutoffIso);
+  const dateFrom = marketDate(cutoffDate); // YYYY-MM-DD (Central)
+  const dateTo = marketDate(now);          // YYYY-MM-DD (Central)
 
-  const dtFrom = toErcotDateTimeParam(cutoffIso); // yyyy-MM-ddThh:mm:ss
-  const dtTo = toErcotDateTimeParam(nowIso);      // yyyy-MM-ddThh:mm:ss
+  const dtFrom = marketDateTimeParam(cutoffDate); // yyyy-MM-ddTHH:mm:ss (Central)
+  const dtTo = marketDateTimeParam(now);          // yyyy-MM-ddTHH:mm:ss (Central)
+
+  // Load forecast: only recent postings; each posting already covers ~7 days ahead.
+  const forecastPostedFrom = marketDateTimeParam(
+    new Date(now.getTime() - CONFIG.forecastPostedLookbackHours * 60 * 60 * 1000)
+  );
 
   // 2d_agg_gen_summary can lag by days. Fetch a wider window.
   // We'll later trim to "last 2 days of AVAILABLE data".
@@ -111,8 +107,8 @@ async function main() {
   const scedToDate = new Date(now.getTime() - scedLagHours * 60 * 60 * 1000);
   const scedFromDate = new Date(scedToDate.getTime() - scedLookbackHours * 60 * 60 * 1000);
 
-  const scedFrom = toMarketLocalParam(scedFromDate, CONFIG.marketTimeZone);
-  const scedTo = toMarketLocalParam(scedToDate, CONFIG.marketTimeZone);
+  const scedFrom = marketDateTimeParam(scedFromDate);
+  const scedTo = marketDateTimeParam(scedToDate);
 
 
   const QUERY_BY_KEY: Record<string, Record<string, string>> = {
@@ -121,26 +117,30 @@ async function main() {
       operatingDayTo: dateTo
     },
     lf_by_model_weather_zone: {
-      postedDatetimeFrom: dtFrom,
-      postedDatetimeTo: dtTo
+      postedDatetimeFrom: forecastPostedFrom,
+      postedDatetimeTo: dtTo,
+      inUseFlag: "true"
     },
     hourly_res_outage_cap: {
       postedDatetimeFrom: dtFrom,
       postedDatetimeTo: dtTo
     },
 
-    // SCED-based endpoints: lock window using SCEDTimestampFrom/To
+    // SCED-based endpoints: lock window using SCEDTimestampFrom/To.
+    // Only 2d_agg_gen_summary lags; prices and lambda are real-time, so query up to now.
     "2d_agg_gen_summary": {
       SCEDTimestampFrom: scedFrom,
       SCEDTimestampTo: scedTo
     },
     lmp_node_zone_hub: {
-      SCEDTimestampFrom: scedFrom,
-      SCEDTimestampTo: scedTo
+      SCEDTimestampFrom: dtFrom,
+      SCEDTimestampTo: dtTo,
+      // Server-side filter: without it every SCED run returns ~1,000 settlement points.
+      settlementPoint: CONFIG.headlineSettlementPoint
     },
     sced_system_lambda: {
-      SCEDTimestampFrom: scedFrom,
-      SCEDTimestampTo: scedTo
+      SCEDTimestampFrom: dtFrom,
+      SCEDTimestampTo: dtTo
     }
   };
 
@@ -200,12 +200,12 @@ async function main() {
   pruneOldHistory(dataHistoryDir, cutoff);
 
   // Merge + normalize for frontend
-  const existingLoad = readJsonIfExists<Load7d>(path.join(publicDataDir, "load_7d.json"));
-  const existingPrice = readJsonIfExists<Price7d>(path.join(publicDataDir, "price_7d.json"));
-  const existingFuel = readJsonIfExists<FuelMix7d>(path.join(publicDataDir, "fuelmix_7d.json"));
-  const existingOutages = readJsonIfExists<Outages7d>(path.join(publicDataDir, "outages_7d.json"));
-  const existingForecast = readJsonIfExists<Forecast7d>(path.join(publicDataDir, "forecast_7d.json"));
-  const existingSupply = readJsonIfExists<SupplyDemand2d>(path.join(publicDataDir, "supplydemand_2d.json"));
+  const existingLoad = readVersioned<Load7d>(path.join(publicDataDir, "load_7d.json"));
+  const existingPrice = readVersioned<Price7d>(path.join(publicDataDir, "price_7d.json"));
+  const existingFuel = readVersioned<FuelMix7d>(path.join(publicDataDir, "fuelmix_7d.json"));
+  const existingOutages = readVersioned<Outages7d>(path.join(publicDataDir, "outages_7d.json"));
+  const existingForecast = readVersioned<Forecast7d>(path.join(publicDataDir, "forecast_7d.json"));
+  const existingSupply = readVersioned<SupplyDemand2d>(path.join(publicDataDir, "supplydemand_2d.json"));
 
   const loadRows = pagesLoad ? pagesLoad.flatMap((p) => extractRows(p as any)) : [];
   const forecastRows = pagesForecast ? pagesForecast.flatMap((p) => extractRows(p as any)) : [];
@@ -216,7 +216,11 @@ async function main() {
 
   const newLoadPoints = withinWindow(buildLoadPoints(loadRows), cutoff);
   const newForecastPoints = withinWindow(buildForecastPoints(forecastRows), cutoff);
-  const newOutagePoints = withinWindow(buildOutagePoints(outageRows), cutoff);
+  // Outage postings include projections up to ~7 days ahead. Split at "now":
+  // past/current hours are history (merged), future hours are the upcoming outlook (replaced each run).
+  const outageSplit = splitAtNow(buildOutagePoints(outageRows), now.getTime());
+  const newOutagePoints = withinWindow(outageSplit.past, cutoff);
+  const upcomingOutagePoints = outageSplit.future;
   const newFuelPoints = withinWindow(buildFuelMixPoints(fuelRows), cutoff);
   const newPricePoints = withinWindow(
     buildPricePoints(priceRows, CONFIG.headlineSettlementPoint),
@@ -242,7 +246,7 @@ async function main() {
   );
 
   // Supply-vs-demand is only 2-day and derived from fuel rows aligned with demand.
-  const supplyNew = buildSupplyDemandPoints(fuelRows, mergedLoad);
+  const { points: supplyNew, haslAvailable } = buildSupplyDemandPoints(fuelRows, mergedLoad);
 
   // IMPORTANT: trim relative to latest AVAILABLE SCED timestamp (ERCOT can lag days).
   const latestSupplyTs = supplyNew.length ? supplyNew[supplyNew.length - 1].ts : null;
@@ -257,6 +261,8 @@ async function main() {
     mergeUniqueByTs(existingSupply?.points ?? [], supplyNewWindow),
     supplyCutoff
   );
+  // Headroom is only meaningful when real capacity (HASL) exists in the data we're showing.
+  const headroomAvailable = haslAvailable || mergedSupply.some((p) => p.availHASLMW != null);
 
   const mergedForecast = withinWindow(
     mergeUniqueByTs(existingForecast?.points ?? [], newForecastPoints),
@@ -265,31 +271,34 @@ async function main() {
 
   const load7d: Load7d = {
     meta: {
+      schemaVersion: CONFIG.schemaVersion,
       updatedAt: nowIso,
       windowDays: CONFIG.historyDays,
       source: "ERCOT Public Data API",
       endpoint: CONFIG.endpoints.actualLoad,
       queryUsed: usedQueryByKey["act_sys_load_by_fzn"] ?? {},
-      notes: "System load is aggregated across rows per timestamp (if multiple zones are present)."
+      notes: "System load (total MW) per hour. ts is the hour-ending time in UTC (ERCOT Central-time hour ending converted, HE24 = next day 00:00 Central)."
     },
     points: mergedLoad
   };
 
   const forecast7d: Forecast7d = {
     meta: {
+      schemaVersion: CONFIG.schemaVersion,
       updatedAt: nowIso,
       windowDays: CONFIG.historyDays,
       source: "ERCOT Public Data API",
       endpoint: CONFIG.endpoints.forecast,
       queryUsed: usedQueryByKey["lf_by_model_weather_zone"] ?? {},
       notes:
-        "Forecast is best-effort aggregated across rows per timestamp. If your dataset schema differs, adjust scripts/src/normalize.ts buildForecastPoints()."
+        "ERCOT system-wide load forecast (systemTotal) from the in-use model only. ts is the hour-ending time in UTC; for each hour the most recent posting wins. Points extend into the future."
     },
     points: mergedForecast
   };
 
   const price7d: Price7d = {
     meta: {
+      schemaVersion: CONFIG.schemaVersion,
       updatedAt: nowIso,
       windowDays: CONFIG.historyDays,
       source: "ERCOT Public Data API",
@@ -297,13 +306,14 @@ async function main() {
       queryUsed: usedQueryByKey["lmp_node_zone_hub"] ?? {},
       headlineSettlementPoint: CONFIG.headlineSettlementPoint,
       notes:
-        "Price series is the selected settlement point if present (default HB_NORTH). If not present, we fall back to averaging available rows per timestamp."
+        "Price series is the selected settlement point (default HB_NORTH), filtered server-side. If not present, we fall back to averaging available hub rows per timestamp."
     },
     points: mergedPrice
   };
 
   const fuelmix7d: FuelMix7d = {
     meta: {
+      schemaVersion: CONFIG.schemaVersion,
       updatedAt: nowIso,
       windowDays: CONFIG.historyDays,
       source: "ERCOT Public Data API",
@@ -317,26 +327,33 @@ async function main() {
 
   const outages7d: Outages7d = {
     meta: {
+      schemaVersion: CONFIG.schemaVersion,
       updatedAt: nowIso,
       windowDays: CONFIG.historyDays,
       source: "ERCOT Public Data API",
       endpoint: CONFIG.endpoints.outages,
       queryUsed: usedQueryByKey["hourly_res_outage_cap"] ?? {},
       notes:
-        "Outages are aggregated from NP3-233-CD by load zone and split into Total, IRR, and New Equipment capability outages."
+        "Outages are aggregated from NP3-233-CD by load zone and split into Total, IRR, and New Equipment capability outages. For each hour the most recent posting wins. `points` are past hours plus the hour in progress; `upcomingPoints` are ERCOT's scheduled outlook for future hours."
     },
-    points: mergedOutages
+    points: mergedOutages,
+    upcomingPoints: upcomingOutagePoints
   };
 
   const supplyDemand2d: SupplyDemand2d = {
     meta: {
+      schemaVersion: CONFIG.schemaVersion,
       updatedAt: nowIso,
       windowDays: 2,
       source: "ERCOT Public Data API",
       endpoint: CONFIG.endpoints.fuelMix,
       queryUsed: usedQueryByKey["2d_agg_gen_summary"] ?? {},
+      headroomAvailable,
+      headroomNote: headroomAvailable
+        ? "Available capability is the total HASL (High Ancillary Service Limit) across NonIRR+WGR+PVGR+REMRES from the 2-Day Aggregated Generation Summary."
+        : "ERCOT isn't currently publishing available-capacity (HASL) values in the 2-Day Aggregated Generation Summary; every HASL field is empty. Headroom is left blank rather than estimated from generation.",
       notes:
-        "Supply = total HASL (High Sustained Limit) across NonIRR+WGR+PVGR+REMRES from 2D Agg Gen Summary. Demand aligns to the most recent hourly system load reading at-or-before each SCED timestamp."
+        "Demand aligns to the most recent hourly system load reading at-or-before each SCED timestamp (both in UTC). This report lags real time by about 2 days."
     },
     points: mergedSupply
   };
@@ -348,19 +365,28 @@ async function main() {
     ? mergedSupply[mergedSupply.length - 1]
     : null;
 
+  const latestHeadroomPct = headroomAvailable ? latestSupply?.headroomPct ?? null : null;
+
   const gridstress: GridStressLatest = computeGridStress({
     nowIso,
     pricePoints: mergedPrice,
     loadPoints: mergedLoad,
     outagePoints: outagesForStress,
-    lambdaPoints: CONFIG.includeSystemLambda ? newLambdaPoints : []
+    lambdaPoints: CONFIG.includeSystemLambda ? newLambdaPoints : [],
+    headroomPct: latestHeadroomPct
   });
 
   // Add extra context used by the UI (bands/tiles).
-  gridstress.latestHeadroomMW = latestSupply?.headroomMW ?? null;
-  gridstress.latestHeadroomPct = latestSupply?.headroomPct ?? null;
-  gridstress.latestDemandMW = latestSupply?.demandMW ?? (mergedLoad.length ? mergedLoad[mergedLoad.length - 1].value : null);
-  gridstress.latestOutagesMW = outagesForStress.length ? outagesForStress[outagesForStress.length - 1].value : null;
+  gridstress.meta = { schemaVersion: CONFIG.schemaVersion };
+  gridstress.headroomAvailable = headroomAvailable;
+  gridstress.latestHeadroomMW = headroomAvailable ? latestSupply?.headroomMW ?? null : null;
+  gridstress.latestHeadroomPct = latestHeadroomPct;
+  // Demand from the hourly load series (supply-vs-demand lags ~2 days).
+  gridstress.latestDemandMW = mergedLoad.length ? mergedLoad[mergedLoad.length - 1].value : null;
+  // Last past/current point = the hour in progress, never a future projection.
+  const latestOutage = outagesForStress.length ? outagesForStress[outagesForStress.length - 1] : null;
+  gridstress.latestOutagesMW = latestOutage?.value ?? null;
+  gridstress.latestOutagesTs = latestOutage?.ts ?? null;
   gridstress.latestPrice = mergedPrice.length ? mergedPrice[mergedPrice.length - 1].value : null;
 
   // Write frontend JSON

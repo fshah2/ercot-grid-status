@@ -8,7 +8,12 @@ import type {
   SupplyDemand2d
 } from "./types";
 
-async function getJson<T>(path: string): Promise<T> {
+// The site is served under a sub-path on GitHub Pages (e.g. /ercot-grid-status).
+// NEXT_PUBLIC_BASE_PATH is inlined at build time; empty for local `npm run dev`.
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
+async function getJson<T>(relPath: string): Promise<T> {
+  const path = `${BASE_PATH}${relPath}`;
   const res = await fetch(path, { cache: "no-store" });
   if (!res.ok) throw new Error(`Failed to load ${path}: ${res.status}`);
   return (await res.json()) as T;
