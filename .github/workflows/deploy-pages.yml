@@ -4,6 +4,11 @@ on:
   push:
     branches: ["main"]
   workflow_dispatch: {}
+  # Data commits are pushed with GITHUB_TOKEN, which does NOT trigger `push` workflows.
+  # Redeploy after every successful data refresh instead.
+  workflow_run:
+    workflows: ["Update ERCOT data (every 15 minutes)"]
+    types: [completed]
 
 permissions:
   contents: read
@@ -16,10 +21,15 @@ concurrency:
 
 jobs:
   build:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # workflow_run checks out the commit that *started* the data run by default;
+          # deploy the latest main so the freshly committed data is included.
+          ref: main
 
       - name: Setup Node
         uses: actions/setup-node@v4

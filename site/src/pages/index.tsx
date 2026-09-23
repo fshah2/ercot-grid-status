@@ -70,7 +70,13 @@ export default function HomePage() {
     const renewPct =
       renewNow != null && genNow != null && genNow > 0 ? (renewNow / genNow) * 100 : null;
 
-    return { latestPrice, renewPct };
+    // 2d_agg_gen_summary lags ~2 days, so show when this mix is from.
+    const renewAsOf = latestFuel ? fmtTime(latestFuel.ts) : null;
+
+    const headroomAvailable =
+      state.supply.meta?.headroomAvailable ?? state.stress.headroomAvailable ?? false;
+
+    return { latestPrice, renewPct, renewAsOf, headroomAvailable };
   }, [state]);
 
   const reasonLine = useMemo(() => {
@@ -82,21 +88,15 @@ export default function HomePage() {
     if (s.priceStatus === "Spike") reasons.push("Price spike");
     else if (s.priceStatus === "Elevated") reasons.push("High prices");
 
-    // System Lambda detection from notes
-    const lambdaNote = s.notes.find((n) => /System Lambda is/i.test(n));
-    if (lambdaNote) {
-      const m = lambdaNote.match(/(\d+(?:\.\d+)?)/);
-      const v = m ? Number(m[1]) : NaN;
-      if (Number.isFinite(v)) {
-        if (v >= 500) reasons.push("Very high system cost");
-        else if (v >= 300) reasons.push("High system cost");
-      }
-    }
+    if (s.lambdaStressed) reasons.push("Very high system cost");
+    else if (s.lambdaWatch) reasons.push("High system cost");
 
-    if (s.gridStress !== "Normal") {
-      if (s.notes.some((n) => /Demand right now/i.test(n))) reasons.push("High demand");
-      if (s.notes.some((n) => /Outages right now/i.test(n))) reasons.push("High outages");
-    }
+    if (s.headroomLow) reasons.push("Low supply headroom");
+
+    if (s.loadStressed) reasons.push("Very high demand");
+    else if (s.loadWatch) reasons.push("High demand");
+
+    if (s.outageHigh) reasons.push("High outages");
 
     // Dedup + keep top 2
     const seen = new Set<string>();
@@ -182,12 +182,13 @@ export default function HomePage() {
                       It helps answer: <b>should I expect the grid to be under strain right now?</b>
                     </p>
                     <p>
-                      We look at: <b>prices</b>, <b>demand</b>, <b>outages</b>, and (when available) <b>System Lambda</b>.
+                      We look at: <b>prices</b>, <b>demand</b>, <b>outages</b>, <b>System Lambda</b>, and (when ERCOT
+                      publishes it) <b>supply headroom</b>.
                       Higher values usually mean ERCOT is using more expensive or limited resources.
                     </p>
                     <p className="muted">Why this label was chosen (latest signals):</p>
                     <ul>
-                      {state.stress.notes.slice(0, 6).map((n, i) => (
+                      {state.stress.notes.map((n, i) => (
                         <li key={i}>{n}</li>
                       ))}
                     </ul>
@@ -200,6 +201,7 @@ export default function HomePage() {
                 icon="🌬️"
                 value={computed.renewPct == null ? "—" : `${computed.renewPct.toFixed(0)}%`}
                 subvalue="Share of generation"
+                footnote={computed.renewAsOf ? `as of ${computed.renewAsOf} (ERCOT publishes this ~2 days late)` : undefined}
                 tone="neutral"
                 tooltipTitle="What counts as renewables here?"
                 tooltipBody={
@@ -209,6 +211,10 @@ export default function HomePage() {
                     </p>
                     <p className="muted">
                       Renewables can change quickly (weather + time of day), which can affect prices.
+                    </p>
+                    <p className="muted">
+                      ERCOT releases this generation summary about 2 days after the fact, so this is not a live
+                      reading. The “as of” time shows which moment it describes.
                     </p>
                   </div>
                 }
@@ -256,9 +262,14 @@ export default function HomePage() {
           {/* SUPPLY HEADROOM (2D) */}
           <div className="section">
             <div className="sectionHead">
-              <h2 className="h2Big">Supply headroom (last 2 days)</h2>
+              <h2 className="h2Big">
+                {computed.headroomAvailable ? "Supply headroom (last 2 days)" : "Supply vs demand (last 2 days)"}
+              </h2>
               <div className="muted">
-                Quick view of demand vs what ERCOT reports as available capability. This is the clearest “do we have enough supply?” check.
+                {computed.headroomAvailable
+                  ? "Quick view of demand vs what ERCOT reports as available capability. This is the clearest “do we have enough supply?” check."
+                  : "Demand vs actual generation. ERCOT isn’t currently publishing available-capacity data, so spare headroom can’t be shown."}{" "}
+                This ERCOT report runs about 2 days behind.
               </div>
             </div>
 
@@ -269,7 +280,11 @@ export default function HomePage() {
             ) : (
               <div className="grid">
                 <ChartCard
-                  title="Do we have enough supply? (Demand vs Available) — last 2 days"
+                  title={
+                    computed.headroomAvailable
+                      ? "Do we have enough supply? (Demand vs Available) — last 2 days"
+                      : "Demand vs Generation — last 2 days"
+                  }
                   tooltipTitle="What is “Available capability” here?"
                   tooltipBody={
                     <div>
@@ -277,12 +292,18 @@ export default function HomePage() {
                         <b>Demand</b> is the system load (how much Texans are using).
                       </p>
                       <p>
-                        <b>Available capability (HASL)</b> is a best-effort “how much could we produce?” envelope
-                        from ERCOT’s 2-day aggregated generation summary.
+                        <b>Available capability (HASL)</b> is ERCOT’s “how much could we produce right now?” total
+                        from the 2-day aggregated generation summary.
                       </p>
                       <p className="muted">
                         Headroom = Available − Demand. If headroom shrinks, conditions can get tighter.
                       </p>
+                      {!computed.headroomAvailable && (
+                        <p className="muted">
+                          ERCOT currently leaves the capacity fields in this report empty. We don’t estimate them
+                          from generation, because that would make headroom look negative when it isn’t.
+                        </p>
+                      )}
                     </div>
                   }
                 >
@@ -316,7 +337,10 @@ export default function HomePage() {
                         This chart shows how much electricity Texans are using. When demand is unusually high,
                         the grid can get tighter.
                       </p>
-                      <p className="muted">The dashed line (if present) is the best-effort forecast from ERCOT.</p>
+                      <p className="muted">
+                        The dashed line is ERCOT’s official load forecast (the model ERCOT is currently using). It
+                        continues into the coming days.
+                      </p>
                     </div>
                   }
                 >
@@ -358,7 +382,7 @@ export default function HomePage() {
                 </ChartCard>
 
                 <ChartCard
-                  title="Outages — last 7 days"
+                  title="Outages — last 7 days + scheduled outlook"
                   tooltipTitle="What are outages in this chart?"
                   tooltipBody={
                     <div>
@@ -366,7 +390,8 @@ export default function HomePage() {
                         Outages are generation that is unavailable. Higher outages can make the grid tighter.
                       </p>
                       <p className="muted">
-                        We aggregate outage-related fields per timestamp.
+                        We use ERCOT’s most recent posting for each hour. The dashed line is ERCOT’s outlook for the
+                        coming days (scheduled outages), which can change.
                       </p>
                     </div>
                   }

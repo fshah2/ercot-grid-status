@@ -12,6 +12,11 @@
 // }
 //
 // This file converts that into object rows and then into frontend points.
+//
+// All ERCOT timestamps are Central Prevailing Time with no offset; every `ts`
+// produced here is real UTC ISO (see time.ts).
+
+import { hourEndingToUtcIso, localTimeToUtcIso } from "./time.js";
 
 type AnyRow = Record<string, any>;
 type ApiResponseLike = any;
@@ -33,45 +38,22 @@ function toNumber(v: any): number | null {
   return Number.isFinite(n) ? n : null;
 }
 
-// Some ERCOT timestamps look like "2026-01-24T18:45:17" (no timezone).
-// Treat as UTC for consistency by appending "Z" when no timezone is present.
-function normalizeTs(ts: string): string {
-  if (!ts) return ts;
-  // already ISO with Z or offset
-  if (/[zZ]$/.test(ts) || /[+-]\d{2}:\d{2}$/.test(ts)) return ts;
-  // looks like YYYY-MM-DDTHH:mm:ss
-  if (/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}$/.test(ts)) return `${ts}Z`;
-  return ts;
+/**
+ * True when the row is flagged as the second occurrence of the repeated hour
+ * on the fall-back DST day. Each dataset names the flag differently:
+ *  - repeatHourFlag: 2d_agg_gen_summary, lmp_node_zone_hub
+ *  - repeatedHourFlag: sced_system_lambda
+ *  - DSTFlag: act_sys_load_by_fzn, lf_by_model_weather_zone
+ * hourly_res_outage_cap has no flag (first occurrence is used).
+ */
+function isRepeatHour(r: AnyRow): boolean {
+  return r.repeatHourFlag === true || r.repeatedHourFlag === true || r.DSTFlag === true;
 }
 
-function pad2(n: number) {
-  return String(n).padStart(2, "0");
-}
-
-function addDays(dateIso: string, days: number): string {
-  const d = new Date(`${dateIso}T00:00:00Z`);
-  d.setUTCDate(d.getUTCDate() + days);
-  return d.toISOString().slice(0, 10);
-}
-
-// Load endpoint gives operatingDay + hourEnding like "01:00".
-// We'll map to a timestamp at that hour (UTC) as "YYYY-MM-DDTHH:00:00Z".
-function operatingDayHourToTs(operatingDay: string, hourEnding: string): string {
-  // hourEnding expected "HH:00"
-  const hh = hourEnding?.slice(0, 2);
-  if (!operatingDay || !hh) return "";
-  return `${operatingDay}T${hh}:00:00Z`;
-}
-
-function operatingDateHourEndingIntToTs(operatingDate: string, hourEndingInt: any): string {
-  const he = Number(hourEndingInt);
-  if (!operatingDate || !Number.isFinite(he) || he < 1 || he > 24) return "";
-  if (he === 24) {
-    // 24:00 -> 00:00 next day
-    const nextDay = addDays(operatingDate, 1);
-    return `${nextDay}T00:00:00Z`;
-  }
-  return `${operatingDate}T${pad2(he)}:00:00Z`;
+// ERCOT SCED/posted timestamps look like "2026-01-24T18:45:17" (Central time, no zone).
+function normalizeTs(ts: string, isRepeat = false): string {
+  if (!ts) return "";
+  return localTimeToUtcIso(ts, { isRepeatHour: isRepeat }) ?? "";
 }
 
 function firstArrayRow(arr: any[]): any[] | null {
@@ -108,7 +90,8 @@ export function extractRows(resp: ApiResponseLike): AnyRow[] {
     // Case: array-of-arrays (often mistakenly saved as the entire payload)
     const first = firstArrayRow(resp);
     if (first && looksLikeAggGenSummaryRow(first)) {
-      // IMPORTANT: match ERCOT field order for NP3-910-ER (2D Agg Gen Summary)
+      // IMPORTANT: match ERCOT field order for NP3-910-ER (2D Agg Gen Summary),
+      // as returned in the API's `fields` array (see data/latest/2d_agg_gen_summary.json).
       // (2nd col is repeatHourFlag, NOT postedDatetime)
       const fallbackFields = [
         "SCEDTimestamp",
@@ -117,19 +100,18 @@ export function extractRows(resp: ApiResponseLike): AnyRow[] {
         "sumBasePointWGR",
         "sumBasePointPVGR",
         "sumBasePointREMRES",
-        "sumBasePointTotal",
+        "sumGenTelemMW",
+        "sumBasePointESR",
         "sumBasePointESRCharge",
         "sumBasePointESRDischarge",
-        "sumBasePointESRNet",
         "sumHASLNonIRR",
+        "sumLASLNonIRR",
         "sumHASLWGR",
+        "sumLASLWGR",
         "sumHASLPVGR",
+        "sumLASLPVGR",
         "sumHASLREMRES",
-        "sumHASLTotal",
-        "sumGenTelemMW",
-        "sumAuxLoadTelemMW",
-        "sumAncServiceTelemMW",
-        "sumNetGenTelemMW"
+        "sumLASLREMRES"
       ];
 
       return (resp as any[])
@@ -184,6 +166,7 @@ export function extractRows(resp: ApiResponseLike): AnyRow[] {
 
 /**
  * Build LOAD points: {ts,value} using operatingDay + hourEnding and "total" MW.
+ * ts = UTC instant at which the hour ends (HE24 -> next day 00:00 Central).
  */
 export function buildLoadPoints(rows: AnyRow[]): Array<{ ts: string; value: number }> {
   const points: Array<{ ts: string; value: number }> = [];
@@ -195,7 +178,7 @@ export function buildLoadPoints(rows: AnyRow[]): Array<{ ts: string; value: numb
 
     if (!operatingDay || !hourEnding || total === null) continue;
 
-    const ts = operatingDayHourToTs(String(operatingDay), String(hourEnding));
+    const ts = hourEndingToUtcIso(String(operatingDay), hourEnding, { isRepeatHour: isRepeatHour(r) });
     if (!ts) continue;
 
     points.push({ ts, value: total });
@@ -228,7 +211,8 @@ export function buildPricePoints(
 
     if (!tsRaw || !sp || lmp === null) continue;
 
-    const ts = normalizeTs(String(tsRaw));
+    const ts = normalizeTs(String(tsRaw), isRepeatHour(r));
+    if (!ts) continue;
     const arr = byTs.get(ts) ?? [];
     arr.push({ ts, settlementPoint: String(sp), LMP: lmp });
     byTs.set(ts, arr);
@@ -287,7 +271,8 @@ export function buildFuelMixPoints(rows: AnyRow[]): Array<{
     const tsRaw = r.SCEDTimestamp ?? r.scedTimestamp ?? r.timestamp;
     if (!tsRaw) continue;
 
-    const ts = normalizeTs(String(tsRaw));
+    const ts = normalizeTs(String(tsRaw), isRepeatHour(r));
+    if (!ts) continue;
 
     const wind = toNumber(r.sumBasePointWGR) ?? 0;
     const solar = toNumber(r.sumBasePointPVGR) ?? 0;
@@ -335,29 +320,26 @@ export function buildFuelMixPoints(rows: AnyRow[]): Array<{
 }
 
 /**
- * Build OUTAGE points (best-effort).
- * We try common zone-based fields.
+ * Build OUTAGE points from NP3-233-CD (Hourly Resource Outage Capacity).
+ *
+ * Every hourly posting repeats the whole outlook (today through ~7 days ahead),
+ * so the same target hour appears in many postings. For each target hour we keep
+ * the row from the most recent postedDatetime. The result spans past AND future
+ * hours; use splitOutagesAtNow() to separate them.
  */
-export function buildOutagePoints(rows: AnyRow[]): Array<{
-  ts: string;
-  totalResourceMW: number;
-  totalIRRMW: number;
-  totalNewEquipResourceMW: number;
-  zones?: { south: number; north: number; west: number; houston: number };
-}> {
-  const points: Array<{
-    ts: string;
-    totalResourceMW: number;
-    totalIRRMW: number;
-    totalNewEquipResourceMW: number;
-    zones?: { south: number; north: number; west: number; houston: number };
-  }> = [];
+export function buildOutagePoints(rows: AnyRow[]): OutagePointOut[] {
+  const best = new Map<string, { posted: string; point: OutagePointOut }>();
 
   for (const r of rows) {
     const operatingDate = r.operatingDate ?? r.operatingDay ?? r.operating_date;
     const he = r.hourEnding ?? r.hour_ending ?? r.hourEndingInt;
-    const ts = operatingDateHourEndingIntToTs(String(operatingDate ?? ""), he);
+    // No repeat-hour flag in this dataset: first occurrence is used.
+    const ts = hourEndingToUtcIso(String(operatingDate ?? ""), he);
     if (!ts) continue;
+
+    const posted = String(r.postedDatetime ?? "");
+    const prev = best.get(ts);
+    if (prev && prev.posted >= posted) continue;
 
     const zSouth = toNumber(r.totalResourceMWZoneSouth) ?? 0;
     const zNorth = toNumber(r.totalResourceMWZoneNorth) ?? 0;
@@ -377,47 +359,93 @@ export function buildOutagePoints(rows: AnyRow[]): Array<{
     const neHouston = toNumber(r.totalNewEquipResourceMWZoneHouston) ?? 0;
     const totalNewEquipResourceMW = neSouth + neNorth + neWest + neHouston;
 
-    points.push({
-      ts,
-      totalResourceMW,
-      totalIRRMW,
-      totalNewEquipResourceMW,
-      zones: { south: zSouth, north: zNorth, west: zWest, houston: zHouston }
+    best.set(ts, {
+      posted,
+      point: {
+        ts,
+        totalResourceMW,
+        totalIRRMW,
+        totalNewEquipResourceMW,
+        zones: { south: zSouth, north: zNorth, west: zWest, houston: zHouston }
+      }
     });
   }
 
-  points.sort((a, b) => a.ts.localeCompare(b.ts));
-  // Dedupe by ts (keep last)
-  const out: typeof points = [];
+  return [...best.values()].map((b) => b.point).sort((a, b) => a.ts.localeCompare(b.ts));
+}
+
+type OutagePointOut = {
+  ts: string;
+  totalResourceMW: number;
+  totalIRRMW: number;
+  totalNewEquipResourceMW: number;
+  zones?: { south: number; north: number; west: number; houston: number };
+};
+
+/**
+ * Split hour-ending points into past/current vs future.
+ * An hour-ending point `ts` covers [ts-1h, ts). The hour in progress
+ * (ts-1h <= now < ts) counts as "current", so it lands in `past`.
+ */
+export function splitAtNow<T extends { ts: string }>(
+  points: T[],
+  nowMs: number
+): { past: T[]; future: T[] } {
+  const past: T[] = [];
+  const future: T[] = [];
   for (const p of points) {
-    if (!out.length || out[out.length - 1].ts !== p.ts) out.push(p);
-    else out[out.length - 1] = p;
+    const t = Date.parse(p.ts);
+    if (!Number.isFinite(t)) continue;
+    (t - 60 * 60 * 1000 <= nowMs ? past : future).push(p);
   }
-  return out;
+  return { past, future };
 }
 
 /**
  * Build SUPPLY vs DEMAND points using 2D Agg Gen Summary (NP3-910-ER)
  * and align to the most recent LOAD point at-or-before each SCED timestamp.
+ *
+ * Available capability = sum of HASL (High Ancillary Service Limit) across
+ * NonIRR + WGR + PVGR + REMRES. ERCOT currently publishes these as null in
+ * this report. We NEVER substitute generation or base point for capacity
+ * (that makes headroom = generation - load, which is meaningless), so when
+ * HASL is missing, availHASLMW / headroomMW / headroomPct are null and
+ * `haslAvailable` is false.
  */
 export function buildSupplyDemandPoints(
   fuelRows: AnyRow[],
   loadPoints: Array<{ ts: string; value: number }>
-): Array<{
-  ts: string;
-  demandMW: number | null;
-  genTelemMW: number | null;
-  availHASLMW: number | null;
-  headroomMW: number | null;
-  headroomPct: number | null;
-}> {
-  const lp = [...loadPoints].sort((a, b) => a.ts.localeCompare(b.ts));
-  let li = 0;
+): {
+  haslAvailable: boolean;
+  points: Array<{
+    ts: string;
+    demandMW: number | null;
+    genTelemMW: number | null;
+    availHASLMW: number | null;
+    headroomMW: number | null;
+    headroomPct: number | null;
+  }>;
+} {
+  // Both sides are real UTC ISO strings here, so compare as epoch ms.
+  const lp = loadPoints
+    .map((p) => ({ t: Date.parse(p.ts), value: p.value }))
+    .filter((p) => Number.isFinite(p.t))
+    .sort((a, b) => a.t - b.t);
 
+  // Binary search: independent of row order (the API returns SCED rows newest-first).
   function demandAtOrBefore(ts: string): number | null {
-    if (!lp.length) return null;
-    while (li + 1 < lp.length && lp[li + 1].ts <= ts) li++;
-    return lp[li].ts <= ts ? lp[li].value : null;
+    const t = Date.parse(ts);
+    let lo = 0;
+    let hi = lp.length - 1;
+    let found = -1;
+    while (lo <= hi) {
+      const mid = (lo + hi) >> 1;
+      if (lp[mid].t <= t) {
+        found = mid;
+        lo = mid + 1;
+      } else hi = mid - 1;
+    }
+    return found >= 0 ? lp[found].value : null;
   }
 
   const out: Array<{
@@ -429,44 +457,30 @@ export function buildSupplyDemandPoints(
     headroomPct: number | null;
   }> = [];
 
+  let haslAvailable = false;
+
   for (const r of fuelRows) {
     const tsRaw = r.SCEDTimestamp ?? r.scedTimestamp ?? r.timestamp;
     if (!tsRaw) continue;
-    const ts = normalizeTs(String(tsRaw));
+    const ts = normalizeTs(String(tsRaw), isRepeatHour(r));
+    if (!ts) continue;
 
     const demandMW = demandAtOrBefore(ts);
 
     const genTelemMW = toNumber(r.sumGenTelemMW);
 
-    // Prefer explicit sumHASLTotal when available (some payloads provide it directly)
-    const haslTotalDirect = toNumber(r.sumHASLTotal);
-
-    // Or sum components when present
-    const haslNon = toNumber(r.sumHASLNonIRR);
-    const haslW = toNumber(r.sumHASLWGR);
-    const haslS = toNumber(r.sumHASLPVGR);
-    const haslR = toNumber(r.sumHASLREMRES);
-
-    const hasAnyHasl = [haslNon, haslW, haslS, haslR].some((v) => v != null);
-    const haslTotalFromParts = hasAnyHasl
-      ? (haslNon ?? 0) + (haslW ?? 0) + (haslS ?? 0) + (haslR ?? 0)
+    const haslParts = [
+      toNumber(r.sumHASLNonIRR),
+      toNumber(r.sumHASLWGR),
+      toNumber(r.sumHASLPVGR),
+      toNumber(r.sumHASLREMRES)
+    ];
+    // Only trust a row when every component is present; a partial sum would
+    // understate capacity and raise false alarms.
+    const availHASLMW = haslParts.every((v) => v != null)
+      ? haslParts.reduce<number>((s, v) => s + (v as number), 0)
       : null;
-
-    const haslTotal = haslTotalDirect ?? haslTotalFromParts;
-
-    // Fallback availability proxy (in order of preference):
-    // 1) sumBasePointTotal (scheduled generation)
-    // 2) sumNetGenTelemMW (telemetry)
-    // 3) sumGenTelemMW
-    const basePointTotal = toNumber(r.sumBasePointTotal);
-    const netGenTelemMW = toNumber(r.sumNetGenTelemMW);
-
-    const availProxyMW =
-      basePointTotal ??
-      (netGenTelemMW == null ? null : netGenTelemMW) ??
-      (genTelemMW == null ? null : genTelemMW);
-
-    const availHASLMW = haslTotal ?? availProxyMW;
+    if (availHASLMW != null) haslAvailable = true;
 
     const headroomMW = demandMW == null || availHASLMW == null ? null : availHASLMW - demandMW;
     const headroomPct =
@@ -478,7 +492,7 @@ export function buildSupplyDemandPoints(
       ts,
       demandMW,
       genTelemMW: genTelemMW == null ? null : genTelemMW,
-      availHASLMW: availHASLMW == null || !Number.isFinite(availHASLMW) ? null : availHASLMW,
+      availHASLMW,
       headroomMW,
       headroomPct
     });
@@ -491,68 +505,57 @@ export function buildSupplyDemandPoints(
     if (!dedup.length || dedup[dedup.length - 1].ts !== p.ts) dedup.push(p);
     else dedup[dedup.length - 1] = p;
   }
-  return dedup;
+  return { haslAvailable, points: dedup };
 }
 
 /**
- * Build FORECAST points (best-effort).
- * This endpoint’s schema varies; we try to locate:
- * - a timestamp field
- * - a value field (load/forecast)
+ * Build FORECAST points from NP3-565-CD (Seven-Day Load Forecast by Model and Weather Zone).
+ * - Only rows with inUseFlag === true (the model ERCOT is actually using).
+ * - ts = deliveryDate + hourEnding (hour-ending instant, UTC); value = systemTotal.
+ * - For each delivery hour, keep the most recent posting.
+ * Points extend into the future.
  */
 export function buildForecastPoints(rows: AnyRow[]): Array<{ ts: string; value: number }> {
-  const tsCandidates = [
-    "forecastTimestamp",
-    "timestamp",
-    "intervalEnding",
-    "SCEDTimestamp",
-    "postedDatetime",
-    "postedDateTime"
-  ];
-  const valCandidates = ["forecast", "loadForecast", "mw", "MW", "value", "systemTotal", "total"];
-
-  const points: Array<{ ts: string; value: number }> = [];
+  const best = new Map<string, { posted: string; value: number }>();
 
   for (const r of rows) {
-    let tsRaw: any = null;
-    for (const f of tsCandidates) {
-      if (r[f] != null) {
-        tsRaw = r[f];
-        break;
-      }
-    }
-    if (!tsRaw) continue;
+    if (r.inUseFlag !== true) continue;
 
-    let valRaw: any = null;
-    for (const f of valCandidates) {
-      if (r[f] != null) {
-        valRaw = r[f];
-        break;
-      }
-    }
-    const v = toNumber(valRaw);
-    if (v === null) continue;
+    const value = toNumber(r.systemTotal);
+    if (value === null) continue;
 
-    const ts = normalizeTs(String(tsRaw));
-    points.push({ ts, value: v });
+    const ts = hourEndingToUtcIso(String(r.deliveryDate ?? ""), r.hourEnding, {
+      isRepeatHour: isRepeatHour(r)
+    });
+    if (!ts) continue;
+
+    const posted = String(r.postedDatetime ?? "");
+    const prev = best.get(ts);
+    if (prev && prev.posted >= posted) continue;
+    best.set(ts, { posted, value });
   }
 
-  points.sort((a, b) => a.ts.localeCompare(b.ts));
-  return points;
+  return [...best.entries()]
+    .map(([ts, b]) => ({ ts, value: b.value }))
+    .sort((a, b) => a.ts.localeCompare(b.ts));
 }
 
 /**
- * Build LAMBDA points: {ts,value} from systemLambda
+ * Build LAMBDA points: {ts,value} from cappedSystemLambda (NP6-322-CD).
  */
 export function buildLambdaPoints(rows: AnyRow[]): Array<{ ts: string; value: number }> {
   const points: Array<{ ts: string; value: number }> = [];
 
   for (const r of rows) {
     const tsRaw = r.SCEDTimestamp ?? r.scedTimestamp ?? r.timestamp;
-    const lam = toNumber(r.systemLambda ?? r.lambda ?? r.SystemLambda);
+    const lam = toNumber(
+      r.cappedSystemLambda ?? r.uncappedSystemLambda ?? r.systemLambda ?? r.lambda ?? r.SystemLambda
+    );
     if (!tsRaw || lam === null) continue;
 
-    points.push({ ts: normalizeTs(String(tsRaw)), value: lam });
+    const ts = normalizeTs(String(tsRaw), isRepeatHour(r));
+    if (!ts) continue;
+    points.push({ ts, value: lam });
   }
 
   points.sort((a, b) => a.ts.localeCompare(b.ts));
