@@ -1,25 +1,25 @@
 {
-  "ts": "2026-09-25T19:34:52.666Z",
-  "gridStress": "Watch",
+  "ts": "2026-09-25T22:50:00.963Z",
+  "gridStress": "Normal",
   "priceStatus": "Normal",
   "loadWatch": false,
   "loadStressed": false,
-  "outageHigh": true,
+  "outageHigh": false,
   "lambdaWatch": false,
   "lambdaStressed": false,
   "headroomLow": false,
-  "latestLambda": 37.94312,
-  "latestPrice": 29.04,
-  "priceP75": 41.27,
+  "latestLambda": 58.59856,
+  "latestPrice": 55.19,
+  "priceP75": 41.28,
   "priceP95": 81.94,
   "notes": [
-    "Latest real-time price is $29/MWh.",
+    "Latest real-time price is $55/MWh.",
     "Price status rules: Elevated if above max(75th percentile, $150); Spike if above max(95th percentile, $300) or above $500.",
-    "System Lambda is 38.",
+    "System Lambda is 59.",
     "Lambda rules: Watch at ≥300; Stressed at ≥500.",
     "Latest actual demand is 64977 MW (hour ending Sep 25, 12:00 AM CDT). ERCOT publishes actual demand once a day, so this can be up to a day old.",
     "Demand rules: Watch above the 90th percentile; Stressed above the 95th percentile (based on the last 7 days).",
-    "Outages right now are 13130 MW.",
+    "Outages right now are 11982 MW.",
     "Outage rule: “Unusually high” if above the 90th percentile (last 7 days).",
     "Supply headroom isn't used right now because ERCOT isn't publishing available-capacity data.",
     "This is a conservative indicator meant to answer: “Are conditions getting tight?” It is not an emergency alert system."
@@ -31,6 +31,6 @@
   "latestHeadroomMW": null,
   "latestHeadroomPct": null,
   "latestDemandMW": 64977.47,
-  "latestOutagesMW": 13130,
-  "latestOutagesTs": "2026-09-25T20:00:00.000Z"
+  "latestOutagesMW": 11982,
+  "latestOutagesTs": "2026-09-25T23:00:00.000Z"
 }
