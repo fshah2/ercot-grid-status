@@ -1,77 +1,17 @@
 {
   "meta": {
     "schemaVersion": 2,
-    "updatedAt": "2026-09-26T06:10:30.920Z",
+    "updatedAt": "2026-09-26T11:23:14.349Z",
     "windowDays": 7,
     "source": "ERCOT Public Data API",
     "endpoint": "/np3-233-cd/hourly_res_outage_cap",
     "queryUsed": {
-      "postedDatetimeFrom": "2026-09-19T01:10:30",
-      "postedDatetimeTo": "2026-09-26T01:10:30"
+      "postedDatetimeFrom": "2026-09-19T06:23:14",
+      "postedDatetimeTo": "2026-09-26T06:23:14"
     },
     "notes": "Outages are aggregated from NP3-233-CD by load zone and split into Total, IRR, and New Equipment capability outages. For each hour the most recent posting wins. `points` are past hours plus the hour in progress; `upcomingPoints` are ERCOT's scheduled outlook for future hours."
   },
   "points": [
-    {
-      "ts": "2026-09-19T07:00:00.000Z",
-      "totalResourceMW": 10368,
-      "totalIRRMW": 5424,
-      "totalNewEquipResourceMW": 3604,
-      "zones": {
-        "south": 2432,
-        "north": 5785,
-        "west": 336,
-        "houston": 1815
-      }
-    },
-    {
-      "ts": "2026-09-19T08:00:00.000Z",
-      "totalResourceMW": 10368,
-      "totalIRRMW": 5424,
-      "totalNewEquipResourceMW": 3604,
-      "zones": {
-        "south": 2432,
-        "north": 5785,
-        "west": 336,
-        "houston": 1815
-      }
-    },
-    {
-      "ts": "2026-09-19T09:00:00.000Z",
-      "totalResourceMW": 10368,
-      "totalIRRMW": 5424,
-      "totalNewEquipResourceMW": 3604,
-      "zones": {
-        "south": 2432,
-        "north": 5785,
-        "west": 336,
-        "houston": 1815
-      }
-    },
-    {
-      "ts": "2026-09-19T10:00:00.000Z",
-      "totalResourceMW": 10368,
-      "totalIRRMW": 5424,
-      "totalNewEquipResourceMW": 3604,
-      "zones": {
-        "south": 2432,
-        "north": 5785,
-        "west": 336,
-        "houston": 1815
-      }
-    },
-    {
-      "ts": "2026-09-19T11:00:00.000Z",
-      "totalResourceMW": 10365,
-      "totalIRRMW": 5433,
-      "totalNewEquipResourceMW": 3604,
-      "zones": {
-        "south": 2432,
-        "north": 5785,
-        "west": 333,
-        "houston": 1815
-      }
-    },
     {
       "ts": "2026-09-19T12:00:00.000Z",
       "totalResourceMW": 10410,
@@ -2006,35 +1946,95 @@
     },
     {
       "ts": "2026-09-26T05:00:00.000Z",
-      "totalResourceMW": 11336,
-      "totalIRRMW": 6124,
+      "totalResourceMW": 10462,
+      "totalIRRMW": 5887,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 3188,
-        "north": 5445,
+        "south": 3169,
+        "north": 4590,
         "west": 460,
         "houston": 2243
       }
     },
     {
       "ts": "2026-09-26T06:00:00.000Z",
-      "totalResourceMW": 11336,
-      "totalIRRMW": 6169,
+      "totalResourceMW": 10462,
+      "totalIRRMW": 5932,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 3188,
-        "north": 5445,
+        "south": 3169,
+        "north": 4590,
         "west": 460,
         "houston": 2243
       }
     },
     {
       "ts": "2026-09-26T07:00:00.000Z",
-      "totalResourceMW": 11336,
-      "totalIRRMW": 6169,
+      "totalResourceMW": 10462,
+      "totalIRRMW": 5932,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 3188,
+        "south": 3169,
+        "north": 4590,
+        "west": 460,
+        "houston": 2243
+      }
+    },
+    {
+      "ts": "2026-09-26T08:00:00.000Z",
+      "totalResourceMW": 10462,
+      "totalIRRMW": 5947,
+      "totalNewEquipResourceMW": 3390,
+      "zones": {
+        "south": 3169,
+        "north": 4590,
+        "west": 460,
+        "houston": 2243
+      }
+    },
+    {
+      "ts": "2026-09-26T09:00:00.000Z",
+      "totalResourceMW": 10462,
+      "totalIRRMW": 5947,
+      "totalNewEquipResourceMW": 3390,
+      "zones": {
+        "south": 3169,
+        "north": 4590,
+        "west": 460,
+        "houston": 2243
+      }
+    },
+    {
+      "ts": "2026-09-26T10:00:00.000Z",
+      "totalResourceMW": 11317,
+      "totalIRRMW": 5937,
+      "totalNewEquipResourceMW": 3390,
+      "zones": {
+        "south": 3169,
+        "north": 5445,
+        "west": 460,
+        "houston": 2243
+      }
+    },
+    {
+      "ts": "2026-09-26T11:00:00.000Z",
+      "totalResourceMW": 11092,
+      "totalIRRMW": 5937,
+      "totalNewEquipResourceMW": 3390,
+      "zones": {
+        "south": 2944,
+        "north": 5445,
+        "west": 460,
+        "houston": 2243
+      }
+    },
+    {
+      "ts": "2026-09-26T12:00:00.000Z",
+      "totalResourceMW": 11092,
+      "totalIRRMW": 5937,
+      "totalNewEquipResourceMW": 3390,
+      "zones": {
+        "south": 2944,
         "north": 5445,
         "west": 460,
         "houston": 2243
@@ -2043,84 +2043,24 @@
   ],
   "upcomingPoints": [
     {
-      "ts": "2026-09-26T08:00:00.000Z",
-      "totalResourceMW": 11336,
-      "totalIRRMW": 6169,
-      "totalNewEquipResourceMW": 3390,
-      "zones": {
-        "south": 3188,
-        "north": 5445,
-        "west": 460,
-        "houston": 2243
-      }
-    },
-    {
-      "ts": "2026-09-26T09:00:00.000Z",
-      "totalResourceMW": 11336,
-      "totalIRRMW": 6169,
-      "totalNewEquipResourceMW": 3390,
-      "zones": {
-        "south": 3188,
-        "north": 5445,
-        "west": 460,
-        "houston": 2243
-      }
-    },
-    {
-      "ts": "2026-09-26T10:00:00.000Z",
-      "totalResourceMW": 10481,
-      "totalIRRMW": 6169,
-      "totalNewEquipResourceMW": 3390,
-      "zones": {
-        "south": 3188,
-        "north": 4590,
-        "west": 460,
-        "houston": 2243
-      }
-    },
-    {
-      "ts": "2026-09-26T11:00:00.000Z",
-      "totalResourceMW": 10481,
-      "totalIRRMW": 6169,
-      "totalNewEquipResourceMW": 3390,
-      "zones": {
-        "south": 3188,
-        "north": 4590,
-        "west": 460,
-        "houston": 2243
-      }
-    },
-    {
-      "ts": "2026-09-26T12:00:00.000Z",
-      "totalResourceMW": 10481,
-      "totalIRRMW": 5916,
-      "totalNewEquipResourceMW": 3390,
-      "zones": {
-        "south": 3188,
-        "north": 4590,
-        "west": 460,
-        "houston": 2243
-      }
-    },
-    {
       "ts": "2026-09-26T13:00:00.000Z",
-      "totalResourceMW": 10481,
-      "totalIRRMW": 5916,
+      "totalResourceMW": 11092,
+      "totalIRRMW": 5937,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 3188,
-        "north": 4590,
+        "south": 2944,
+        "north": 5445,
         "west": 460,
         "houston": 2243
       }
     },
     {
       "ts": "2026-09-26T14:00:00.000Z",
-      "totalResourceMW": 10544,
-      "totalIRRMW": 5886,
+      "totalResourceMW": 10300,
+      "totalIRRMW": 5907,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 3251,
+        "south": 3007,
         "north": 4590,
         "west": 460,
         "houston": 2243
@@ -2128,11 +2068,11 @@
     },
     {
       "ts": "2026-09-26T15:00:00.000Z",
-      "totalResourceMW": 10679,
-      "totalIRRMW": 5886,
+      "totalResourceMW": 10435,
+      "totalIRRMW": 5907,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 3251,
+        "south": 3007,
         "north": 4725,
         "west": 460,
         "houston": 2243
@@ -2140,11 +2080,11 @@
     },
     {
       "ts": "2026-09-26T16:00:00.000Z",
-      "totalResourceMW": 10679,
-      "totalIRRMW": 5886,
+      "totalResourceMW": 10435,
+      "totalIRRMW": 5907,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 3251,
+        "south": 3007,
         "north": 4725,
         "west": 460,
         "houston": 2243
@@ -2152,11 +2092,11 @@
     },
     {
       "ts": "2026-09-26T17:00:00.000Z",
-      "totalResourceMW": 10679,
-      "totalIRRMW": 5886,
+      "totalResourceMW": 10435,
+      "totalIRRMW": 5907,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 3251,
+        "south": 3007,
         "north": 4725,
         "west": 460,
         "houston": 2243
@@ -2164,11 +2104,11 @@
     },
     {
       "ts": "2026-09-26T18:00:00.000Z",
-      "totalResourceMW": 10401,
-      "totalIRRMW": 5866,
+      "totalResourceMW": 10157,
+      "totalIRRMW": 5887,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 3251,
+        "south": 3007,
         "north": 4447,
         "west": 460,
         "houston": 2243
@@ -2176,11 +2116,11 @@
     },
     {
       "ts": "2026-09-26T19:00:00.000Z",
-      "totalResourceMW": 10401,
-      "totalIRRMW": 5866,
+      "totalResourceMW": 10157,
+      "totalIRRMW": 5887,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 3251,
+        "south": 3007,
         "north": 4447,
         "west": 460,
         "houston": 2243
@@ -2188,11 +2128,11 @@
     },
     {
       "ts": "2026-09-26T20:00:00.000Z",
-      "totalResourceMW": 10354,
-      "totalIRRMW": 5866,
+      "totalResourceMW": 10110,
+      "totalIRRMW": 5887,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 3204,
+        "south": 2960,
         "north": 4447,
         "west": 460,
         "houston": 2243
@@ -2200,11 +2140,11 @@
     },
     {
       "ts": "2026-09-26T21:00:00.000Z",
-      "totalResourceMW": 10219,
-      "totalIRRMW": 5866,
+      "totalResourceMW": 9975,
+      "totalIRRMW": 5887,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 3204,
+        "south": 2960,
         "north": 4312,
         "west": 460,
         "houston": 2243
@@ -2212,11 +2152,11 @@
     },
     {
       "ts": "2026-09-26T22:00:00.000Z",
-      "totalResourceMW": 10079,
-      "totalIRRMW": 5866,
+      "totalResourceMW": 9835,
+      "totalIRRMW": 5887,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 3204,
+        "south": 2960,
         "north": 4312,
         "west": 320,
         "houston": 2243
@@ -2224,11 +2164,11 @@
     },
     {
       "ts": "2026-09-26T23:00:00.000Z",
-      "totalResourceMW": 9983,
-      "totalIRRMW": 5866,
+      "totalResourceMW": 9739,
+      "totalIRRMW": 5887,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 3188,
+        "south": 2944,
         "north": 4232,
         "west": 320,
         "houston": 2243
@@ -2236,11 +2176,11 @@
     },
     {
       "ts": "2026-09-27T00:00:00.000Z",
-      "totalResourceMW": 9963,
-      "totalIRRMW": 5742,
+      "totalResourceMW": 9719,
+      "totalIRRMW": 5763,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 3168,
+        "south": 2924,
         "north": 4232,
         "west": 320,
         "houston": 2243
@@ -2248,11 +2188,11 @@
     },
     {
       "ts": "2026-09-27T01:00:00.000Z",
-      "totalResourceMW": 9963,
-      "totalIRRMW": 5742,
+      "totalResourceMW": 9719,
+      "totalIRRMW": 5763,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 3168,
+        "south": 2924,
         "north": 4232,
         "west": 320,
         "houston": 2243
@@ -2260,11 +2200,11 @@
     },
     {
       "ts": "2026-09-27T02:00:00.000Z",
-      "totalResourceMW": 9925,
-      "totalIRRMW": 5742,
+      "totalResourceMW": 9681,
+      "totalIRRMW": 5763,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 3130,
+        "south": 2886,
         "north": 4232,
         "west": 320,
         "houston": 2243
@@ -2272,11 +2212,11 @@
     },
     {
       "ts": "2026-09-27T03:00:00.000Z",
-      "totalResourceMW": 9925,
-      "totalIRRMW": 5742,
+      "totalResourceMW": 9681,
+      "totalIRRMW": 5763,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 3130,
+        "south": 2886,
         "north": 4232,
         "west": 320,
         "houston": 2243
@@ -2284,11 +2224,11 @@
     },
     {
       "ts": "2026-09-27T04:00:00.000Z",
-      "totalResourceMW": 9925,
-      "totalIRRMW": 5742,
+      "totalResourceMW": 9681,
+      "totalIRRMW": 5763,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 3130,
+        "south": 2886,
         "north": 4232,
         "west": 320,
         "houston": 2243
@@ -2296,11 +2236,11 @@
     },
     {
       "ts": "2026-09-27T05:00:00.000Z",
-      "totalResourceMW": 9453,
-      "totalIRRMW": 5742,
+      "totalResourceMW": 9434,
+      "totalIRRMW": 5763,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 2641,
+        "south": 2622,
         "north": 4301,
         "west": 311,
         "houston": 2200
@@ -2308,11 +2248,11 @@
     },
     {
       "ts": "2026-09-27T06:00:00.000Z",
-      "totalResourceMW": 9453,
-      "totalIRRMW": 5742,
+      "totalResourceMW": 9434,
+      "totalIRRMW": 5763,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 2641,
+        "south": 2622,
         "north": 4301,
         "west": 311,
         "houston": 2200
@@ -2320,11 +2260,11 @@
     },
     {
       "ts": "2026-09-27T07:00:00.000Z",
-      "totalResourceMW": 9453,
-      "totalIRRMW": 5742,
+      "totalResourceMW": 9434,
+      "totalIRRMW": 5763,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 2641,
+        "south": 2622,
         "north": 4301,
         "west": 311,
         "houston": 2200
@@ -2332,11 +2272,11 @@
     },
     {
       "ts": "2026-09-27T08:00:00.000Z",
-      "totalResourceMW": 9453,
-      "totalIRRMW": 5742,
+      "totalResourceMW": 9434,
+      "totalIRRMW": 5763,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 2641,
+        "south": 2622,
         "north": 4301,
         "west": 311,
         "houston": 2200
@@ -2344,11 +2284,11 @@
     },
     {
       "ts": "2026-09-27T09:00:00.000Z",
-      "totalResourceMW": 9453,
-      "totalIRRMW": 5742,
+      "totalResourceMW": 9434,
+      "totalIRRMW": 5763,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 2641,
+        "south": 2622,
         "north": 4301,
         "west": 311,
         "houston": 2200
@@ -2356,11 +2296,11 @@
     },
     {
       "ts": "2026-09-27T10:00:00.000Z",
-      "totalResourceMW": 9453,
-      "totalIRRMW": 5742,
+      "totalResourceMW": 9434,
+      "totalIRRMW": 5763,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 2641,
+        "south": 2622,
         "north": 4301,
         "west": 311,
         "houston": 2200
@@ -2368,11 +2308,11 @@
     },
     {
       "ts": "2026-09-27T11:00:00.000Z",
-      "totalResourceMW": 9453,
-      "totalIRRMW": 5742,
+      "totalResourceMW": 9434,
+      "totalIRRMW": 5763,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 2641,
+        "south": 2622,
         "north": 4301,
         "west": 311,
         "houston": 2200
@@ -2380,11 +2320,11 @@
     },
     {
       "ts": "2026-09-27T12:00:00.000Z",
-      "totalResourceMW": 9453,
-      "totalIRRMW": 5742,
+      "totalResourceMW": 9434,
+      "totalIRRMW": 5763,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 2641,
+        "south": 2622,
         "north": 4301,
         "west": 311,
         "houston": 2200
@@ -2392,11 +2332,11 @@
     },
     {
       "ts": "2026-09-27T13:00:00.000Z",
-      "totalResourceMW": 9453,
-      "totalIRRMW": 5742,
+      "totalResourceMW": 9434,
+      "totalIRRMW": 5763,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 2641,
+        "south": 2622,
         "north": 4301,
         "west": 311,
         "houston": 2200
@@ -2404,11 +2344,11 @@
     },
     {
       "ts": "2026-09-27T14:00:00.000Z",
-      "totalResourceMW": 9453,
-      "totalIRRMW": 5742,
+      "totalResourceMW": 9434,
+      "totalIRRMW": 5763,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 2641,
+        "south": 2622,
         "north": 4301,
         "west": 311,
         "houston": 2200
@@ -2416,11 +2356,11 @@
     },
     {
       "ts": "2026-09-27T15:00:00.000Z",
-      "totalResourceMW": 9453,
-      "totalIRRMW": 5742,
+      "totalResourceMW": 9434,
+      "totalIRRMW": 5763,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 2641,
+        "south": 2622,
         "north": 4301,
         "west": 311,
         "houston": 2200
@@ -2428,11 +2368,11 @@
     },
     {
       "ts": "2026-09-27T16:00:00.000Z",
-      "totalResourceMW": 9453,
-      "totalIRRMW": 5742,
+      "totalResourceMW": 9434,
+      "totalIRRMW": 5763,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 2641,
+        "south": 2622,
         "north": 4301,
         "west": 311,
         "houston": 2200
@@ -2440,11 +2380,11 @@
     },
     {
       "ts": "2026-09-27T17:00:00.000Z",
-      "totalResourceMW": 9453,
-      "totalIRRMW": 5716,
+      "totalResourceMW": 9434,
+      "totalIRRMW": 5737,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 2641,
+        "south": 2622,
         "north": 4301,
         "west": 311,
         "houston": 2200
@@ -2452,11 +2392,11 @@
     },
     {
       "ts": "2026-09-27T18:00:00.000Z",
-      "totalResourceMW": 9453,
-      "totalIRRMW": 5716,
+      "totalResourceMW": 9434,
+      "totalIRRMW": 5737,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 2641,
+        "south": 2622,
         "north": 4301,
         "west": 311,
         "houston": 2200
@@ -2464,11 +2404,11 @@
     },
     {
       "ts": "2026-09-27T19:00:00.000Z",
-      "totalResourceMW": 9453,
-      "totalIRRMW": 5716,
+      "totalResourceMW": 9434,
+      "totalIRRMW": 5737,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 2641,
+        "south": 2622,
         "north": 4301,
         "west": 311,
         "houston": 2200
@@ -2476,11 +2416,11 @@
     },
     {
       "ts": "2026-09-27T20:00:00.000Z",
-      "totalResourceMW": 9453,
-      "totalIRRMW": 5716,
+      "totalResourceMW": 9434,
+      "totalIRRMW": 5737,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 2641,
+        "south": 2622,
         "north": 4301,
         "west": 311,
         "houston": 2200
@@ -2488,11 +2428,11 @@
     },
     {
       "ts": "2026-09-27T21:00:00.000Z",
-      "totalResourceMW": 9453,
-      "totalIRRMW": 5716,
+      "totalResourceMW": 9434,
+      "totalIRRMW": 5737,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 2641,
+        "south": 2622,
         "north": 4301,
         "west": 311,
         "houston": 2200
@@ -2500,11 +2440,11 @@
     },
     {
       "ts": "2026-09-27T22:00:00.000Z",
-      "totalResourceMW": 9453,
-      "totalIRRMW": 5673,
+      "totalResourceMW": 9434,
+      "totalIRRMW": 5694,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 2641,
+        "south": 2622,
         "north": 4301,
         "west": 311,
         "houston": 2200
@@ -2512,11 +2452,11 @@
     },
     {
       "ts": "2026-09-27T23:00:00.000Z",
-      "totalResourceMW": 9373,
-      "totalIRRMW": 5673,
+      "totalResourceMW": 9354,
+      "totalIRRMW": 5694,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 2641,
+        "south": 2622,
         "north": 4221,
         "west": 311,
         "houston": 2200
@@ -2524,11 +2464,11 @@
     },
     {
       "ts": "2026-09-28T00:00:00.000Z",
-      "totalResourceMW": 9373,
-      "totalIRRMW": 5639,
+      "totalResourceMW": 9354,
+      "totalIRRMW": 5660,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 2641,
+        "south": 2622,
         "north": 4221,
         "west": 311,
         "houston": 2200
@@ -2536,11 +2476,11 @@
     },
     {
       "ts": "2026-09-28T01:00:00.000Z",
-      "totalResourceMW": 9327,
-      "totalIRRMW": 5639,
+      "totalResourceMW": 9308,
+      "totalIRRMW": 5660,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 2641,
+        "south": 2622,
         "north": 4221,
         "west": 311,
         "houston": 2154
@@ -2548,11 +2488,11 @@
     },
     {
       "ts": "2026-09-28T02:00:00.000Z",
-      "totalResourceMW": 9327,
-      "totalIRRMW": 5639,
+      "totalResourceMW": 9308,
+      "totalIRRMW": 5660,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 2641,
+        "south": 2622,
         "north": 4221,
         "west": 311,
         "houston": 2154
@@ -2560,11 +2500,11 @@
     },
     {
       "ts": "2026-09-28T03:00:00.000Z",
-      "totalResourceMW": 9327,
-      "totalIRRMW": 5639,
+      "totalResourceMW": 9308,
+      "totalIRRMW": 5660,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 2641,
+        "south": 2622,
         "north": 4221,
         "west": 311,
         "houston": 2154
@@ -2572,11 +2512,11 @@
     },
     {
       "ts": "2026-09-28T04:00:00.000Z",
-      "totalResourceMW": 9453,
-      "totalIRRMW": 5859,
+      "totalResourceMW": 9434,
+      "totalIRRMW": 5880,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 2641,
+        "south": 2622,
         "north": 4347,
         "west": 311,
         "houston": 2154
@@ -2584,11 +2524,11 @@
     },
     {
       "ts": "2026-09-28T05:00:00.000Z",
-      "totalResourceMW": 8789,
-      "totalIRRMW": 5827,
+      "totalResourceMW": 8770,
+      "totalIRRMW": 5848,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 2019,
+        "south": 2000,
         "north": 4305,
         "west": 311,
         "houston": 2154
@@ -2596,11 +2536,11 @@
     },
     {
       "ts": "2026-09-28T06:00:00.000Z",
-      "totalResourceMW": 10413,
-      "totalIRRMW": 5827,
+      "totalResourceMW": 10394,
+      "totalIRRMW": 5848,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 2329,
+        "south": 2310,
         "north": 5396,
         "west": 311,
         "houston": 2377
@@ -2608,11 +2548,11 @@
     },
     {
       "ts": "2026-09-28T07:00:00.000Z",
-      "totalResourceMW": 10413,
-      "totalIRRMW": 5827,
+      "totalResourceMW": 10394,
+      "totalIRRMW": 5848,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 2329,
+        "south": 2310,
         "north": 5396,
         "west": 311,
         "houston": 2377
@@ -2620,11 +2560,11 @@
     },
     {
       "ts": "2026-09-28T08:00:00.000Z",
-      "totalResourceMW": 10413,
-      "totalIRRMW": 5827,
+      "totalResourceMW": 10394,
+      "totalIRRMW": 5848,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 2329,
+        "south": 2310,
         "north": 5396,
         "west": 311,
         "houston": 2377
@@ -2632,11 +2572,11 @@
     },
     {
       "ts": "2026-09-28T09:00:00.000Z",
-      "totalResourceMW": 10413,
-      "totalIRRMW": 5827,
+      "totalResourceMW": 10394,
+      "totalIRRMW": 5848,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 2329,
+        "south": 2310,
         "north": 5396,
         "west": 311,
         "houston": 2377
@@ -2644,11 +2584,11 @@
     },
     {
       "ts": "2026-09-28T10:00:00.000Z",
-      "totalResourceMW": 10505,
-      "totalIRRMW": 5827,
+      "totalResourceMW": 10486,
+      "totalIRRMW": 5848,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 2329,
+        "south": 2310,
         "north": 5396,
         "west": 311,
         "houston": 2469
@@ -2656,11 +2596,11 @@
     },
     {
       "ts": "2026-09-28T11:00:00.000Z",
-      "totalResourceMW": 10505,
-      "totalIRRMW": 5807,
+      "totalResourceMW": 10486,
+      "totalIRRMW": 5828,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 2329,
+        "south": 2310,
         "north": 5396,
         "west": 311,
         "houston": 2469
@@ -2668,11 +2608,11 @@
     },
     {
       "ts": "2026-09-28T12:00:00.000Z",
-      "totalResourceMW": 10728,
-      "totalIRRMW": 6109,
+      "totalResourceMW": 10709,
+      "totalIRRMW": 6130,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 2346,
+        "south": 2327,
         "north": 5396,
         "west": 471,
         "houston": 2515
@@ -2680,11 +2620,11 @@
     },
     {
       "ts": "2026-09-28T13:00:00.000Z",
-      "totalResourceMW": 10830,
-      "totalIRRMW": 6531,
+      "totalResourceMW": 10811,
+      "totalIRRMW": 6552,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 2346,
+        "south": 2327,
         "north": 5498,
         "west": 471,
         "houston": 2515
@@ -2692,11 +2632,11 @@
     },
     {
       "ts": "2026-09-28T14:00:00.000Z",
-      "totalResourceMW": 11070,
-      "totalIRRMW": 6962,
+      "totalResourceMW": 11051,
+      "totalIRRMW": 6983,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 2386,
+        "south": 2367,
         "north": 5498,
         "west": 671,
         "houston": 2515
@@ -2704,11 +2644,11 @@
     },
     {
       "ts": "2026-09-28T15:00:00.000Z",
-      "totalResourceMW": 10970,
-      "totalIRRMW": 6962,
+      "totalResourceMW": 10951,
+      "totalIRRMW": 6983,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 2388,
+        "south": 2369,
         "north": 5396,
         "west": 671,
         "houston": 2515
@@ -2716,11 +2656,11 @@
     },
     {
       "ts": "2026-09-28T16:00:00.000Z",
-      "totalResourceMW": 10847,
-      "totalIRRMW": 6771,
+      "totalResourceMW": 10828,
+      "totalIRRMW": 6792,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 2388,
+        "south": 2369,
         "north": 5270,
         "west": 671,
         "houston": 2518
@@ -2728,11 +2668,11 @@
     },
     {
       "ts": "2026-09-28T17:00:00.000Z",
-      "totalResourceMW": 10840,
-      "totalIRRMW": 6771,
+      "totalResourceMW": 10821,
+      "totalIRRMW": 6792,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 2381,
+        "south": 2362,
         "north": 5270,
         "west": 671,
         "houston": 2518
@@ -2740,11 +2680,11 @@
     },
     {
       "ts": "2026-09-28T18:00:00.000Z",
-      "totalResourceMW": 10625,
-      "totalIRRMW": 6687,
+      "totalResourceMW": 10606,
+      "totalIRRMW": 6693,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 2282,
+        "south": 2263,
         "north": 5234,
         "west": 671,
         "houston": 2438
@@ -2752,11 +2692,11 @@
     },
     {
       "ts": "2026-09-28T19:00:00.000Z",
-      "totalResourceMW": 10622,
-      "totalIRRMW": 6687,
+      "totalResourceMW": 10603,
+      "totalIRRMW": 6693,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 2279,
+        "south": 2260,
         "north": 5234,
         "west": 671,
         "houston": 2438
@@ -2764,11 +2704,11 @@
     },
     {
       "ts": "2026-09-28T20:00:00.000Z",
-      "totalResourceMW": 10619,
-      "totalIRRMW": 6687,
+      "totalResourceMW": 10600,
+      "totalIRRMW": 6693,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 2279,
+        "south": 2260,
         "north": 5234,
         "west": 671,
         "houston": 2435
@@ -2776,11 +2716,11 @@
     },
     {
       "ts": "2026-09-28T21:00:00.000Z",
-      "totalResourceMW": 10459,
-      "totalIRRMW": 6596,
+      "totalResourceMW": 10440,
+      "totalIRRMW": 6602,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 1969,
+        "south": 1950,
         "north": 5234,
         "west": 671,
         "houston": 2585
@@ -2788,11 +2728,11 @@
     },
     {
       "ts": "2026-09-28T22:00:00.000Z",
-      "totalResourceMW": 10457,
-      "totalIRRMW": 6515,
+      "totalResourceMW": 10438,
+      "totalIRRMW": 6521,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 1967,
+        "south": 1948,
         "north": 5234,
         "west": 671,
         "houston": 2585
@@ -2800,11 +2740,11 @@
     },
     {
       "ts": "2026-09-28T23:00:00.000Z",
-      "totalResourceMW": 10349,
-      "totalIRRMW": 6289,
+      "totalResourceMW": 10330,
+      "totalIRRMW": 6295,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 1951,
+        "south": 1932,
         "north": 5142,
         "west": 671,
         "houston": 2585
@@ -2812,11 +2752,11 @@
     },
     {
       "ts": "2026-09-29T00:00:00.000Z",
-      "totalResourceMW": 10149,
-      "totalIRRMW": 6178,
+      "totalResourceMW": 10130,
+      "totalIRRMW": 6184,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 1951,
+        "south": 1932,
         "north": 5142,
         "west": 471,
         "houston": 2585
@@ -2824,11 +2764,11 @@
     },
     {
       "ts": "2026-09-29T01:00:00.000Z",
-      "totalResourceMW": 10149,
-      "totalIRRMW": 6220,
+      "totalResourceMW": 10130,
+      "totalIRRMW": 6226,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 1951,
+        "south": 1932,
         "north": 5142,
         "west": 471,
         "houston": 2585
@@ -2836,11 +2776,11 @@
     },
     {
       "ts": "2026-09-29T02:00:00.000Z",
-      "totalResourceMW": 10149,
-      "totalIRRMW": 6253,
+      "totalResourceMW": 10130,
+      "totalIRRMW": 6259,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 1951,
+        "south": 1932,
         "north": 5142,
         "west": 471,
         "houston": 2585
@@ -2848,11 +2788,11 @@
     },
     {
       "ts": "2026-09-29T03:00:00.000Z",
-      "totalResourceMW": 10149,
-      "totalIRRMW": 6201,
+      "totalResourceMW": 10130,
+      "totalIRRMW": 6207,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 1951,
+        "south": 1932,
         "north": 5142,
         "west": 471,
         "houston": 2585
@@ -2860,11 +2800,11 @@
     },
     {
       "ts": "2026-09-29T04:00:00.000Z",
-      "totalResourceMW": 10505,
-      "totalIRRMW": 7004,
+      "totalResourceMW": 10486,
+      "totalIRRMW": 7010,
       "totalNewEquipResourceMW": 3390,
       "zones": {
-        "south": 1951,
+        "south": 1932,
         "north": 5338,
         "west": 631,
         "houston": 2585
@@ -2872,11 +2812,11 @@
     },
     {
       "ts": "2026-09-29T05:00:00.000Z",
-      "totalResourceMW": 10318,
-      "totalIRRMW": 6886,
+      "totalResourceMW": 10299,
+      "totalIRRMW": 6902,
       "totalNewEquipResourceMW": 3380,
       "zones": {
-        "south": 1796,
+        "south": 1777,
         "north": 5418,
         "west": 471,
         "houston": 2633
@@ -2884,11 +2824,11 @@
     },
     {
       "ts": "2026-09-29T06:00:00.000Z",
-      "totalResourceMW": 10751,
-      "totalIRRMW": 6886,
+      "totalResourceMW": 10732,
+      "totalIRRMW": 6902,
       "totalNewEquipResourceMW": 3380,
       "zones": {
-        "south": 1796,
+        "south": 1777,
         "north": 5573,
         "west": 471,
         "houston": 2911
@@ -2896,11 +2836,11 @@
     },
     {
       "ts": "2026-09-29T07:00:00.000Z",
-      "totalResourceMW": 10751,
-      "totalIRRMW": 6886,
+      "totalResourceMW": 10732,
+      "totalIRRMW": 6902,
       "totalNewEquipResourceMW": 3380,
       "zones": {
-        "south": 1796,
+        "south": 1777,
         "north": 5573,
         "west": 471,
         "houston": 2911
@@ -2908,11 +2848,11 @@
     },
     {
       "ts": "2026-09-29T08:00:00.000Z",
-      "totalResourceMW": 10751,
-      "totalIRRMW": 6886,
+      "totalResourceMW": 10732,
+      "totalIRRMW": 6902,
       "totalNewEquipResourceMW": 3380,
       "zones": {
-        "south": 1796,
+        "south": 1777,
         "north": 5573,
         "west": 471,
         "houston": 2911
@@ -2920,11 +2860,11 @@
     },
     {
       "ts": "2026-09-29T09:00:00.000Z",
-      "totalResourceMW": 10751,
-      "totalIRRMW": 6886,
+      "totalResourceMW": 10732,
+      "totalIRRMW": 6902,
       "totalNewEquipResourceMW": 3380,
       "zones": {
-        "south": 1796,
+        "south": 1777,
         "north": 5573,
         "west": 471,
         "houston": 2911
@@ -2932,11 +2872,11 @@
     },
     {
       "ts": "2026-09-29T10:00:00.000Z",
-      "totalResourceMW": 10751,
-      "totalIRRMW": 6886,
+      "totalResourceMW": 10732,
+      "totalIRRMW": 6902,
       "totalNewEquipResourceMW": 3380,
       "zones": {
-        "south": 1796,
+        "south": 1777,
         "north": 5573,
         "west": 471,
         "houston": 2911
@@ -2944,11 +2884,11 @@
     },
     {
       "ts": "2026-09-29T11:00:00.000Z",
-      "totalResourceMW": 10696,
-      "totalIRRMW": 6787,
+      "totalResourceMW": 10677,
+      "totalIRRMW": 6803,
       "totalNewEquipResourceMW": 3380,
       "zones": {
-        "south": 1796,
+        "south": 1777,
         "north": 5573,
         "west": 471,
         "houston": 2856
@@ -2956,11 +2896,11 @@
     },
     {
       "ts": "2026-09-29T12:00:00.000Z",
-      "totalResourceMW": 10616,
-      "totalIRRMW": 6381,
+      "totalResourceMW": 10597,
+      "totalIRRMW": 6397,
       "totalNewEquipResourceMW": 3380,
       "zones": {
-        "south": 1815,
+        "south": 1796,
         "north": 5586,
         "west": 471,
         "houston": 2744
@@ -2968,11 +2908,11 @@
     },
     {
       "ts": "2026-09-29T13:00:00.000Z",
-      "totalResourceMW": 10616,
-      "totalIRRMW": 6623,
+      "totalResourceMW": 10597,
+      "totalIRRMW": 6639,
       "totalNewEquipResourceMW": 3380,
       "zones": {
-        "south": 1815,
+        "south": 1796,
         "north": 5586,
         "west": 471,
         "houston": 2744
@@ -2980,11 +2920,11 @@
     },
     {
       "ts": "2026-09-29T14:00:00.000Z",
-      "totalResourceMW": 10832,
-      "totalIRRMW": 6750,
+      "totalResourceMW": 10813,
+      "totalIRRMW": 6766,
       "totalNewEquipResourceMW": 3380,
       "zones": {
-        "south": 1831,
+        "south": 1812,
         "north": 5586,
         "west": 671,
         "houston": 2744
@@ -2992,11 +2932,11 @@
     },
     {
       "ts": "2026-09-29T15:00:00.000Z",
-      "totalResourceMW": 10136,
-      "totalIRRMW": 6750,
+      "totalResourceMW": 10117,
+      "totalIRRMW": 6766,
       "totalNewEquipResourceMW": 3380,
       "zones": {
-        "south": 1830,
+        "south": 1811,
         "north": 4731,
         "west": 831,
         "houston": 2744
@@ -3004,11 +2944,11 @@
     },
     {
       "ts": "2026-09-29T16:00:00.000Z",
-      "totalResourceMW": 9940,
-      "totalIRRMW": 6297,
+      "totalResourceMW": 9921,
+      "totalIRRMW": 6313,
       "totalNewEquipResourceMW": 3380,
       "zones": {
-        "south": 1830,
+        "south": 1811,
         "north": 4535,
         "west": 831,
         "houston": 2744
@@ -3016,11 +2956,11 @@
     },
     {
       "ts": "2026-09-29T17:00:00.000Z",
-      "totalResourceMW": 9940,
-      "totalIRRMW": 6074,
+      "totalResourceMW": 9921,
+      "totalIRRMW": 6090,
       "totalNewEquipResourceMW": 3380,
       "zones": {
-        "south": 1830,
+        "south": 1811,
         "north": 4535,
         "west": 831,
         "houston": 2744
@@ -3028,11 +2968,11 @@
     },
     {
       "ts": "2026-09-29T18:00:00.000Z",
-      "totalResourceMW": 9940,
-      "totalIRRMW": 6175,
+      "totalResourceMW": 9921,
+      "totalIRRMW": 6191,
       "totalNewEquipResourceMW": 3083,
       "zones": {
-        "south": 1830,
+        "south": 1811,
         "north": 4535,
         "west": 831,
         "houston": 2744
@@ -3040,11 +2980,11 @@
     },
     {
       "ts": "2026-09-29T19:00:00.000Z",
-      "totalResourceMW": 9780,
-      "totalIRRMW": 6175,
+      "totalResourceMW": 9761,
+      "totalIRRMW": 6191,
       "totalNewEquipResourceMW": 3083,
       "zones": {
-        "south": 1830,
+        "south": 1811,
         "north": 4535,
         "west": 671,
         "houston": 2744
@@ -3052,11 +2992,11 @@
     },
     {
       "ts": "2026-09-29T20:00:00.000Z",
-      "totalResourceMW": 9780,
-      "totalIRRMW": 6175,
+      "totalResourceMW": 9761,
+      "totalIRRMW": 6191,
       "totalNewEquipResourceMW": 3083,
       "zones": {
-        "south": 1830,
+        "south": 1811,
         "north": 4535,
         "west": 671,
         "houston": 2744
@@ -3064,11 +3004,11 @@
     },
     {
       "ts": "2026-09-29T21:00:00.000Z",
-      "totalResourceMW": 9780,
-      "totalIRRMW": 6175,
+      "totalResourceMW": 9761,
+      "totalIRRMW": 6191,
       "totalNewEquipResourceMW": 3083,
       "zones": {
-        "south": 1830,
+        "south": 1811,
         "north": 4535,
         "west": 671,
         "houston": 2744
@@ -3076,11 +3016,11 @@
     },
     {
       "ts": "2026-09-29T22:00:00.000Z",
-      "totalResourceMW": 9778,
-      "totalIRRMW": 6175,
+      "totalResourceMW": 9759,
+      "totalIRRMW": 6191,
       "totalNewEquipResourceMW": 3083,
       "zones": {
-        "south": 1828,
+        "south": 1809,
         "north": 4535,
         "west": 671,
         "houston": 2744
@@ -3088,11 +3028,11 @@
     },
     {
       "ts": "2026-09-29T23:00:00.000Z",
-      "totalResourceMW": 9582,
-      "totalIRRMW": 6175,
+      "totalResourceMW": 9563,
+      "totalIRRMW": 6191,
       "totalNewEquipResourceMW": 3083,
       "zones": {
-        "south": 1712,
+        "south": 1693,
         "north": 4455,
         "west": 671,
         "houston": 2744
@@ -3101,7 +3041,7 @@
     {
       "ts": "2026-09-30T00:00:00.000Z",
       "totalResourceMW": 9191,
-      "totalIRRMW": 6125,
+      "totalIRRMW": 6141,
       "totalNewEquipResourceMW": 3083,
       "zones": {
         "south": 1693,
@@ -3113,7 +3053,7 @@
     {
       "ts": "2026-09-30T01:00:00.000Z",
       "totalResourceMW": 9191,
-      "totalIRRMW": 6125,
+      "totalIRRMW": 6141,
       "totalNewEquipResourceMW": 3083,
       "zones": {
         "south": 1693,
@@ -3125,7 +3065,7 @@
     {
       "ts": "2026-09-30T02:00:00.000Z",
       "totalResourceMW": 9482,
-      "totalIRRMW": 7155,
+      "totalIRRMW": 7171,
       "totalNewEquipResourceMW": 3083,
       "zones": {
         "south": 1664,
@@ -3137,7 +3077,7 @@
     {
       "ts": "2026-09-30T03:00:00.000Z",
       "totalResourceMW": 9482,
-      "totalIRRMW": 6632,
+      "totalIRRMW": 6648,
       "totalNewEquipResourceMW": 3083,
       "zones": {
         "south": 1664,
@@ -3149,7 +3089,7 @@
     {
       "ts": "2026-09-30T04:00:00.000Z",
       "totalResourceMW": 9976,
-      "totalIRRMW": 6982,
+      "totalIRRMW": 6998,
       "totalNewEquipResourceMW": 3083,
       "zones": {
         "south": 1664,
@@ -3161,7 +3101,7 @@
     {
       "ts": "2026-09-30T05:00:00.000Z",
       "totalResourceMW": 10159,
-      "totalIRRMW": 6963,
+      "totalIRRMW": 6979,
       "totalNewEquipResourceMW": 3072,
       "zones": {
         "south": 1942,
@@ -3173,7 +3113,7 @@
     {
       "ts": "2026-09-30T06:00:00.000Z",
       "totalResourceMW": 10177,
-      "totalIRRMW": 6963,
+      "totalIRRMW": 6979,
       "totalNewEquipResourceMW": 3072,
       "zones": {
         "south": 1962,
@@ -3185,7 +3125,7 @@
     {
       "ts": "2026-09-30T07:00:00.000Z",
       "totalResourceMW": 10177,
-      "totalIRRMW": 6963,
+      "totalIRRMW": 6979,
       "totalNewEquipResourceMW": 3072,
       "zones": {
         "south": 1962,
@@ -3197,7 +3137,7 @@
     {
       "ts": "2026-09-30T08:00:00.000Z",
       "totalResourceMW": 10177,
-      "totalIRRMW": 6963,
+      "totalIRRMW": 6979,
       "totalNewEquipResourceMW": 3072,
       "zones": {
         "south": 1962,
@@ -3209,7 +3149,7 @@
     {
       "ts": "2026-09-30T09:00:00.000Z",
       "totalResourceMW": 10177,
-      "totalIRRMW": 6963,
+      "totalIRRMW": 6979,
       "totalNewEquipResourceMW": 3072,
       "zones": {
         "south": 1962,
@@ -3221,7 +3161,7 @@
     {
       "ts": "2026-09-30T10:00:00.000Z",
       "totalResourceMW": 10267,
-      "totalIRRMW": 6963,
+      "totalIRRMW": 6979,
       "totalNewEquipResourceMW": 3072,
       "zones": {
         "south": 1962,
@@ -3233,7 +3173,7 @@
     {
       "ts": "2026-09-30T11:00:00.000Z",
       "totalResourceMW": 10267,
-      "totalIRRMW": 6864,
+      "totalIRRMW": 6880,
       "totalNewEquipResourceMW": 3072,
       "zones": {
         "south": 1962,
@@ -3245,7 +3185,7 @@
     {
       "ts": "2026-09-30T12:00:00.000Z",
       "totalResourceMW": 10046,
-      "totalIRRMW": 6121,
+      "totalIRRMW": 6137,
       "totalNewEquipResourceMW": 3072,
       "zones": {
         "south": 1981,
@@ -3257,7 +3197,7 @@
     {
       "ts": "2026-09-30T13:00:00.000Z",
       "totalResourceMW": 10252,
-      "totalIRRMW": 5890,
+      "totalIRRMW": 5906,
       "totalNewEquipResourceMW": 3072,
       "zones": {
         "south": 1981,
@@ -3269,7 +3209,7 @@
     {
       "ts": "2026-09-30T14:00:00.000Z",
       "totalResourceMW": 10469,
-      "totalIRRMW": 5890,
+      "totalIRRMW": 5906,
       "totalNewEquipResourceMW": 3072,
       "zones": {
         "south": 1997,
@@ -3281,7 +3221,7 @@
     {
       "ts": "2026-09-30T15:00:00.000Z",
       "totalResourceMW": 10631,
-      "totalIRRMW": 5890,
+      "totalIRRMW": 5906,
       "totalNewEquipResourceMW": 3072,
       "zones": {
         "south": 1999,
@@ -3293,7 +3233,7 @@
     {
       "ts": "2026-09-30T16:00:00.000Z",
       "totalResourceMW": 10763,
-      "totalIRRMW": 5890,
+      "totalIRRMW": 5906,
       "totalNewEquipResourceMW": 3072,
       "zones": {
         "south": 2131,
@@ -3305,7 +3245,7 @@
     {
       "ts": "2026-09-30T17:00:00.000Z",
       "totalResourceMW": 10763,
-      "totalIRRMW": 5890,
+      "totalIRRMW": 5906,
       "totalNewEquipResourceMW": 3072,
       "zones": {
         "south": 2131,
@@ -3317,7 +3257,7 @@
     {
       "ts": "2026-09-30T18:00:00.000Z",
       "totalResourceMW": 10762,
-      "totalIRRMW": 5876,
+      "totalIRRMW": 5892,
       "totalNewEquipResourceMW": 3072,
       "zones": {
         "south": 2131,
@@ -3329,7 +3269,7 @@
     {
       "ts": "2026-09-30T19:00:00.000Z",
       "totalResourceMW": 10599,
-      "totalIRRMW": 5876,
+      "totalIRRMW": 5892,
       "totalNewEquipResourceMW": 3072,
       "zones": {
         "south": 2131,
@@ -3341,7 +3281,7 @@
     {
       "ts": "2026-09-30T20:00:00.000Z",
       "totalResourceMW": 10599,
-      "totalIRRMW": 5852,
+      "totalIRRMW": 5868,
       "totalNewEquipResourceMW": 3072,
       "zones": {
         "south": 2131,
@@ -3353,7 +3293,7 @@
     {
       "ts": "2026-09-30T21:00:00.000Z",
       "totalResourceMW": 10467,
-      "totalIRRMW": 5852,
+      "totalIRRMW": 5868,
       "totalNewEquipResourceMW": 3072,
       "zones": {
         "south": 1999,
@@ -3365,7 +3305,7 @@
     {
       "ts": "2026-09-30T22:00:00.000Z",
       "totalResourceMW": 10175,
-      "totalIRRMW": 5841,
+      "totalIRRMW": 5857,
       "totalNewEquipResourceMW": 3072,
       "zones": {
         "south": 1937,
@@ -3377,7 +3317,7 @@
     {
       "ts": "2026-09-30T23:00:00.000Z",
       "totalResourceMW": 10079,
-      "totalIRRMW": 5841,
+      "totalIRRMW": 5857,
       "totalNewEquipResourceMW": 3072,
       "zones": {
         "south": 1921,
@@ -3389,7 +3329,7 @@
     {
       "ts": "2026-10-01T00:00:00.000Z",
       "totalResourceMW": 9879,
-      "totalIRRMW": 5788,
+      "totalIRRMW": 5804,
       "totalNewEquipResourceMW": 3072,
       "zones": {
         "south": 1921,
@@ -3401,7 +3341,7 @@
     {
       "ts": "2026-10-01T01:00:00.000Z",
       "totalResourceMW": 9833,
-      "totalIRRMW": 5788,
+      "totalIRRMW": 5804,
       "totalNewEquipResourceMW": 3072,
       "zones": {
         "south": 1921,
@@ -3413,7 +3353,7 @@
     {
       "ts": "2026-10-01T02:00:00.000Z",
       "totalResourceMW": 10134,
-      "totalIRRMW": 6947,
+      "totalIRRMW": 6963,
       "totalNewEquipResourceMW": 3072,
       "zones": {
         "south": 1902,
@@ -3425,7 +3365,7 @@
     {
       "ts": "2026-10-01T03:00:00.000Z",
       "totalResourceMW": 10134,
-      "totalIRRMW": 6937,
+      "totalIRRMW": 6953,
       "totalNewEquipResourceMW": 3072,
       "zones": {
         "south": 1902,
@@ -3437,7 +3377,7 @@
     {
       "ts": "2026-10-01T04:00:00.000Z",
       "totalResourceMW": 10134,
-      "totalIRRMW": 6937,
+      "totalIRRMW": 6953,
       "totalNewEquipResourceMW": 3072,
       "zones": {
         "south": 1902,
@@ -3449,7 +3389,7 @@
     {
       "ts": "2026-10-01T05:00:00.000Z",
       "totalResourceMW": 9377,
-      "totalIRRMW": 6187,
+      "totalIRRMW": 6203,
       "totalNewEquipResourceMW": 2628,
       "zones": {
         "south": 1811,
@@ -3461,7 +3401,7 @@
     {
       "ts": "2026-10-01T06:00:00.000Z",
       "totalResourceMW": 12420,
-      "totalIRRMW": 6187,
+      "totalIRRMW": 6203,
       "totalNewEquipResourceMW": 2628,
       "zones": {
         "south": 3826,
@@ -3473,7 +3413,7 @@
     {
       "ts": "2026-10-01T07:00:00.000Z",
       "totalResourceMW": 12420,
-      "totalIRRMW": 6187,
+      "totalIRRMW": 6203,
       "totalNewEquipResourceMW": 2628,
       "zones": {
         "south": 3826,
@@ -3485,7 +3425,7 @@
     {
       "ts": "2026-10-01T08:00:00.000Z",
       "totalResourceMW": 12420,
-      "totalIRRMW": 6187,
+      "totalIRRMW": 6203,
       "totalNewEquipResourceMW": 2628,
       "zones": {
         "south": 3826,
@@ -3497,7 +3437,7 @@
     {
       "ts": "2026-10-01T09:00:00.000Z",
       "totalResourceMW": 12420,
-      "totalIRRMW": 6187,
+      "totalIRRMW": 6203,
       "totalNewEquipResourceMW": 2628,
       "zones": {
         "south": 3826,
@@ -3509,7 +3449,7 @@
     {
       "ts": "2026-10-01T10:00:00.000Z",
       "totalResourceMW": 12420,
-      "totalIRRMW": 6187,
+      "totalIRRMW": 6203,
       "totalNewEquipResourceMW": 2628,
       "zones": {
         "south": 3826,
@@ -3521,7 +3461,7 @@
     {
       "ts": "2026-10-01T11:00:00.000Z",
       "totalResourceMW": 12420,
-      "totalIRRMW": 6088,
+      "totalIRRMW": 6104,
       "totalNewEquipResourceMW": 2628,
       "zones": {
         "south": 3826,
@@ -3533,7 +3473,7 @@
     {
       "ts": "2026-10-01T12:00:00.000Z",
       "totalResourceMW": 12082,
-      "totalIRRMW": 5131,
+      "totalIRRMW": 5147,
       "totalNewEquipResourceMW": 2628,
       "zones": {
         "south": 3808,
@@ -3545,7 +3485,7 @@
     {
       "ts": "2026-10-01T13:00:00.000Z",
       "totalResourceMW": 12082,
-      "totalIRRMW": 4818,
+      "totalIRRMW": 4834,
       "totalNewEquipResourceMW": 2628,
       "zones": {
         "south": 3808,
@@ -3557,7 +3497,7 @@
     {
       "ts": "2026-10-01T14:00:00.000Z",
       "totalResourceMW": 12548,
-      "totalIRRMW": 4818,
+      "totalIRRMW": 4834,
       "totalNewEquipResourceMW": 2628,
       "zones": {
         "south": 3824,
@@ -3569,7 +3509,7 @@
     {
       "ts": "2026-10-01T15:00:00.000Z",
       "totalResourceMW": 12690,
-      "totalIRRMW": 4818,
+      "totalIRRMW": 4834,
       "totalNewEquipResourceMW": 2628,
       "zones": {
         "south": 3826,
@@ -3581,7 +3521,7 @@
     {
       "ts": "2026-10-01T16:00:00.000Z",
       "totalResourceMW": 12690,
-      "totalIRRMW": 4632,
+      "totalIRRMW": 4648,
       "totalNewEquipResourceMW": 2628,
       "zones": {
         "south": 3826,
@@ -3593,7 +3533,7 @@
     {
       "ts": "2026-10-01T17:00:00.000Z",
       "totalResourceMW": 12690,
-      "totalIRRMW": 4632,
+      "totalIRRMW": 4648,
       "totalNewEquipResourceMW": 2628,
       "zones": {
         "south": 3826,
@@ -3605,7 +3545,7 @@
     {
       "ts": "2026-10-01T18:00:00.000Z",
       "totalResourceMW": 12690,
-      "totalIRRMW": 4632,
+      "totalIRRMW": 4648,
       "totalNewEquipResourceMW": 2418,
       "zones": {
         "south": 3826,
@@ -3617,7 +3557,7 @@
     {
       "ts": "2026-10-01T19:00:00.000Z",
       "totalResourceMW": 12690,
-      "totalIRRMW": 4632,
+      "totalIRRMW": 4648,
       "totalNewEquipResourceMW": 2418,
       "zones": {
         "south": 3826,
@@ -3629,7 +3569,7 @@
     {
       "ts": "2026-10-01T20:00:00.000Z",
       "totalResourceMW": 12690,
-      "totalIRRMW": 4632,
+      "totalIRRMW": 4648,
       "totalNewEquipResourceMW": 2418,
       "zones": {
         "south": 3826,
@@ -3641,7 +3581,7 @@
     {
       "ts": "2026-10-01T21:00:00.000Z",
       "totalResourceMW": 12640,
-      "totalIRRMW": 4632,
+      "totalIRRMW": 4648,
       "totalNewEquipResourceMW": 2418,
       "zones": {
         "south": 3826,
@@ -3653,7 +3593,7 @@
     {
       "ts": "2026-10-01T22:00:00.000Z",
       "totalResourceMW": 12638,
-      "totalIRRMW": 4632,
+      "totalIRRMW": 4648,
       "totalNewEquipResourceMW": 2418,
       "zones": {
         "south": 3824,
@@ -3665,7 +3605,7 @@
     {
       "ts": "2026-10-01T23:00:00.000Z",
       "totalResourceMW": 12542,
-      "totalIRRMW": 4607,
+      "totalIRRMW": 4623,
       "totalNewEquipResourceMW": 2268,
       "zones": {
         "south": 3808,
@@ -3677,7 +3617,7 @@
     {
       "ts": "2026-10-02T00:00:00.000Z",
       "totalResourceMW": 12342,
-      "totalIRRMW": 4607,
+      "totalIRRMW": 4623,
       "totalNewEquipResourceMW": 2268,
       "zones": {
         "south": 3808,
@@ -3689,7 +3629,7 @@
     {
       "ts": "2026-10-02T01:00:00.000Z",
       "totalResourceMW": 12342,
-      "totalIRRMW": 4607,
+      "totalIRRMW": 4623,
       "totalNewEquipResourceMW": 2268,
       "zones": {
         "south": 3808,
@@ -3701,7 +3641,7 @@
     {
       "ts": "2026-10-02T02:00:00.000Z",
       "totalResourceMW": 12662,
-      "totalIRRMW": 5454,
+      "totalIRRMW": 5470,
       "totalNewEquipResourceMW": 2268,
       "zones": {
         "south": 3808,
@@ -3713,7 +3653,7 @@
     {
       "ts": "2026-10-02T03:00:00.000Z",
       "totalResourceMW": 12662,
-      "totalIRRMW": 5553,
+      "totalIRRMW": 5569,
       "totalNewEquipResourceMW": 2268,
       "zones": {
         "south": 3808,
@@ -3725,7 +3665,7 @@
     {
       "ts": "2026-10-02T04:00:00.000Z",
       "totalResourceMW": 12662,
-      "totalIRRMW": 5553,
+      "totalIRRMW": 5569,
       "totalNewEquipResourceMW": 2268,
       "zones": {
         "south": 3808,
@@ -3737,7 +3677,7 @@
     {
       "ts": "2026-10-02T05:00:00.000Z",
       "totalResourceMW": 12415,
-      "totalIRRMW": 5497,
+      "totalIRRMW": 5513,
       "totalNewEquipResourceMW": 2268,
       "zones": {
         "south": 3808,
@@ -3749,7 +3689,7 @@
     {
       "ts": "2026-10-02T06:00:00.000Z",
       "totalResourceMW": 12678,
-      "totalIRRMW": 5497,
+      "totalIRRMW": 5513,
       "totalNewEquipResourceMW": 2268,
       "zones": {
         "south": 4075,
@@ -3761,7 +3701,7 @@
     {
       "ts": "2026-10-02T07:00:00.000Z",
       "totalResourceMW": 12678,
-      "totalIRRMW": 5497,
+      "totalIRRMW": 5513,
       "totalNewEquipResourceMW": 2268,
       "zones": {
         "south": 4075,
@@ -3773,7 +3713,7 @@
     {
       "ts": "2026-10-02T08:00:00.000Z",
       "totalResourceMW": 12678,
-      "totalIRRMW": 5497,
+      "totalIRRMW": 5513,
       "totalNewEquipResourceMW": 2268,
       "zones": {
         "south": 4075,
@@ -3785,7 +3725,7 @@
     {
       "ts": "2026-10-02T09:00:00.000Z",
       "totalResourceMW": 12678,
-      "totalIRRMW": 5497,
+      "totalIRRMW": 5513,
       "totalNewEquipResourceMW": 2268,
       "zones": {
         "south": 4075,
@@ -3797,7 +3737,7 @@
     {
       "ts": "2026-10-02T10:00:00.000Z",
       "totalResourceMW": 12678,
-      "totalIRRMW": 5497,
+      "totalIRRMW": 5513,
       "totalNewEquipResourceMW": 2268,
       "zones": {
         "south": 4075,
@@ -3809,7 +3749,7 @@
     {
       "ts": "2026-10-02T11:00:00.000Z",
       "totalResourceMW": 12678,
-      "totalIRRMW": 5398,
+      "totalIRRMW": 5414,
       "totalNewEquipResourceMW": 2268,
       "zones": {
         "south": 4075,
@@ -3821,7 +3761,7 @@
     {
       "ts": "2026-10-02T12:00:00.000Z",
       "totalResourceMW": 12340,
-      "totalIRRMW": 4472,
+      "totalIRRMW": 4488,
       "totalNewEquipResourceMW": 2268,
       "zones": {
         "south": 4075,
@@ -3833,7 +3773,7 @@
     {
       "ts": "2026-10-02T13:00:00.000Z",
       "totalResourceMW": 12340,
-      "totalIRRMW": 4272,
+      "totalIRRMW": 4288,
       "totalNewEquipResourceMW": 2268,
       "zones": {
         "south": 4075,
@@ -3845,7 +3785,7 @@
     {
       "ts": "2026-10-02T14:00:00.000Z",
       "totalResourceMW": 12556,
-      "totalIRRMW": 4272,
+      "totalIRRMW": 4288,
       "totalNewEquipResourceMW": 2268,
       "zones": {
         "south": 4091,
@@ -3857,7 +3797,7 @@
     {
       "ts": "2026-10-02T15:00:00.000Z",
       "totalResourceMW": 12538,
-      "totalIRRMW": 4272,
+      "totalIRRMW": 4288,
       "totalNewEquipResourceMW": 2268,
       "zones": {
         "south": 4073,
@@ -3869,7 +3809,7 @@
     {
       "ts": "2026-10-02T16:00:00.000Z",
       "totalResourceMW": 12528,
-      "totalIRRMW": 4171,
+      "totalIRRMW": 4187,
       "totalNewEquipResourceMW": 2268,
       "zones": {
         "south": 4063,
@@ -3881,7 +3821,7 @@
     {
       "ts": "2026-10-02T17:00:00.000Z",
       "totalResourceMW": 12528,
-      "totalIRRMW": 4171,
+      "totalIRRMW": 4187,
       "totalNewEquipResourceMW": 2268,
       "zones": {
         "south": 4063,
@@ -3893,7 +3833,7 @@
     {
       "ts": "2026-10-02T18:00:00.000Z",
       "totalResourceMW": 12528,
-      "totalIRRMW": 4171,
+      "totalIRRMW": 4187,
       "totalNewEquipResourceMW": 2268,
       "zones": {
         "south": 4063,
@@ -3905,7 +3845,7 @@
     {
       "ts": "2026-10-02T19:00:00.000Z",
       "totalResourceMW": 12528,
-      "totalIRRMW": 4171,
+      "totalIRRMW": 4187,
       "totalNewEquipResourceMW": 2268,
       "zones": {
         "south": 4063,
@@ -3917,7 +3857,7 @@
     {
       "ts": "2026-10-02T20:00:00.000Z",
       "totalResourceMW": 12136,
-      "totalIRRMW": 4171,
+      "totalIRRMW": 4187,
       "totalNewEquipResourceMW": 2118,
       "zones": {
         "south": 4063,
@@ -3929,7 +3869,7 @@
     {
       "ts": "2026-10-02T21:00:00.000Z",
       "totalResourceMW": 12136,
-      "totalIRRMW": 4171,
+      "totalIRRMW": 4187,
       "totalNewEquipResourceMW": 2118,
       "zones": {
         "south": 4063,
@@ -3941,7 +3881,7 @@
     {
       "ts": "2026-10-02T22:00:00.000Z",
       "totalResourceMW": 12134,
-      "totalIRRMW": 4108,
+      "totalIRRMW": 4124,
       "totalNewEquipResourceMW": 2118,
       "zones": {
         "south": 4061,
@@ -3953,7 +3893,7 @@
     {
       "ts": "2026-10-02T23:00:00.000Z",
       "totalResourceMW": 12108,
-      "totalIRRMW": 3842,
+      "totalIRRMW": 3858,
       "totalNewEquipResourceMW": 2118,
       "zones": {
         "south": 4035,
@@ -3965,7 +3905,7 @@
     {
       "ts": "2026-10-03T00:00:00.000Z",
       "totalResourceMW": 11908,
-      "totalIRRMW": 3220,
+      "totalIRRMW": 3236,
       "totalNewEquipResourceMW": 2118,
       "zones": {
         "south": 4035,
@@ -3977,7 +3917,7 @@
     {
       "ts": "2026-10-03T01:00:00.000Z",
       "totalResourceMW": 11748,
-      "totalIRRMW": 2900,
+      "totalIRRMW": 2916,
       "totalNewEquipResourceMW": 2118,
       "zones": {
         "south": 4035,
@@ -3989,7 +3929,7 @@
     {
       "ts": "2026-10-03T02:00:00.000Z",
       "totalResourceMW": 12068,
-      "totalIRRMW": 3676,
+      "totalIRRMW": 3692,
       "totalNewEquipResourceMW": 2118,
       "zones": {
         "south": 4035,
@@ -4001,7 +3941,7 @@
     {
       "ts": "2026-10-03T03:00:00.000Z",
       "totalResourceMW": 12068,
-      "totalIRRMW": 3775,
+      "totalIRRMW": 3791,
       "totalNewEquipResourceMW": 2118,
       "zones": {
         "south": 4035,
@@ -4013,7 +3953,7 @@
     {
       "ts": "2026-10-03T04:00:00.000Z",
       "totalResourceMW": 12068,
-      "totalIRRMW": 3775,
+      "totalIRRMW": 3791,
       "totalNewEquipResourceMW": 2118,
       "zones": {
         "south": 4035,
