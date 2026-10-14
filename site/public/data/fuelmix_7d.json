@@ -1,612 +1,18 @@
 {
   "meta": {
     "schemaVersion": 2,
-    "updatedAt": "2026-10-14T08:40:03.117Z",
+    "updatedAt": "2026-10-14T14:03:35.505Z",
     "windowDays": 7,
     "source": "ERCOT Public Data API",
     "endpoint": "/np3-910-er/2d_agg_gen_summary",
     "queryUsed": {
-      "SCEDTimestampFrom": "2026-10-06T21:40:03",
-      "SCEDTimestampTo": "2026-10-13T21:40:03"
+      "SCEDTimestampFrom": "2026-10-07T03:03:35",
+      "SCEDTimestampTo": "2026-10-14T03:03:35"
     },
     "renewablesDefinition": "wind + solar + hydro + other renewables (best-effort key matching)",
     "thermalDefinition": "gas + coal + nuclear + other thermal (best-effort key matching)"
   },
   "points": [
-    {
-      "ts": "2026-10-07T08:40:21.000Z",
-      "wind": 11116.8571559,
-      "solar": 0.99496486,
-      "otherRenew": 5702.90934379,
-      "thermal": 33572.31975015,
-      "storageDischarge": 0.09823845,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T08:45:21.000Z",
-      "wind": 11126.44368547,
-      "solar": 1.05441739,
-      "otherRenew": 5701.35665886,
-      "thermal": 33354.00611881,
-      "storageDischarge": 0.09485896,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T08:50:21.000Z",
-      "wind": 11062.69370711,
-      "solar": 1.02359229,
-      "otherRenew": 5701.10934073,
-      "thermal": 33138.28687581,
-      "storageDischarge": 0.12132955,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T08:55:21.000Z",
-      "wind": 11156.97519347,
-      "solar": 1.01189067,
-      "otherRenew": 5702.76333914,
-      "thermal": 32969.33044624,
-      "storageDischarge": 2.29598763,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T09:00:26.000Z",
-      "wind": 11118.40519998,
-      "solar": 1.0027537,
-      "otherRenew": 5702.3023741,
-      "thermal": 32711.4625517,
-      "storageDischarge": 8.99219733,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T09:05:20.000Z",
-      "wind": 11061.75643976,
-      "solar": 0.99551495,
-      "otherRenew": 5700.97230827,
-      "thermal": 32774.36792732,
-      "storageDischarge": 10.36268989,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T09:10:19.000Z",
-      "wind": 10971.3257566,
-      "solar": 0.98392659,
-      "otherRenew": 5701.1252613,
-      "thermal": 32969.90919184,
-      "storageDischarge": 15.05461583,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T09:15:22.000Z",
-      "wind": 10875.93305432,
-      "solar": 0.9868528,
-      "otherRenew": 5699.6565064,
-      "thermal": 33343.57456891,
-      "storageDischarge": 11.00872977,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T09:20:16.000Z",
-      "wind": 10819.436571,
-      "solar": 0.98689767,
-      "otherRenew": 5703.06796865,
-      "thermal": 33343.18035701,
-      "storageDischarge": 11.03182682,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T09:25:16.000Z",
-      "wind": 10785.52708807,
-      "solar": 0.97169011,
-      "otherRenew": 5698.68012286,
-      "thermal": 33379.64654699,
-      "storageDischarge": 11.12737578,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T09:30:20.000Z",
-      "wind": 10695.57999677,
-      "solar": 1.09791391,
-      "otherRenew": 5700.36939803,
-      "thermal": 33496.92076794,
-      "storageDischarge": 11.19735708,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T09:35:16.000Z",
-      "wind": 10616.62111884,
-      "solar": 0.9545513,
-      "otherRenew": 5698.50744929,
-      "thermal": 33436.16250405,
-      "storageDischarge": 11.08697947,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T09:40:18.000Z",
-      "wind": 10510.74052632,
-      "solar": 0.98577377,
-      "otherRenew": 5696.29922376,
-      "thermal": 33487.39886739,
-      "storageDischarge": 15.26108847,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T09:45:18.000Z",
-      "wind": 10420.5355123,
-      "solar": 0.97319336,
-      "otherRenew": 5696.65791152,
-      "thermal": 33217.87756955,
-      "storageDischarge": 13.87987717,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T09:50:17.000Z",
-      "wind": 10317.48730769,
-      "solar": 0.98318144,
-      "otherRenew": 5695.48313002,
-      "thermal": 33296.60592481,
-      "storageDischarge": 13.24948657,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T09:55:18.000Z",
-      "wind": 10175.54860702,
-      "solar": 0.9677712,
-      "otherRenew": 5694.11484067,
-      "thermal": 33115.24827519,
-      "storageDischarge": 13.20457044,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T10:00:21.000Z",
-      "wind": 10092.44583104,
-      "solar": 0.98012004,
-      "otherRenew": 5695.91334456,
-      "thermal": 32761.21469414,
-      "storageDischarge": 89.7148842,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T10:05:18.000Z",
-      "wind": 10003.20750752,
-      "solar": 0.93768755,
-      "otherRenew": 5694.87989606,
-      "thermal": 32976.13881829,
-      "storageDischarge": 94.64203396,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T10:10:17.000Z",
-      "wind": 9845.97917204,
-      "solar": 2.64139956,
-      "otherRenew": 5693.66708295,
-      "thermal": 33194.35901667,
-      "storageDischarge": 88.29179727,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T10:15:17.000Z",
-      "wind": 9651.93719977,
-      "solar": 4.07802116,
-      "otherRenew": 5693.61685306,
-      "thermal": 33362.25137841,
-      "storageDischarge": 103.36763296,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T10:20:19.000Z",
-      "wind": 9412.33735403,
-      "solar": 7.63936446,
-      "otherRenew": 5694.04274044,
-      "thermal": 33561.40026022,
-      "storageDischarge": 102.55993595,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T10:25:15.000Z",
-      "wind": 9244.08136256,
-      "solar": 1.60010659,
-      "otherRenew": 5695.88371774,
-      "thermal": 33720.54489792,
-      "storageDischarge": 101.98526609,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T10:30:17.000Z",
-      "wind": 9047.61181803,
-      "solar": 0.95283473,
-      "otherRenew": 5694.64858492,
-      "thermal": 33859.27755623,
-      "storageDischarge": 102.06764165,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T10:35:17.000Z",
-      "wind": 8793.19249575,
-      "solar": 0.94576073,
-      "otherRenew": 5696.76675349,
-      "thermal": 34232.02168549,
-      "storageDischarge": 132.8555015,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T10:40:16.000Z",
-      "wind": 8636.11076836,
-      "solar": 0.95927649,
-      "otherRenew": 5696.99389195,
-      "thermal": 34404.05945898,
-      "storageDischarge": 297.96929755,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T10:45:18.000Z",
-      "wind": 8427.91437065,
-      "solar": 0.97660365,
-      "otherRenew": 5693.86487219,
-      "thermal": 34634.23129401,
-      "storageDischarge": 390.69925538,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T10:50:17.000Z",
-      "wind": 8183.10069043,
-      "solar": 1.06258097,
-      "otherRenew": 5697.00117495,
-      "thermal": 34748.80733113,
-      "storageDischarge": 674.94908832,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T10:55:18.000Z",
-      "wind": 8042.54985973,
-      "solar": 0.98070815,
-      "otherRenew": 5697.80724367,
-      "thermal": 34881.41956403,
-      "storageDischarge": 759.62169244,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T11:00:19.000Z",
-      "wind": 7841.030605,
-      "solar": 0.97209371,
-      "otherRenew": 5696.53533731,
-      "thermal": 35064.85848315,
-      "storageDischarge": 1079.4024736,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T11:05:17.000Z",
-      "wind": 7723.21763862,
-      "solar": 1.00427789,
-      "otherRenew": 5691.72275629,
-      "thermal": 35290.79083195,
-      "storageDischarge": 1426.65881536,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T11:10:17.000Z",
-      "wind": 7596.33519601,
-      "solar": 0.97558137,
-      "otherRenew": 5693.93728586,
-      "thermal": 35401.31688554,
-      "storageDischarge": 1618.79459537,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T11:15:18.000Z",
-      "wind": 7456.72859145,
-      "solar": 0.96389654,
-      "otherRenew": 5697.88362893,
-      "thermal": 35434.30604103,
-      "storageDischarge": 1668.40021332,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T11:20:16.000Z",
-      "wind": 7371.41042138,
-      "solar": 0.98353863,
-      "otherRenew": 5697.8046722,
-      "thermal": 35467.2631805,
-      "storageDischarge": 1902.43010231,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T11:25:16.000Z",
-      "wind": 7207.15733609,
-      "solar": 1.0598006,
-      "otherRenew": 5699.73192687,
-      "thermal": 35486.81788308,
-      "storageDischarge": 2055.26178756,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T11:30:18.000Z",
-      "wind": 7130.96543208,
-      "solar": 0.93767733,
-      "otherRenew": 5700.45483181,
-      "thermal": 35533.80359056,
-      "storageDischarge": 2219.33729544,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T11:35:17.000Z",
-      "wind": 7037.29546818,
-      "solar": 0.96909334,
-      "otherRenew": 5703.0293852,
-      "thermal": 35576.16306222,
-      "storageDischarge": 2574.34311156,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T11:40:17.000Z",
-      "wind": 6993.17173343,
-      "solar": 1.00281584,
-      "otherRenew": 5711.53511743,
-      "thermal": 35585.74953475,
-      "storageDischarge": 2668.94839466,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T11:45:17.000Z",
-      "wind": 6945.92238032,
-      "solar": 1.02536617,
-      "otherRenew": 5715.54983356,
-      "thermal": 35600.97516687,
-      "storageDischarge": 2715.33662196,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T11:50:17.000Z",
-      "wind": 6848.49308723,
-      "solar": 1.04057091,
-      "otherRenew": 5714.51990184,
-      "thermal": 35642.06854093,
-      "storageDischarge": 2916.9891366,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T11:55:17.000Z",
-      "wind": 6760.58419508,
-      "solar": 0.99573422,
-      "otherRenew": 5720.27903248,
-      "thermal": 35674.64166032,
-      "storageDischarge": 3024.74352167,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T12:00:20.000Z",
-      "wind": 6723.40973653,
-      "solar": 0.97637932,
-      "otherRenew": 5718.62681858,
-      "thermal": 35566.82586858,
-      "storageDischarge": 3210.39878663,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T12:04:22.000Z",
-      "wind": 6638.00188203,
-      "solar": 0.98113233,
-      "otherRenew": 5717.29043792,
-      "thermal": 35387.26866616,
-      "storageDischarge": 3860.07240324,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T12:05:19.000Z",
-      "wind": 6614.95060767,
-      "solar": 0.9526431,
-      "otherRenew": 5719.95149468,
-      "thermal": 35400.52400576,
-      "storageDischarge": 3969.72252827,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T12:10:26.000Z",
-      "wind": 6500.48979645,
-      "solar": 1.05675586,
-      "otherRenew": 5713.70802809,
-      "thermal": 35151.25172234,
-      "storageDischarge": 4207.71623387,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T12:15:19.000Z",
-      "wind": 6376.82904391,
-      "solar": 2.25638248,
-      "otherRenew": 5717.3839955,
-      "thermal": 35016.11789664,
-      "storageDischarge": 4249.48078647,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T12:20:24.000Z",
-      "wind": 6261.77749567,
-      "solar": 8.49728346,
-      "otherRenew": 5720.20478436,
-      "thermal": 34950.13780907,
-      "storageDischarge": 4312.35196469,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T12:25:24.000Z",
-      "wind": 6121.39419883,
-      "solar": 26.86237322,
-      "otherRenew": 5715.15858623,
-      "thermal": 34855.30833021,
-      "storageDischarge": 4500.41463417,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T12:30:20.000Z",
-      "wind": 6004.80572503,
-      "solar": 80.97711667,
-      "otherRenew": 5718.46123119,
-      "thermal": 34815.48508798,
-      "storageDischarge": 4335.78204882,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T12:35:19.000Z",
-      "wind": 5905.98791549,
-      "solar": 220.82466295,
-      "otherRenew": 5722.95954723,
-      "thermal": 34776.19021311,
-      "storageDischarge": 4253.74247374,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T12:40:17.000Z",
-      "wind": 5811.41746341,
-      "solar": 485.90353521,
-      "otherRenew": 5723.16077367,
-      "thermal": 34758.58943266,
-      "storageDischarge": 3994.9340078,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T12:45:18.000Z",
-      "wind": 5776.0556751,
-      "solar": 955.23629246,
-      "otherRenew": 5724.79629263,
-      "thermal": 34843.01856746,
-      "storageDischarge": 3356.7325091,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T12:50:17.000Z",
-      "wind": 5728.60957134,
-      "solar": 1591.61098543,
-      "otherRenew": 5730.05682512,
-      "thermal": 34738.26956787,
-      "storageDischarge": 2839.40039419,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T12:55:18.000Z",
-      "wind": 5673.48556934,
-      "solar": 2405.39034011,
-      "otherRenew": 5732.11769558,
-      "thermal": 34717.36943007,
-      "storageDischarge": 2390.49735023,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T13:00:19.000Z",
-      "wind": 5561.76074286,
-      "solar": 3444.41841511,
-      "otherRenew": 5738.91552053,
-      "thermal": 34524.84706337,
-      "storageDischarge": 1419.74556595,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T13:05:18.000Z",
-      "wind": 5495.18333898,
-      "solar": 4738.65722287,
-      "otherRenew": 5742.53834145,
-      "thermal": 34192.00331968,
-      "storageDischarge": 1077.11710074,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T13:10:17.000Z",
-      "wind": 5401.95724404,
-      "solar": 6132.64382138,
-      "otherRenew": 5744.41553742,
-      "thermal": 33431.65730509,
-      "storageDischarge": 751.24215081,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T13:15:18.000Z",
-      "wind": 5351.09254197,
-      "solar": 7656.96710839,
-      "otherRenew": 5738.52800368,
-      "thermal": 33057.87487566,
-      "storageDischarge": 208.22469963,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T13:20:18.000Z",
-      "wind": 5250.97512093,
-      "solar": 9326.97289294,
-      "otherRenew": 5739.42674334,
-      "thermal": 32316.24936378,
-      "storageDischarge": 159.39316642,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T13:25:15.000Z",
-      "wind": 5161.26617494,
-      "solar": 11028.14989376,
-      "otherRenew": 5741.29589936,
-      "thermal": 31294.29681134,
-      "storageDischarge": 163.68122143,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T13:30:16.000Z",
-      "wind": 5054.09827405,
-      "solar": 12834.41929525,
-      "otherRenew": 5735.87022607,
-      "thermal": 30170.77468741,
-      "storageDischarge": 150.10995921,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T13:35:15.000Z",
-      "wind": 4901.90936776,
-      "solar": 14559.94861912,
-      "otherRenew": 5714.57903763,
-      "thermal": 29540.34570634,
-      "storageDischarge": 150.10732057,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T13:40:17.000Z",
-      "wind": 4769.64188883,
-      "solar": 16253.66922008,
-      "otherRenew": 5375.89939953,
-      "thermal": 29119.31833673,
-      "storageDischarge": 150.0933309,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T13:45:17.000Z",
-      "wind": 4636.6306228,
-      "solar": 17997.36838901,
-      "otherRenew": 5292.01571049,
-      "thermal": 28376.38889241,
-      "storageDischarge": 153.87930446,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T13:50:16.000Z",
-      "wind": 4463.28885292,
-      "solar": 19787.6863631,
-      "otherRenew": 5256.9187357,
-      "thermal": 27383.07385862,
-      "storageDischarge": 150.44381821,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T13:55:18.000Z",
-      "wind": 4268.57921376,
-      "solar": 21556.4168787,
-      "otherRenew": 5256.73633044,
-      "thermal": 26683.95524561,
-      "storageDischarge": 150.33025046,
-      "storageCharge": 0
-    },
-    {
-      "ts": "2026-10-07T14:00:18.000Z",
-      "wind": 4059.45487915,
-      "solar": 23238.06746745,
-      "otherRenew": 5652.86252671,
-      "thermal": 26582.40890562,
-      "storageDischarge": 0.17354092,
-      "storageCharge": 0
-    },
     {
       "ts": "2026-10-07T14:05:17.000Z",
       "wind": 3833.01859647,
@@ -12746,6 +12152,2652 @@
       "otherRenew": 5219.26154088,
       "thermal": 26357.07411987,
       "storageDischarge": 52.65322794,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T05:00:20.000Z",
+      "wind": 24924.83698129,
+      "solar": 1.21639096,
+      "otherRenew": 5361.03306541,
+      "thermal": 26177.24523865,
+      "storageDischarge": 103.51606376,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T05:05:19.000Z",
+      "wind": 24815.59364557,
+      "solar": 1.03725497,
+      "otherRenew": 5247.9109624,
+      "thermal": 26197.10903148,
+      "storageDischarge": 100.3776134,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T05:10:19.000Z",
+      "wind": 24948.71745777,
+      "solar": 1.04943652,
+      "otherRenew": 5219.70284666,
+      "thermal": 25802.88837119,
+      "storageDischarge": 107.2075537,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T05:15:19.000Z",
+      "wind": 24980.67233574,
+      "solar": 1.01898094,
+      "otherRenew": 5219.76982298,
+      "thermal": 25586.65784467,
+      "storageDischarge": 130.9863421,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T05:20:18.000Z",
+      "wind": 24995.21699023,
+      "solar": 0.93431138,
+      "otherRenew": 5221.35590169,
+      "thermal": 25308.81854456,
+      "storageDischarge": 122.98357532,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T05:25:18.000Z",
+      "wind": 24984.2009778,
+      "solar": 0.99279035,
+      "otherRenew": 5220.14416122,
+      "thermal": 25007.99128617,
+      "storageDischarge": 119.74686567,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T05:30:18.000Z",
+      "wind": 25067.58191049,
+      "solar": 1.0674089,
+      "otherRenew": 5220.03291319,
+      "thermal": 24689.97088025,
+      "storageDischarge": 113.28048532,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T05:35:18.000Z",
+      "wind": 25091.06156921,
+      "solar": 1.15242524,
+      "otherRenew": 5220.46922035,
+      "thermal": 24632.00583361,
+      "storageDischarge": 111.55797513,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T05:40:19.000Z",
+      "wind": 25031.45146107,
+      "solar": 1.29092469,
+      "otherRenew": 5220.72353357,
+      "thermal": 24573.4444121,
+      "storageDischarge": 113.21552252,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T05:45:19.000Z",
+      "wind": 25032.39852941,
+      "solar": 0.98144675,
+      "otherRenew": 5221.75181019,
+      "thermal": 24361.15192519,
+      "storageDischarge": 113.93737261,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T05:50:18.000Z",
+      "wind": 25107.71544218,
+      "solar": 1.42861968,
+      "otherRenew": 5220.06412393,
+      "thermal": 24234.17361353,
+      "storageDischarge": 103.31569502,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T05:55:19.000Z",
+      "wind": 25059.34815967,
+      "solar": 1.37365942,
+      "otherRenew": 5221.22274719,
+      "thermal": 24296.0161023,
+      "storageDischarge": 103.33038433,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T06:00:21.000Z",
+      "wind": 25090.55193126,
+      "solar": 1.3402095,
+      "otherRenew": 5219.8655986,
+      "thermal": 24882.51372383,
+      "storageDischarge": 0.14119697,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T06:05:18.000Z",
+      "wind": 25193.14951229,
+      "solar": 1.5777678,
+      "otherRenew": 5218.69400708,
+      "thermal": 24724.45835291,
+      "storageDischarge": 5.22461762,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T06:10:19.000Z",
+      "wind": 25061.74369835,
+      "solar": 1.51918825,
+      "otherRenew": 5217.06898554,
+      "thermal": 24581.91602348,
+      "storageDischarge": 0.16070457,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T06:15:18.000Z",
+      "wind": 25037.26325309,
+      "solar": 1.77181654,
+      "otherRenew": 5219.75412852,
+      "thermal": 24444.87502847,
+      "storageDischarge": 0.18070873,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T06:20:16.000Z",
+      "wind": 25008.93382573,
+      "solar": 1.67579455,
+      "otherRenew": 5216.29184379,
+      "thermal": 24432.66279016,
+      "storageDischarge": 0.15864989,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T06:25:16.000Z",
+      "wind": 24893.45958495,
+      "solar": 1.63908025,
+      "otherRenew": 5151.92071018,
+      "thermal": 24595.16840278,
+      "storageDischarge": 1.57936056,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T06:30:21.000Z",
+      "wind": 24803.12435162,
+      "solar": 1.61548588,
+      "otherRenew": 5139.00491452,
+      "thermal": 24415.37547575,
+      "storageDischarge": 0.05373978,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T06:35:18.000Z",
+      "wind": 24604.70624554,
+      "solar": 1.54256685,
+      "otherRenew": 5138.5381195,
+      "thermal": 24643.16714333,
+      "storageDischarge": 0.16508307,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T06:40:19.000Z",
+      "wind": 24565.08699679,
+      "solar": 1.53518173,
+      "otherRenew": 5137.70270533,
+      "thermal": 24642.60411881,
+      "storageDischarge": 0.06240237,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T06:45:17.000Z",
+      "wind": 24448.27483665,
+      "solar": 1.54927919,
+      "otherRenew": 5136.435215,
+      "thermal": 24633.92824622,
+      "storageDischarge": 0.6434198,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T06:50:19.000Z",
+      "wind": 24445.66054439,
+      "solar": 1.52084284,
+      "otherRenew": 5136.07714094,
+      "thermal": 24609.90584815,
+      "storageDischarge": 20.64549019,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T06:55:19.000Z",
+      "wind": 24420.91308879,
+      "solar": 1.54530715,
+      "otherRenew": 5138.51755427,
+      "thermal": 24460.05998568,
+      "storageDischarge": 0.66172079,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T07:00:19.000Z",
+      "wind": 24426.08315277,
+      "solar": 1.59871495,
+      "otherRenew": 5137.79115818,
+      "thermal": 24731.32837294,
+      "storageDischarge": 103.74320062,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T07:05:18.000Z",
+      "wind": 24313.91262114,
+      "solar": 1.79506993,
+      "otherRenew": 5138.4919035,
+      "thermal": 24642.72162019,
+      "storageDischarge": 115.24412153,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T07:10:18.000Z",
+      "wind": 24291.16689312,
+      "solar": 1.61043627,
+      "otherRenew": 5136.46790775,
+      "thermal": 24810.24878775,
+      "storageDischarge": 111.95251571,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T07:15:19.000Z",
+      "wind": 24229.97080755,
+      "solar": 1.67922669,
+      "otherRenew": 5137.26236014,
+      "thermal": 24704.87585936,
+      "storageDischarge": 109.86820752,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T07:20:18.000Z",
+      "wind": 24143.93823564,
+      "solar": 1.77531675,
+      "otherRenew": 5137.51189152,
+      "thermal": 24685.27243743,
+      "storageDischarge": 109.43131183,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T07:25:17.000Z",
+      "wind": 24057.21969509,
+      "solar": 1.58222926,
+      "otherRenew": 5139.07648742,
+      "thermal": 24622.73419188,
+      "storageDischarge": 112.85709464,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T07:30:20.000Z",
+      "wind": 23970.78880739,
+      "solar": 1.40610432,
+      "otherRenew": 5138.43509774,
+      "thermal": 24822.11651049,
+      "storageDischarge": 105.20061628,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T07:35:20.000Z",
+      "wind": 23852.99575912,
+      "solar": 1.59470568,
+      "otherRenew": 5138.0070181,
+      "thermal": 24756.02361344,
+      "storageDischarge": 113.71540244,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T07:40:19.000Z",
+      "wind": 23772.40758538,
+      "solar": 1.49785499,
+      "otherRenew": 5136.14528906,
+      "thermal": 24747.79690943,
+      "storageDischarge": 107.67604349,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T07:45:18.000Z",
+      "wind": 23727.62455224,
+      "solar": 1.53613455,
+      "otherRenew": 5137.32358335,
+      "thermal": 24854.77552984,
+      "storageDischarge": 118.32525039,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T07:50:17.000Z",
+      "wind": 23719.35701262,
+      "solar": 1.50450454,
+      "otherRenew": 5135.56422354,
+      "thermal": 24816.6739317,
+      "storageDischarge": 118.73633743,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T07:55:17.000Z",
+      "wind": 23739.6170808,
+      "solar": 1.42940648,
+      "otherRenew": 5132.4773418,
+      "thermal": 24751.18721007,
+      "storageDischarge": 117.74266671,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T08:00:18.000Z",
+      "wind": 23841.90925371,
+      "solar": 1.53056117,
+      "otherRenew": 5131.10443257,
+      "thermal": 25033.2720068,
+      "storageDischarge": 0.57262317,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T08:05:18.000Z",
+      "wind": 23730.10797286,
+      "solar": 1.4579642,
+      "otherRenew": 5132.02952728,
+      "thermal": 25068.33094744,
+      "storageDischarge": 56.29601673,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T08:10:17.000Z",
+      "wind": 23658.93398243,
+      "solar": 1.50161852,
+      "otherRenew": 5133.05490397,
+      "thermal": 25042.78466664,
+      "storageDischarge": 64.77182215,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T08:15:18.000Z",
+      "wind": 23615.60280454,
+      "solar": 1.46971119,
+      "otherRenew": 5131.6046342,
+      "thermal": 24901.71605371,
+      "storageDischarge": 82.29668215,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T08:20:16.000Z",
+      "wind": 23394.25708931,
+      "solar": 1.47459827,
+      "otherRenew": 5130.90671349,
+      "thermal": 24996.41702394,
+      "storageDischarge": 70.36400966,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T08:25:18.000Z",
+      "wind": 23383.70077383,
+      "solar": 1.51263362,
+      "otherRenew": 5132.24488432,
+      "thermal": 24938.4054055,
+      "storageDischarge": 76.52208159,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T08:30:17.000Z",
+      "wind": 23236.16424751,
+      "solar": 1.47472602,
+      "otherRenew": 5133.45706929,
+      "thermal": 25070.35823475,
+      "storageDischarge": 78.61674288,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T08:35:16.000Z",
+      "wind": 23217.68684434,
+      "solar": 1.49068669,
+      "otherRenew": 5130.25579946,
+      "thermal": 25036.39769016,
+      "storageDischarge": 73.73770588,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T08:40:19.000Z",
+      "wind": 23115.10536611,
+      "solar": 1.70435969,
+      "otherRenew": 5133.02484829,
+      "thermal": 24978.78488038,
+      "storageDischarge": 68.60917371,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T08:45:24.000Z",
+      "wind": 23114.88252341,
+      "solar": 1.50076322,
+      "otherRenew": 5131.77466909,
+      "thermal": 24928.84009794,
+      "storageDischarge": 63.90367601,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T08:50:20.000Z",
+      "wind": 23191.61750876,
+      "solar": 1.29593868,
+      "otherRenew": 5133.49709198,
+      "thermal": 24902.38911824,
+      "storageDischarge": 68.08483629,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T08:55:21.000Z",
+      "wind": 23147.43446278,
+      "solar": 1.31664425,
+      "otherRenew": 5133.77629715,
+      "thermal": 24833.02951406,
+      "storageDischarge": 68.5257804,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T09:00:26.000Z",
+      "wind": 22903.03426671,
+      "solar": 1.55498526,
+      "otherRenew": 5136.78724038,
+      "thermal": 24856.03433106,
+      "storageDischarge": 15.00354386,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T09:05:23.000Z",
+      "wind": 22820.74304509,
+      "solar": 1.47171367,
+      "otherRenew": 5132.19453639,
+      "thermal": 25174.16414416,
+      "storageDischarge": 11.76529552,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T09:10:20.000Z",
+      "wind": 22748.87973564,
+      "solar": 1.53284043,
+      "otherRenew": 5136.10695109,
+      "thermal": 25026.03018529,
+      "storageDischarge": 12.96106993,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T09:15:19.000Z",
+      "wind": 22688.56618273,
+      "solar": 1.45330302,
+      "otherRenew": 5134.44572141,
+      "thermal": 25039.05622215,
+      "storageDischarge": 13.41254785,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T09:20:17.000Z",
+      "wind": 22629.73481762,
+      "solar": 1.55426432,
+      "otherRenew": 5136.94562581,
+      "thermal": 24993.38622219,
+      "storageDischarge": 99.7044917,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T09:25:18.000Z",
+      "wind": 22537.52885341,
+      "solar": 1.62303278,
+      "otherRenew": 5135.69691522,
+      "thermal": 25017.08487136,
+      "storageDischarge": 130.59974766,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T09:30:20.000Z",
+      "wind": 22474.16672217,
+      "solar": 1.58120326,
+      "otherRenew": 5137.51852451,
+      "thermal": 24971.46343386,
+      "storageDischarge": 133.05000972,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T09:35:19.000Z",
+      "wind": 22530.2261396,
+      "solar": 1.5585586,
+      "otherRenew": 5139.47013152,
+      "thermal": 25018.72210977,
+      "storageDischarge": 124.30469177,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T09:40:18.000Z",
+      "wind": 22540.24542313,
+      "solar": 1.59880892,
+      "otherRenew": 5137.77645663,
+      "thermal": 25058.12257085,
+      "storageDischarge": 95.57685109,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T09:45:19.000Z",
+      "wind": 22535.54230803,
+      "solar": 1.66994789,
+      "otherRenew": 5137.32404498,
+      "thermal": 25060.73497568,
+      "storageDischarge": 89.00677566,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T09:50:19.000Z",
+      "wind": 22569.22241997,
+      "solar": 1.60045675,
+      "otherRenew": 5142.76405199,
+      "thermal": 25157.8581724,
+      "storageDischarge": 19.34491431,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T09:55:19.000Z",
+      "wind": 22578.83537626,
+      "solar": 1.50898938,
+      "otherRenew": 5141.45826484,
+      "thermal": 25188.15610359,
+      "storageDischarge": 14.48033974,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T10:00:20.000Z",
+      "wind": 22538.81185305,
+      "solar": 1.48182068,
+      "otherRenew": 5141.99348576,
+      "thermal": 25146.86065923,
+      "storageDischarge": 20.62064731,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T10:05:17.000Z",
+      "wind": 22552.76997017,
+      "solar": 1.50421586,
+      "otherRenew": 5136.78059843,
+      "thermal": 25313.28680299,
+      "storageDischarge": 23.03496689,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T10:10:17.000Z",
+      "wind": 22515.34480392,
+      "solar": 1.42205165,
+      "otherRenew": 5139.50931368,
+      "thermal": 25347.54980181,
+      "storageDischarge": 18.97891809,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T10:15:17.000Z",
+      "wind": 22402.99370455,
+      "solar": 1.48869374,
+      "otherRenew": 5139.25699029,
+      "thermal": 25466.3730552,
+      "storageDischarge": 12.4626462,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T10:20:18.000Z",
+      "wind": 22289.21776819,
+      "solar": 1.39254974,
+      "otherRenew": 5137.80794508,
+      "thermal": 25559.96177374,
+      "storageDischarge": 12.57304847,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T10:25:17.000Z",
+      "wind": 22053.68302932,
+      "solar": 1.54448172,
+      "otherRenew": 5137.57503845,
+      "thermal": 25666.58725892,
+      "storageDischarge": 168.74412467,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T10:30:16.000Z",
+      "wind": 21938.47506776,
+      "solar": 1.55618947,
+      "otherRenew": 5137.19975374,
+      "thermal": 25824.48863945,
+      "storageDischarge": 176.99298913,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T10:35:16.000Z",
+      "wind": 21863.3918668,
+      "solar": 1.49867039,
+      "otherRenew": 5137.75794602,
+      "thermal": 25867.85847233,
+      "storageDischarge": 184.26121065,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T10:40:17.000Z",
+      "wind": 21704.46032369,
+      "solar": 1.57676745,
+      "otherRenew": 5137.44369204,
+      "thermal": 26042.67146409,
+      "storageDischarge": 211.26734776,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T10:45:16.000Z",
+      "wind": 21606.07657849,
+      "solar": 1.34825896,
+      "otherRenew": 5135.7855507,
+      "thermal": 26079.51011426,
+      "storageDischarge": 420.50968578,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T10:50:19.000Z",
+      "wind": 21559.26188158,
+      "solar": 1.56715416,
+      "otherRenew": 5193.71930393,
+      "thermal": 26085.09525987,
+      "storageDischarge": 424.22548975,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T10:55:18.000Z",
+      "wind": 21463.70768475,
+      "solar": 1.62409129,
+      "otherRenew": 5194.56888845,
+      "thermal": 26253.42563302,
+      "storageDischarge": 425.76295667,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T11:00:19.000Z",
+      "wind": 21431.11256802,
+      "solar": 1.66010872,
+      "otherRenew": 5193.91043188,
+      "thermal": 26268.01077209,
+      "storageDischarge": 496.24464247,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T11:05:18.000Z",
+      "wind": 21217.35013711,
+      "solar": 1.80184785,
+      "otherRenew": 5196.91116124,
+      "thermal": 26695.84166918,
+      "storageDischarge": 642.87975054,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T11:10:17.000Z",
+      "wind": 21073.81409454,
+      "solar": 1.70312718,
+      "otherRenew": 5192.82894247,
+      "thermal": 26828.55537942,
+      "storageDischarge": 632.20317081,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T11:15:18.000Z",
+      "wind": 21001.17338132,
+      "solar": 1.70287139,
+      "otherRenew": 5193.61277664,
+      "thermal": 27203.27083665,
+      "storageDischarge": 532.68259521,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T11:20:18.000Z",
+      "wind": 20914.11524951,
+      "solar": 1.65529081,
+      "otherRenew": 5160.23904302,
+      "thermal": 27417.78990929,
+      "storageDischarge": 593.79816237,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T11:25:17.000Z",
+      "wind": 20808.18771111,
+      "solar": 1.73905044,
+      "otherRenew": 5145.59760148,
+      "thermal": 27482.51733626,
+      "storageDischarge": 602.2595359,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T11:30:17.000Z",
+      "wind": 20727.69411957,
+      "solar": 1.6977042,
+      "otherRenew": 5140.04302802,
+      "thermal": 27333.74327612,
+      "storageDischarge": 859.78637426,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T11:35:17.000Z",
+      "wind": 20499.30362844,
+      "solar": 1.6165124,
+      "otherRenew": 5138.00699029,
+      "thermal": 27526.23941593,
+      "storageDischarge": 1104.92501755,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T11:40:19.000Z",
+      "wind": 20333.7254343,
+      "solar": 1.6597834,
+      "otherRenew": 5137.52724537,
+      "thermal": 27623.19659181,
+      "storageDischarge": 1353.70902853,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T11:45:17.000Z",
+      "wind": 20167.0447334,
+      "solar": 1.74940595,
+      "otherRenew": 5137.33757176,
+      "thermal": 27786.5877562,
+      "storageDischarge": 1463.36885564,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T11:50:17.000Z",
+      "wind": 19995.55948865,
+      "solar": 1.70835539,
+      "otherRenew": 5141.98718915,
+      "thermal": 27924.47547738,
+      "storageDischarge": 1478.32701381,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T11:55:19.000Z",
+      "wind": 19923.21559989,
+      "solar": 1.66351929,
+      "otherRenew": 5142.94572729,
+      "thermal": 27903.62808708,
+      "storageDischarge": 1486.36826393,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T12:00:21.000Z",
+      "wind": 19805.0618745,
+      "solar": 1.60671476,
+      "otherRenew": 5139.24140995,
+      "thermal": 27838.9036034,
+      "storageDischarge": 2021.80714633,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T12:05:18.000Z",
+      "wind": 19652.96263033,
+      "solar": 1.72470574,
+      "otherRenew": 5082.45586063,
+      "thermal": 27714.94184886,
+      "storageDischarge": 2800.87283564,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T12:10:25.000Z",
+      "wind": 19571.48639634,
+      "solar": 1.82192661,
+      "otherRenew": 5085.68404993,
+      "thermal": 27615.11093162,
+      "storageDischarge": 2922.51667913,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T12:15:20.000Z",
+      "wind": 19477.71616768,
+      "solar": 1.67342315,
+      "otherRenew": 5081.23665004,
+      "thermal": 27508.0831636,
+      "storageDischarge": 2987.41528115,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T12:20:25.000Z",
+      "wind": 19428.03086103,
+      "solar": 2.98523389,
+      "otherRenew": 5140.59945595,
+      "thermal": 27502.42775057,
+      "storageDischarge": 3108.81196837,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T12:25:18.000Z",
+      "wind": 19387.77042067,
+      "solar": 10.2188829,
+      "otherRenew": 5141.30507054,
+      "thermal": 27420.71249001,
+      "storageDischarge": 3151.55695635,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T12:30:25.000Z",
+      "wind": 19288.53640428,
+      "solar": 35.95770062,
+      "otherRenew": 5142.4082802,
+      "thermal": 27483.55708323,
+      "storageDischarge": 3250.29193503,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T12:35:18.000Z",
+      "wind": 19077.07897815,
+      "solar": 85.34531276,
+      "otherRenew": 5140.78186921,
+      "thermal": 27505.25242887,
+      "storageDischarge": 3382.73798113,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T12:40:18.000Z",
+      "wind": 18940.86530274,
+      "solar": 197.07207639,
+      "otherRenew": 5142.77680776,
+      "thermal": 27553.78355936,
+      "storageDischarge": 3143.22258511,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T12:45:19.000Z",
+      "wind": 18906.82464408,
+      "solar": 394.66389355,
+      "otherRenew": 5140.90219217,
+      "thermal": 27491.5821533,
+      "storageDischarge": 2903.55531393,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T12:50:18.000Z",
+      "wind": 18814.7727971,
+      "solar": 704.63742878,
+      "otherRenew": 5142.68070429,
+      "thermal": 27412.75211868,
+      "storageDischarge": 3053.27998797,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T12:55:18.000Z",
+      "wind": 18810.61458566,
+      "solar": 1166.2811563,
+      "otherRenew": 5085.57981392,
+      "thermal": 27294.41395448,
+      "storageDischarge": 2925.14247699,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T13:00:21.000Z",
+      "wind": 18698.60735261,
+      "solar": 1651.76290563,
+      "otherRenew": 5086.32987003,
+      "thermal": 27294.46201299,
+      "storageDischarge": 2786.14871285,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T13:05:20.000Z",
+      "wind": 18645.50568819,
+      "solar": 2171.33836897,
+      "otherRenew": 5084.75096287,
+      "thermal": 27226.56517832,
+      "storageDischarge": 2296.31338457,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T13:10:19.000Z",
+      "wind": 18543.53914093,
+      "solar": 3015.56083583,
+      "otherRenew": 5145.31309099,
+      "thermal": 27156.84404276,
+      "storageDischarge": 1847.73350463,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T13:15:19.000Z",
+      "wind": 18461.8077411,
+      "solar": 3839.43522465,
+      "otherRenew": 5148.71898816,
+      "thermal": 27105.70360266,
+      "storageDischarge": 1531.0927371,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T13:20:18.000Z",
+      "wind": 18319.79698157,
+      "solar": 4807.26267997,
+      "otherRenew": 5150.66015984,
+      "thermal": 26565.88896013,
+      "storageDischarge": 1310.14033363,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T13:25:18.000Z",
+      "wind": 18078.52989685,
+      "solar": 5870.77698903,
+      "otherRenew": 5149.53954334,
+      "thermal": 25941.77429353,
+      "storageDischarge": 1240.51659977,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T13:30:18.000Z",
+      "wind": 17854.81893157,
+      "solar": 7062.58863668,
+      "otherRenew": 5154.76244253,
+      "thermal": 25713.84472827,
+      "storageDischarge": 854.97273903,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T13:35:19.000Z",
+      "wind": 17667.66002291,
+      "solar": 8287.20407307,
+      "otherRenew": 5153.6878284,
+      "thermal": 25352.6003402,
+      "storageDischarge": 645.12324324,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T13:40:18.000Z",
+      "wind": 17403.09520857,
+      "solar": 9801.12148767,
+      "otherRenew": 5130.66197264,
+      "thermal": 24594.10943768,
+      "storageDischarge": 648.00269791,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T13:45:18.000Z",
+      "wind": 17228.51305834,
+      "solar": 10965.55002713,
+      "otherRenew": 5090.96650417,
+      "thermal": 24132.59368028,
+      "storageDischarge": 587.76518856,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T13:50:18.000Z",
+      "wind": 16883.16140189,
+      "solar": 11932.1931282,
+      "otherRenew": 5091.02639519,
+      "thermal": 23817.04419134,
+      "storageDischarge": 575.11332193,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T13:55:19.000Z",
+      "wind": 16556.83753186,
+      "solar": 12674.22976658,
+      "otherRenew": 5083.33460926,
+      "thermal": 24118.78664562,
+      "storageDischarge": 400.3853982,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T14:00:21.000Z",
+      "wind": 16476.80545558,
+      "solar": 13733.93084278,
+      "otherRenew": 5132.04988931,
+      "thermal": 24077.42734764,
+      "storageDischarge": 171.74487824,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T14:05:20.000Z",
+      "wind": 16518.67372892,
+      "solar": 14421.21578243,
+      "otherRenew": 5114.01926565,
+      "thermal": 23851.59251003,
+      "storageDischarge": 288.1239482,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T14:10:19.000Z",
+      "wind": 16530.38259607,
+      "solar": 15315.43628063,
+      "otherRenew": 5098.80952646,
+      "thermal": 23137.00233511,
+      "storageDischarge": 286.67208002,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T14:15:19.000Z",
+      "wind": 16735.35282595,
+      "solar": 16051.7891471,
+      "otherRenew": 5103.09048331,
+      "thermal": 22668.79436047,
+      "storageDischarge": 299.59991699,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T14:20:19.000Z",
+      "wind": 16880.48704189,
+      "solar": 16728.07787893,
+      "otherRenew": 5103.896703,
+      "thermal": 22472.0937273,
+      "storageDischarge": 2.73768348,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T14:25:17.000Z",
+      "wind": 17407.00586146,
+      "solar": 17070.82269866,
+      "otherRenew": 5105.42551866,
+      "thermal": 22433.52772796,
+      "storageDischarge": 2.99715013,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T14:30:18.000Z",
+      "wind": 17540.48473626,
+      "solar": 17353.47592331,
+      "otherRenew": 5106.25856349,
+      "thermal": 22798.99559951,
+      "storageDischarge": 1.87797376,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T14:35:19.000Z",
+      "wind": 17780.61898237,
+      "solar": 17729.003074,
+      "otherRenew": 5103.99924224,
+      "thermal": 22820.00237706,
+      "storageDischarge": 6.71945242,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T14:40:20.000Z",
+      "wind": 18168.75835955,
+      "solar": 17689.15780671,
+      "otherRenew": 5104.37607828,
+      "thermal": 22519.17647658,
+      "storageDischarge": 1.81619135,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T14:45:21.000Z",
+      "wind": 18410.05628846,
+      "solar": 17950.02938397,
+      "otherRenew": 5103.7504037,
+      "thermal": 22778.1733254,
+      "storageDischarge": 12.28004531,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T14:50:20.000Z",
+      "wind": 18884.44230387,
+      "solar": 18187.08812581,
+      "otherRenew": 5096.70564968,
+      "thermal": 22686.50013898,
+      "storageDischarge": 1.85363396,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T14:55:20.000Z",
+      "wind": 19292.5471329,
+      "solar": 18253.28566242,
+      "otherRenew": 5100.47369546,
+      "thermal": 22699.14245926,
+      "storageDischarge": 21.43713127,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T15:00:20.000Z",
+      "wind": 19451.02607703,
+      "solar": 18250.18783716,
+      "otherRenew": 5101.96741198,
+      "thermal": 22927.5912188,
+      "storageDischarge": 19.80396523,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T15:05:19.000Z",
+      "wind": 19689.05405008,
+      "solar": 18281.73607133,
+      "otherRenew": 5098.29780477,
+      "thermal": 23070.69223024,
+      "storageDischarge": 57.65241111,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T15:10:20.000Z",
+      "wind": 19595.74504026,
+      "solar": 18531.39449285,
+      "otherRenew": 5100.92386012,
+      "thermal": 23166.94987867,
+      "storageDischarge": 3.29130805,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T15:15:21.000Z",
+      "wind": 19907.81612861,
+      "solar": 18388.65377633,
+      "otherRenew": 5100.12973168,
+      "thermal": 23180.09456001,
+      "storageDischarge": 3.51962254,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T15:20:17.000Z",
+      "wind": 19869.29051125,
+      "solar": 18442.18347118,
+      "otherRenew": 5098.79115607,
+      "thermal": 23256.55687926,
+      "storageDischarge": 1.35158229,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T15:25:17.000Z",
+      "wind": 19891.24827504,
+      "solar": 18766.03257797,
+      "otherRenew": 5093.32982083,
+      "thermal": 23239.09355779,
+      "storageDischarge": 1.75644134,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T15:30:19.000Z",
+      "wind": 20075.80615799,
+      "solar": 18697.92067955,
+      "otherRenew": 5092.24669654,
+      "thermal": 23466.97649021,
+      "storageDischarge": 1.45888185,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T15:35:20.000Z",
+      "wind": 20059.97693574,
+      "solar": 18447.60923253,
+      "otherRenew": 5094.40930861,
+      "thermal": 23860.07043004,
+      "storageDischarge": 0.4653158,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T15:40:19.000Z",
+      "wind": 20128.60659666,
+      "solar": 18472.02711384,
+      "otherRenew": 5089.65923733,
+      "thermal": 23677.82743199,
+      "storageDischarge": 0.61058008,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T15:45:18.000Z",
+      "wind": 20106.17911273,
+      "solar": 18995.49659894,
+      "otherRenew": 5093.26369423,
+      "thermal": 23591.02814989,
+      "storageDischarge": 0.3272307,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T15:50:19.000Z",
+      "wind": 20109.31072783,
+      "solar": 19458.56390373,
+      "otherRenew": 5088.05688374,
+      "thermal": 23705.34876941,
+      "storageDischarge": 14.23318064,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T15:55:20.000Z",
+      "wind": 20135.77627676,
+      "solar": 20554.74973859,
+      "otherRenew": 5088.80960067,
+      "thermal": 23595.00410885,
+      "storageDischarge": 0.31214068,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T16:00:21.000Z",
+      "wind": 20001.766703,
+      "solar": 20992.15485273,
+      "otherRenew": 5089.60266458,
+      "thermal": 23507.91745673,
+      "storageDischarge": 10.1861494,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T16:05:19.000Z",
+      "wind": 20146.99735951,
+      "solar": 20492.03423164,
+      "otherRenew": 5102.17095314,
+      "thermal": 23518.52486502,
+      "storageDischarge": 20.49951658,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T16:10:19.000Z",
+      "wind": 20125.97385835,
+      "solar": 20425.65434734,
+      "otherRenew": 5091.10804079,
+      "thermal": 23764.94289933,
+      "storageDischarge": 10.42263597,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T16:15:21.000Z",
+      "wind": 20134.1915857,
+      "solar": 20996.38053654,
+      "otherRenew": 5092.93033933,
+      "thermal": 23677.73393152,
+      "storageDischarge": 15.31438016,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T16:20:18.000Z",
+      "wind": 20077.18638503,
+      "solar": 21150.59326385,
+      "otherRenew": 4977.38699119,
+      "thermal": 23751.28306411,
+      "storageDischarge": 17.17892254,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T16:25:18.000Z",
+      "wind": 20021.63772362,
+      "solar": 21431.57372491,
+      "otherRenew": 4974.92227798,
+      "thermal": 23542.51269708,
+      "storageDischarge": 13.0496888,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T16:30:20.000Z",
+      "wind": 19890.6008653,
+      "solar": 20881.72707019,
+      "otherRenew": 4980.8996215,
+      "thermal": 23956.32785783,
+      "storageDischarge": 15.15837272,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T16:33:32.000Z",
+      "wind": 19879.76749253,
+      "solar": 20853.80740456,
+      "otherRenew": 4975.12674937,
+      "thermal": 24072.06238823,
+      "storageDischarge": 9.50734146,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T16:35:19.000Z",
+      "wind": 19877.80236208,
+      "solar": 20738.62548445,
+      "otherRenew": 4978.56025568,
+      "thermal": 24174.91296909,
+      "storageDischarge": 29.13592231,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T16:40:18.000Z",
+      "wind": 19812.45849204,
+      "solar": 20789.33246366,
+      "otherRenew": 4974.98646831,
+      "thermal": 24038.32040888,
+      "storageDischarge": 7.04123959,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T16:45:18.000Z",
+      "wind": 19850.1843568,
+      "solar": 20702.70464943,
+      "otherRenew": 4971.46776118,
+      "thermal": 24627.07118509,
+      "storageDischarge": 6.15105937,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T16:50:18.000Z",
+      "wind": 19918.41773211,
+      "solar": 20791.59962813,
+      "otherRenew": 5002.36994503,
+      "thermal": 24541.76708768,
+      "storageDischarge": 9.28831694,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T16:55:23.000Z",
+      "wind": 19769.19832909,
+      "solar": 20983.39121948,
+      "otherRenew": 5229.0905047,
+      "thermal": 24274.12074445,
+      "storageDischarge": 5.66024675,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T17:00:22.000Z",
+      "wind": 19531.13512384,
+      "solar": 21072.73515056,
+      "otherRenew": 5171.02775831,
+      "thermal": 24209.83704506,
+      "storageDischarge": 116.30687765,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T17:05:20.000Z",
+      "wind": 19349.18715524,
+      "solar": 21247.96087418,
+      "otherRenew": 5174.32112513,
+      "thermal": 24427.6548451,
+      "storageDischarge": 103.50856462,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T17:10:19.000Z",
+      "wind": 19391.91690999,
+      "solar": 20736.28162931,
+      "otherRenew": 5162.17801848,
+      "thermal": 24606.34760914,
+      "storageDischarge": 196.80714042,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T17:15:18.000Z",
+      "wind": 19460.94102346,
+      "solar": 20783.57474075,
+      "otherRenew": 5157.18640812,
+      "thermal": 24745.90685772,
+      "storageDischarge": 274.7561532,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T17:20:18.000Z",
+      "wind": 19352.11698472,
+      "solar": 20734.44041274,
+      "otherRenew": 5181.86020196,
+      "thermal": 25058.21354971,
+      "storageDischarge": 70.98178488,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T17:25:21.000Z",
+      "wind": 19349.38664901,
+      "solar": 20842.73366104,
+      "otherRenew": 5178.72770822,
+      "thermal": 25118.73946256,
+      "storageDischarge": 49.25801958,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T17:30:20.000Z",
+      "wind": 19190.32766008,
+      "solar": 21239.76208494,
+      "otherRenew": 5180.27378657,
+      "thermal": 25191.45107552,
+      "storageDischarge": 7.13557408,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T17:35:17.000Z",
+      "wind": 19199.24289548,
+      "solar": 21011.19260297,
+      "otherRenew": 5183.25571495,
+      "thermal": 25485.67399599,
+      "storageDischarge": 7.17972134,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T17:40:17.000Z",
+      "wind": 19201.22789162,
+      "solar": 21282.43619464,
+      "otherRenew": 5175.54429052,
+      "thermal": 25571.6250072,
+      "storageDischarge": 6.32978042,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T17:45:19.000Z",
+      "wind": 19172.0021528,
+      "solar": 20996.33256898,
+      "otherRenew": 5178.71498696,
+      "thermal": 25810.80451385,
+      "storageDischarge": 6.42619247,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T17:50:19.000Z",
+      "wind": 19008.0251553,
+      "solar": 20705.80457829,
+      "otherRenew": 5181.09281768,
+      "thermal": 26264.97337894,
+      "storageDischarge": 6.74163002,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T17:55:19.000Z",
+      "wind": 18740.05364638,
+      "solar": 21006.06935493,
+      "otherRenew": 5176.27298028,
+      "thermal": 26356.11767827,
+      "storageDischarge": 6.50063204,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T18:00:21.000Z",
+      "wind": 18867.14897859,
+      "solar": 21099.00536786,
+      "otherRenew": 5174.30495025,
+      "thermal": 26537.11527802,
+      "storageDischarge": 71.7893495,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T18:05:19.000Z",
+      "wind": 18776.76968812,
+      "solar": 21337.84141276,
+      "otherRenew": 5176.15485323,
+      "thermal": 26477.17147632,
+      "storageDischarge": 198.93536445,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T18:10:21.000Z",
+      "wind": 18521.00324726,
+      "solar": 21382.6285529,
+      "otherRenew": 5184.3134098,
+      "thermal": 26486.84971376,
+      "storageDischarge": 200.43779564,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T18:15:19.000Z",
+      "wind": 18483.62052345,
+      "solar": 21608.93457447,
+      "otherRenew": 5186.50376249,
+      "thermal": 26665.64160396,
+      "storageDischarge": 94.69771284,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T18:18:11.000Z",
+      "wind": 18329.70758855,
+      "solar": 21770.05672143,
+      "otherRenew": 5184.81299654,
+      "thermal": 26922.3812512,
+      "storageDischarge": 94.97671039,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T18:20:19.000Z",
+      "wind": 18354.09646332,
+      "solar": 21853.94094489,
+      "otherRenew": 5184.32684433,
+      "thermal": 26838.61796234,
+      "storageDischarge": 88.66033404,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T18:25:21.000Z",
+      "wind": 18284.53067636,
+      "solar": 21887.63593363,
+      "otherRenew": 5250.12168527,
+      "thermal": 27022.27651411,
+      "storageDischarge": 67.59521786,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T18:30:19.000Z",
+      "wind": 18091.99785184,
+      "solar": 21869.34496605,
+      "otherRenew": 5255.23551342,
+      "thermal": 27215.67069285,
+      "storageDischarge": 584.00828864,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T18:32:59.000Z",
+      "wind": 18001.25654947,
+      "solar": 22089.48096084,
+      "otherRenew": 5157.8599576,
+      "thermal": 27165.62952049,
+      "storageDischarge": 635.00294307,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T18:33:30.000Z",
+      "wind": 18008.46694171,
+      "solar": 22037.46113848,
+      "otherRenew": 5139.90006001,
+      "thermal": 27156.52075104,
+      "storageDischarge": 667.97743847,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T18:35:19.000Z",
+      "wind": 17854.87359154,
+      "solar": 22454.43331694,
+      "otherRenew": 5142.68631564,
+      "thermal": 27035.74338375,
+      "storageDischarge": 784.78329854,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T18:40:18.000Z",
+      "wind": 17764.22449517,
+      "solar": 22328.33290171,
+      "otherRenew": 5218.63055848,
+      "thermal": 27198.02324463,
+      "storageDischarge": 789.0761038,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T18:45:19.000Z",
+      "wind": 17674.58445847,
+      "solar": 22226.4998126,
+      "otherRenew": 5232.6007455,
+      "thermal": 27886.9335839,
+      "storageDischarge": 306.71136848,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T18:50:18.000Z",
+      "wind": 17764.70835692,
+      "solar": 22390.35257124,
+      "otherRenew": 5245.09427986,
+      "thermal": 28047.00278108,
+      "storageDischarge": 213.28833765,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T18:55:19.000Z",
+      "wind": 17562.78161263,
+      "solar": 22415.10367953,
+      "otherRenew": 5252.29382008,
+      "thermal": 28642.5634052,
+      "storageDischarge": 212.17376766,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T19:00:22.000Z",
+      "wind": 17409.24959909,
+      "solar": 22529.89199113,
+      "otherRenew": 5250.00505849,
+      "thermal": 28641.47394593,
+      "storageDischarge": 377.63318443,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T19:05:21.000Z",
+      "wind": 17146.95326173,
+      "solar": 22901.77429068,
+      "otherRenew": 5246.48955892,
+      "thermal": 28868.35268971,
+      "storageDischarge": 523.26547397,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T19:10:19.000Z",
+      "wind": 17043.69573241,
+      "solar": 23027.25081944,
+      "otherRenew": 5245.70592379,
+      "thermal": 28899.02775802,
+      "storageDischarge": 140.19769207,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T19:15:19.000Z",
+      "wind": 17122.78986847,
+      "solar": 22889.87241005,
+      "otherRenew": 5250.64820844,
+      "thermal": 29306.32050766,
+      "storageDischarge": 117.62112603,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T19:20:22.000Z",
+      "wind": 16946.3365429,
+      "solar": 22521.98264017,
+      "otherRenew": 5253.3229283,
+      "thermal": 29787.092097,
+      "storageDischarge": 292.10515992,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T19:23:34.000Z",
+      "wind": 16936.14531803,
+      "solar": 22250.34752219,
+      "otherRenew": 5223.78398853,
+      "thermal": 29980.9635482,
+      "storageDischarge": 354.88412236,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T19:24:06.000Z",
+      "wind": 16892.84510755,
+      "solar": 22210.26930648,
+      "otherRenew": 5224.99883449,
+      "thermal": 30042.11669431,
+      "storageDischarge": 425.85166265,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T19:25:20.000Z",
+      "wind": 16880.00697046,
+      "solar": 22388.76065194,
+      "otherRenew": 5220.40897774,
+      "thermal": 29977.285762,
+      "storageDischarge": 421.58650564,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T19:30:21.000Z",
+      "wind": 16874.63930034,
+      "solar": 22427.01099133,
+      "otherRenew": 5223.52238969,
+      "thermal": 30195.94981192,
+      "storageDischarge": 296.89331759,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T19:35:21.000Z",
+      "wind": 16959.53930318,
+      "solar": 22655.27655994,
+      "otherRenew": 5221.28956232,
+      "thermal": 30605.88457446,
+      "storageDischarge": 80.20122801,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T19:40:19.000Z",
+      "wind": 16891.1110773,
+      "solar": 22846.42461776,
+      "otherRenew": 5219.25127504,
+      "thermal": 30553.87464629,
+      "storageDischarge": 162.71751026,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T19:45:20.000Z",
+      "wind": 16863.93637478,
+      "solar": 22703.90670466,
+      "otherRenew": 5222.09159217,
+      "thermal": 30925.80009912,
+      "storageDischarge": 192.90362607,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T19:50:19.000Z",
+      "wind": 16812.55558328,
+      "solar": 22807.03519415,
+      "otherRenew": 5223.45536294,
+      "thermal": 30803.11754511,
+      "storageDischarge": 202.64216621,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T19:55:19.000Z",
+      "wind": 16794.46104233,
+      "solar": 23088.04831254,
+      "otherRenew": 5223.43371891,
+      "thermal": 31100.15739403,
+      "storageDischarge": 39.60014142,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T20:00:21.000Z",
+      "wind": 16932.71894647,
+      "solar": 22608.44819796,
+      "otherRenew": 5215.27087525,
+      "thermal": 31345.28380703,
+      "storageDischarge": 411.15828091,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T20:05:20.000Z",
+      "wind": 16667.41268444,
+      "solar": 22967.12232643,
+      "otherRenew": 5211.30156755,
+      "thermal": 31333.26496587,
+      "storageDischarge": 234.07536062,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T20:10:19.000Z",
+      "wind": 16632.64558226,
+      "solar": 23175.36666226,
+      "otherRenew": 5221.81685676,
+      "thermal": 31442.72737453,
+      "storageDischarge": 188.53899735,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T20:15:19.000Z",
+      "wind": 16644.38589663,
+      "solar": 22781.82465004,
+      "otherRenew": 5220.99901056,
+      "thermal": 31999.00706176,
+      "storageDischarge": 164.16826503,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T20:20:18.000Z",
+      "wind": 16614.61214825,
+      "solar": 22383.87754714,
+      "otherRenew": 5227.89748154,
+      "thermal": 32107.27346496,
+      "storageDischarge": 394.47652442,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T20:25:18.000Z",
+      "wind": 16757.49052002,
+      "solar": 22487.74695581,
+      "otherRenew": 5233.79839319,
+      "thermal": 32234.61005626,
+      "storageDischarge": 197.44656927,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T20:30:20.000Z",
+      "wind": 16593.43562015,
+      "solar": 22671.61924508,
+      "otherRenew": 5235.76167317,
+      "thermal": 32421.66034458,
+      "storageDischarge": 204.01584241,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T20:35:18.000Z",
+      "wind": 16743.16266772,
+      "solar": 22742.42863181,
+      "otherRenew": 5225.63859607,
+      "thermal": 32466.94776879,
+      "storageDischarge": 318.03417228,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T20:40:20.000Z",
+      "wind": 16731.26649446,
+      "solar": 21900.55959498,
+      "otherRenew": 5226.42724766,
+      "thermal": 32635.32388149,
+      "storageDischarge": 470.28349908,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T20:45:21.000Z",
+      "wind": 16601.18049311,
+      "solar": 22011.30250567,
+      "otherRenew": 5222.25041354,
+      "thermal": 32708.77913533,
+      "storageDischarge": 516.8692824,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T20:50:20.000Z",
+      "wind": 16868.62802493,
+      "solar": 21768.33397758,
+      "otherRenew": 5223.99529183,
+      "thermal": 33029.23365365,
+      "storageDischarge": 514.29122518,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T20:55:21.000Z",
+      "wind": 16844.73815321,
+      "solar": 21492.9828549,
+      "otherRenew": 5226.06880976,
+      "thermal": 33320.91652988,
+      "storageDischarge": 490.40012738,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T21:00:22.000Z",
+      "wind": 17055.68932023,
+      "solar": 21597.18508565,
+      "otherRenew": 5224.96738001,
+      "thermal": 33428.35881124,
+      "storageDischarge": 157.13289962,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T21:05:20.000Z",
+      "wind": 16894.11263498,
+      "solar": 21106.07794839,
+      "otherRenew": 5232.46946494,
+      "thermal": 33837.54681657,
+      "storageDischarge": 369.98237485,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T21:10:20.000Z",
+      "wind": 17040.1299996,
+      "solar": 20619.92725509,
+      "otherRenew": 5225.11094693,
+      "thermal": 34124.93719672,
+      "storageDischarge": 338.65177783,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T21:15:21.000Z",
+      "wind": 17127.16226908,
+      "solar": 20421.46302917,
+      "otherRenew": 5225.22515684,
+      "thermal": 34379.25992905,
+      "storageDischarge": 337.41708537,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T21:20:22.000Z",
+      "wind": 17150.55934213,
+      "solar": 20320.2305372,
+      "otherRenew": 5226.72827497,
+      "thermal": 34449.68083773,
+      "storageDischarge": 206.8506283,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T21:25:19.000Z",
+      "wind": 17018.10529111,
+      "solar": 20208.56304037,
+      "otherRenew": 5232.45499956,
+      "thermal": 34647.17964707,
+      "storageDischarge": 438.72905263,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T21:30:19.000Z",
+      "wind": 17193.34465903,
+      "solar": 19944.21247017,
+      "otherRenew": 5225.88648477,
+      "thermal": 34650.18097387,
+      "storageDischarge": 234.62184625,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T21:35:21.000Z",
+      "wind": 17214.29273644,
+      "solar": 19948.71149611,
+      "otherRenew": 5224.57780374,
+      "thermal": 34724.35093997,
+      "storageDischarge": 186.22293158,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T21:40:20.000Z",
+      "wind": 17410.79097008,
+      "solar": 19859.25915628,
+      "otherRenew": 5226.661616,
+      "thermal": 34902.05156324,
+      "storageDischarge": 86.88406073,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T21:45:20.000Z",
+      "wind": 17369.01353087,
+      "solar": 19789.19504308,
+      "otherRenew": 5225.17824287,
+      "thermal": 34993.16155569,
+      "storageDischarge": 150.69083766,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T21:50:20.000Z",
+      "wind": 17580.29114831,
+      "solar": 19670.7000344,
+      "otherRenew": 5227.41662471,
+      "thermal": 34894.85335992,
+      "storageDischarge": 135.86335272,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T21:55:21.000Z",
+      "wind": 17731.91140055,
+      "solar": 19321.574254,
+      "otherRenew": 5226.53872271,
+      "thermal": 35114.15666692,
+      "storageDischarge": 142.31826074,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T22:00:23.000Z",
+      "wind": 17802.79506924,
+      "solar": 19144.7834253,
+      "otherRenew": 5218.47090693,
+      "thermal": 35004.61541669,
+      "storageDischarge": 257.99771082,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T22:05:20.000Z",
+      "wind": 18039.47185844,
+      "solar": 18916.92372959,
+      "otherRenew": 5223.52267447,
+      "thermal": 34958.43991361,
+      "storageDischarge": 235.0894849,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T22:10:20.000Z",
+      "wind": 18088.09278011,
+      "solar": 18794.4037728,
+      "otherRenew": 5222.84644893,
+      "thermal": 34894.50932239,
+      "storageDischarge": 275.69428905,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T22:15:21.000Z",
+      "wind": 18328.22564321,
+      "solar": 18412.70948114,
+      "otherRenew": 5221.64696958,
+      "thermal": 35127.89449297,
+      "storageDischarge": 582.25284619,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T22:20:20.000Z",
+      "wind": 18332.1866638,
+      "solar": 18248.33936131,
+      "otherRenew": 5219.80079377,
+      "thermal": 35231.77803595,
+      "storageDischarge": 667.33311071,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T22:25:19.000Z",
+      "wind": 18515.67443621,
+      "solar": 17420.10749413,
+      "otherRenew": 5215.87190212,
+      "thermal": 35517.01267193,
+      "storageDischarge": 645.69520642,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T22:30:20.000Z",
+      "wind": 18624.36137169,
+      "solar": 16270.67705041,
+      "otherRenew": 5222.41825653,
+      "thermal": 35979.72127478,
+      "storageDischarge": 975.17600948,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T22:35:23.000Z",
+      "wind": 18649.35017812,
+      "solar": 15296.99037832,
+      "otherRenew": 5219.42698147,
+      "thermal": 36329.31642516,
+      "storageDischarge": 1234.57866442,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T22:40:22.000Z",
+      "wind": 18842.33866661,
+      "solar": 14692.89920148,
+      "otherRenew": 5216.10286637,
+      "thermal": 36643.81229095,
+      "storageDischarge": 1399.58238171,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T22:45:24.000Z",
+      "wind": 19011.12700265,
+      "solar": 13751.67721569,
+      "otherRenew": 5238.37284909,
+      "thermal": 37045.06395695,
+      "storageDischarge": 1682.96878132,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T22:50:20.000Z",
+      "wind": 19239.16309595,
+      "solar": 12332.49088327,
+      "otherRenew": 5243.85881283,
+      "thermal": 37525.75182377,
+      "storageDischarge": 2297.9345154,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T22:55:24.000Z",
+      "wind": 19387.25218081,
+      "solar": 11560.25876709,
+      "otherRenew": 5282.2115523,
+      "thermal": 37750.01018734,
+      "storageDischarge": 2473.04198093,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T23:00:24.000Z",
+      "wind": 19747.71184134,
+      "solar": 10511.41378745,
+      "otherRenew": 5356.5794457,
+      "thermal": 37414.53418244,
+      "storageDischarge": 3269.22470169,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T23:05:21.000Z",
+      "wind": 19770.14816343,
+      "solar": 9298.43353825,
+      "otherRenew": 5372.15589127,
+      "thermal": 37524.55044609,
+      "storageDischarge": 3884.67500127,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T23:10:26.000Z",
+      "wind": 19981.36379528,
+      "solar": 7894.43430597,
+      "otherRenew": 5368.49935176,
+      "thermal": 37815.52005193,
+      "storageDischarge": 4620.65270925,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T23:15:23.000Z",
+      "wind": 20125.36929392,
+      "solar": 6886.85041046,
+      "otherRenew": 5366.91780566,
+      "thermal": 38048.83707069,
+      "storageDischarge": 5233.61322086,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T23:20:26.000Z",
+      "wind": 20143.1149764,
+      "solar": 6072.98675572,
+      "otherRenew": 5364.4247321,
+      "thermal": 38241.37353122,
+      "storageDischarge": 5305.31990991,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T23:25:19.000Z",
+      "wind": 20172.45299938,
+      "solar": 5064.53550701,
+      "otherRenew": 5364.76780155,
+      "thermal": 38345.29144737,
+      "storageDischarge": 6007.99696361,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T23:30:21.000Z",
+      "wind": 20245.20696491,
+      "solar": 4167.57860106,
+      "otherRenew": 5360.4551014,
+      "thermal": 38592.79155145,
+      "storageDischarge": 6248.6255805,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T23:35:21.000Z",
+      "wind": 20237.6490857,
+      "solar": 3258.72641663,
+      "otherRenew": 5357.43432981,
+      "thermal": 38737.60085331,
+      "storageDischarge": 7006.46303243,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T23:40:21.000Z",
+      "wind": 20190.25526916,
+      "solar": 2399.21767333,
+      "otherRenew": 5351.44113251,
+      "thermal": 38871.37220017,
+      "storageDischarge": 7510.08846305,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T23:45:22.000Z",
+      "wind": 20189.44386094,
+      "solar": 1722.14531494,
+      "otherRenew": 5347.73421027,
+      "thermal": 38761.98716897,
+      "storageDischarge": 8077.42544434,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T23:50:21.000Z",
+      "wind": 20080.57951655,
+      "solar": 1109.33560447,
+      "otherRenew": 5343.31972664,
+      "thermal": 38867.49570128,
+      "storageDischarge": 8330.61359282,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-12T23:55:22.000Z",
+      "wind": 20109.9777247,
+      "solar": 672.10728833,
+      "otherRenew": 5333.87405349,
+      "thermal": 38852.09664023,
+      "storageDischarge": 8494.97225272,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T00:00:23.000Z",
+      "wind": 19918.75665128,
+      "solar": 378.05400004,
+      "otherRenew": 5313.9867087,
+      "thermal": 38786.13599316,
+      "storageDischarge": 8559.85934808,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T00:05:22.000Z",
+      "wind": 19965.31571212,
+      "solar": 175.68458199,
+      "otherRenew": 5320.09497483,
+      "thermal": 38566.45229964,
+      "storageDischarge": 8882.4276811,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T00:10:21.000Z",
+      "wind": 19939.8426634,
+      "solar": 64.37337804,
+      "otherRenew": 5318.05797333,
+      "thermal": 38396.983607,
+      "storageDischarge": 9303.67081942,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T00:15:21.000Z",
+      "wind": 19974.35639023,
+      "solar": 33.81358124,
+      "otherRenew": 5320.04039681,
+      "thermal": 38198.48690577,
+      "storageDischarge": 9494.03846059,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T00:20:22.000Z",
+      "wind": 19835.92019033,
+      "solar": 19.09539426,
+      "otherRenew": 5321.39883485,
+      "thermal": 38137.69310462,
+      "storageDischarge": 9747.90946579,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T00:25:20.000Z",
+      "wind": 19768.02074939,
+      "solar": 13.17047192,
+      "otherRenew": 5318.28237662,
+      "thermal": 38005.58339167,
+      "storageDischarge": 9899.4547432,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T00:30:20.000Z",
+      "wind": 19844.38517165,
+      "solar": 0.72474516,
+      "otherRenew": 5318.59663292,
+      "thermal": 37926.71105318,
+      "storageDischarge": 9788.39477164,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T00:35:21.000Z",
+      "wind": 19785.52742993,
+      "solar": 0.76139304,
+      "otherRenew": 5320.86144191,
+      "thermal": 37932.54237559,
+      "storageDischarge": 9660.08933054,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T00:40:21.000Z",
+      "wind": 19781.79405725,
+      "solar": 0.92412043,
+      "otherRenew": 5319.32087197,
+      "thermal": 38262.49846827,
+      "storageDischarge": 9297.63585792,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T00:45:20.000Z",
+      "wind": 19808.79816067,
+      "solar": 1.38210706,
+      "otherRenew": 5316.30757498,
+      "thermal": 38424.11772699,
+      "storageDischarge": 8851.01358916,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T00:50:20.000Z",
+      "wind": 19817.82440771,
+      "solar": 1.30469831,
+      "otherRenew": 5315.82887515,
+      "thermal": 38643.15962619,
+      "storageDischarge": 8531.94998632,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T00:55:21.000Z",
+      "wind": 19981.83482766,
+      "solar": 1.23169493,
+      "otherRenew": 5314.58504728,
+      "thermal": 38400.20443832,
+      "storageDischarge": 8550.65490675,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T01:00:23.000Z",
+      "wind": 20025.77849924,
+      "solar": 1.40706553,
+      "otherRenew": 5309.4145309,
+      "thermal": 38483.80588461,
+      "storageDischarge": 8121.60673839,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T01:05:23.000Z",
+      "wind": 20287.97569012,
+      "solar": 0.92712762,
+      "otherRenew": 5317.11719404,
+      "thermal": 38256.99068035,
+      "storageDischarge": 7988.90389768,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T01:10:24.000Z",
+      "wind": 20404.5919246,
+      "solar": 1.33062552,
+      "otherRenew": 5314.75379281,
+      "thermal": 38438.29826525,
+      "storageDischarge": 7524.8728551,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T01:15:23.000Z",
+      "wind": 20606.02063405,
+      "solar": 1.23529406,
+      "otherRenew": 5314.74275067,
+      "thermal": 38430.91314749,
+      "storageDischarge": 7155.4652077,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T01:20:23.000Z",
+      "wind": 20711.72722995,
+      "solar": 0.923217,
+      "otherRenew": 5317.22251733,
+      "thermal": 38471.78453288,
+      "storageDischarge": 6779.71480194,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T01:25:24.000Z",
+      "wind": 20954.2493056,
+      "solar": 1.27087634,
+      "otherRenew": 5313.73950231,
+      "thermal": 38459.05514227,
+      "storageDischarge": 6570.03862332,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T01:30:22.000Z",
+      "wind": 21168.69256973,
+      "solar": 0.99791875,
+      "otherRenew": 5300.50242657,
+      "thermal": 38538.13022225,
+      "storageDischarge": 6242.66941603,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T01:35:22.000Z",
+      "wind": 21397.16509503,
+      "solar": 1.08362688,
+      "otherRenew": 5284.63184669,
+      "thermal": 38535.80774192,
+      "storageDischarge": 5838.62376006,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T01:40:23.000Z",
+      "wind": 21613.95539489,
+      "solar": 1.02248252,
+      "otherRenew": 5239.39027151,
+      "thermal": 38535.48525043,
+      "storageDischarge": 5475.67639724,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T01:45:22.000Z",
+      "wind": 21683.08720028,
+      "solar": 1.08265852,
+      "otherRenew": 5234.74828224,
+      "thermal": 38673.31553398,
+      "storageDischarge": 5256.29411419,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T01:50:27.000Z",
+      "wind": 21920.94346648,
+      "solar": 1.17084038,
+      "otherRenew": 5236.66479359,
+      "thermal": 38597.00633459,
+      "storageDischarge": 4915.1250668,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T01:55:29.000Z",
+      "wind": 22109.15627408,
+      "solar": 1.04758975,
+      "otherRenew": 5238.7111801,
+      "thermal": 38576.11032986,
+      "storageDischarge": 4509.03669558,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T02:00:23.000Z",
+      "wind": 22129.5203768,
+      "solar": 1.13967896,
+      "otherRenew": 5158.10011674,
+      "thermal": 38919.58471981,
+      "storageDischarge": 3624.16328242,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T02:05:22.000Z",
+      "wind": 22403.54077911,
+      "solar": 0.96550882,
+      "otherRenew": 5160.4216676,
+      "thermal": 38751.17316055,
+      "storageDischarge": 3427.1225702,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T02:10:21.000Z",
+      "wind": 22545.54020899,
+      "solar": 1.12847157,
+      "otherRenew": 5158.48329797,
+      "thermal": 38798.28307952,
+      "storageDischarge": 3105.98938008,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T02:15:23.000Z",
+      "wind": 22623.44905686,
+      "solar": 1.11290646,
+      "otherRenew": 5159.00380214,
+      "thermal": 38818.33337607,
+      "storageDischarge": 2795.95709915,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T02:20:21.000Z",
+      "wind": 22747.44711744,
+      "solar": 1.16690045,
+      "otherRenew": 5159.94924997,
+      "thermal": 38810.06488414,
+      "storageDischarge": 2545.75370569,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T02:25:22.000Z",
+      "wind": 22832.46544706,
+      "solar": 1.15489056,
+      "otherRenew": 5159.31316338,
+      "thermal": 38885.19533199,
+      "storageDischarge": 2630.50946817,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T02:30:22.000Z",
+      "wind": 22896.43873071,
+      "solar": 1.08474945,
+      "otherRenew": 5162.27874369,
+      "thermal": 38844.5052136,
+      "storageDischarge": 2361.54948156,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T02:35:21.000Z",
+      "wind": 23017.20264202,
+      "solar": 0.98584933,
+      "otherRenew": 5163.89856091,
+      "thermal": 38816.93388665,
+      "storageDischarge": 2159.19640595,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T02:40:21.000Z",
+      "wind": 23128.40237945,
+      "solar": 0.95841196,
+      "otherRenew": 5161.38770404,
+      "thermal": 38702.53553103,
+      "storageDischarge": 1923.26079981,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T02:45:21.000Z",
+      "wind": 23173.50996041,
+      "solar": 1.11503126,
+      "otherRenew": 5162.73385413,
+      "thermal": 38710.45283139,
+      "storageDischarge": 1776.96489622,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T02:50:21.000Z",
+      "wind": 23332.15582299,
+      "solar": 1.22163189,
+      "otherRenew": 5156.17368419,
+      "thermal": 38582.16396121,
+      "storageDischarge": 1569.02370548,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T02:55:21.000Z",
+      "wind": 23412.98515099,
+      "solar": 1.15264196,
+      "otherRenew": 5153.85293897,
+      "thermal": 38495.02537564,
+      "storageDischarge": 1381.48715353,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T03:00:24.000Z",
+      "wind": 23404.16032836,
+      "solar": 1.1505644,
+      "otherRenew": 5154.03731873,
+      "thermal": 38234.9843363,
+      "storageDischarge": 766.5123651,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T03:05:23.000Z",
+      "wind": 23714.74934156,
+      "solar": 1.22325286,
+      "otherRenew": 5158.01086041,
+      "thermal": 38047.39187499,
+      "storageDischarge": 675.93024907,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T03:10:24.000Z",
+      "wind": 23835.8015753,
+      "solar": 1.21299139,
+      "otherRenew": 5155.89312766,
+      "thermal": 37841.75591355,
+      "storageDischarge": 650.8547869,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T03:15:23.000Z",
+      "wind": 24024.42762404,
+      "solar": 1.083963,
+      "otherRenew": 5154.58745856,
+      "thermal": 37754.14171042,
+      "storageDischarge": 458.43351432,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T03:20:21.000Z",
+      "wind": 24068.14741361,
+      "solar": 1.1139567,
+      "otherRenew": 5153.6815972,
+      "thermal": 37584.31440916,
+      "storageDischarge": 514.37265683,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T03:25:21.000Z",
+      "wind": 24166.7942506,
+      "solar": 1.13726122,
+      "otherRenew": 5152.31669716,
+      "thermal": 37414.9319462,
+      "storageDischarge": 443.10370771,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T03:30:21.000Z",
+      "wind": 24316.63579922,
+      "solar": 1.1704817,
+      "otherRenew": 5153.36842384,
+      "thermal": 37102.84842148,
+      "storageDischarge": 412.22418432,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T03:35:23.000Z",
+      "wind": 24427.9380777,
+      "solar": 1.19001688,
+      "otherRenew": 5151.69249287,
+      "thermal": 37058.4544874,
+      "storageDischarge": 375.89025687,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T03:40:21.000Z",
+      "wind": 24620.60697543,
+      "solar": 1.07017717,
+      "otherRenew": 5150.52014431,
+      "thermal": 36913.40646502,
+      "storageDischarge": 242.17817643,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T03:45:22.000Z",
+      "wind": 24719.11205518,
+      "solar": 1.25658854,
+      "otherRenew": 5151.1022559,
+      "thermal": 36603.69968422,
+      "storageDischarge": 258.23884625,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T03:50:20.000Z",
+      "wind": 24871.68844652,
+      "solar": 1.13013436,
+      "otherRenew": 5155.88268981,
+      "thermal": 36377.74938227,
+      "storageDischarge": 141.45614701,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T03:55:21.000Z",
+      "wind": 24900.97428297,
+      "solar": 1.1310398,
+      "otherRenew": 5136.15890874,
+      "thermal": 36376.80013237,
+      "storageDischarge": 275.29671149,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T04:00:23.000Z",
+      "wind": 24978.00542223,
+      "solar": 1.09618202,
+      "otherRenew": 5141.86892866,
+      "thermal": 36214.70987627,
+      "storageDischarge": 88.37823845,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T04:05:23.000Z",
+      "wind": 24994.03856462,
+      "solar": 1.25274921,
+      "otherRenew": 5140.48347434,
+      "thermal": 36030.43778474,
+      "storageDischarge": 147.12442258,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T04:10:20.000Z",
+      "wind": 25014.9356637,
+      "solar": 1.17120264,
+      "otherRenew": 5139.57255514,
+      "thermal": 35776.38675049,
+      "storageDischarge": 101.62885052,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T04:15:21.000Z",
+      "wind": 25075.93852567,
+      "solar": 1.22260506,
+      "otherRenew": 5134.74088143,
+      "thermal": 35662.03537001,
+      "storageDischarge": 52.07705723,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T04:20:20.000Z",
+      "wind": 25139.25793027,
+      "solar": 1.31306173,
+      "otherRenew": 5138.97855267,
+      "thermal": 35380.29196395,
+      "storageDischarge": 22.26838693,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T04:25:19.000Z",
+      "wind": 25185.87871456,
+      "solar": 1.16586611,
+      "otherRenew": 5138.15937263,
+      "thermal": 35075.43577347,
+      "storageDischarge": 36.4641691,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T04:30:20.000Z",
+      "wind": 25187.27050542,
+      "solar": 1.14024501,
+      "otherRenew": 5138.46916502,
+      "thermal": 35097.21205743,
+      "storageDischarge": 53.46141116,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T04:35:20.000Z",
+      "wind": 25267.79645812,
+      "solar": 1.18921018,
+      "otherRenew": 5135.11148892,
+      "thermal": 34866.75545943,
+      "storageDischarge": 19.69822274,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T04:40:20.000Z",
+      "wind": 25340.46689951,
+      "solar": 1.03170408,
+      "otherRenew": 5138.0418403,
+      "thermal": 34757.70638659,
+      "storageDischarge": 25.97830298,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T04:45:22.000Z",
+      "wind": 25304.15057063,
+      "solar": 1.10415873,
+      "otherRenew": 5137.172332,
+      "thermal": 34427.1498355,
+      "storageDischarge": 16.12002631,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T04:50:19.000Z",
+      "wind": 25229.88940298,
+      "solar": 1.05681866,
+      "otherRenew": 5135.7327111,
+      "thermal": 34280.99516433,
+      "storageDischarge": 15.06453814,
+      "storageCharge": 0
+    },
+    {
+      "ts": "2026-10-13T04:55:20.000Z",
+      "wind": 25141.20928883,
+      "solar": 1.10149094,
+      "otherRenew": 5132.90798282,
+      "thermal": 34241.37742378,
+      "storageDischarge": 12.84063413,
       "storageCharge": 0
     }
   ]
