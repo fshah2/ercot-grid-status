@@ -1,53 +1,17 @@
 {
   "meta": {
     "schemaVersion": 2,
-    "updatedAt": "2026-10-31T20:34:11.312Z",
+    "updatedAt": "2026-10-31T23:45:14.624Z",
     "windowDays": 7,
     "source": "ERCOT Public Data API",
     "endpoint": "/np3-233-cd/hourly_res_outage_cap",
     "queryUsed": {
-      "postedDatetimeFrom": "2026-10-24T15:34:11",
-      "postedDatetimeTo": "2026-10-31T15:34:11"
+      "postedDatetimeFrom": "2026-10-24T18:45:14",
+      "postedDatetimeTo": "2026-10-31T18:45:14"
     },
     "notes": "Outages are aggregated from NP3-233-CD by load zone and split into Total, IRR, and New Equipment capability outages. For each hour the most recent posting wins. `points` are past hours plus the hour in progress; `upcomingPoints` are ERCOT's scheduled outlook for future hours."
   },
   "points": [
-    {
-      "ts": "2026-10-24T21:00:00.000Z",
-      "totalResourceMW": 25494,
-      "totalIRRMW": 6331,
-      "totalNewEquipResourceMW": 3596,
-      "zones": {
-        "south": 7544,
-        "north": 10530,
-        "west": 1124,
-        "houston": 6296
-      }
-    },
-    {
-      "ts": "2026-10-24T22:00:00.000Z",
-      "totalResourceMW": 25494,
-      "totalIRRMW": 6331,
-      "totalNewEquipResourceMW": 3596,
-      "zones": {
-        "south": 7544,
-        "north": 10530,
-        "west": 1124,
-        "houston": 6296
-      }
-    },
-    {
-      "ts": "2026-10-24T23:00:00.000Z",
-      "totalResourceMW": 25494,
-      "totalIRRMW": 6431,
-      "totalNewEquipResourceMW": 3596,
-      "zones": {
-        "south": 7544,
-        "north": 10530,
-        "west": 1124,
-        "houston": 6296
-      }
-    },
     {
       "ts": "2026-10-25T00:00:00.000Z",
       "totalResourceMW": 25634,
@@ -2039,9 +2003,7 @@
         "west": 1609,
         "houston": 6399
       }
-    }
-  ],
-  "upcomingPoints": [
+    },
     {
       "ts": "2026-10-31T22:00:00.000Z",
       "totalResourceMW": 22030,
@@ -2077,7 +2039,9 @@
         "west": 1539,
         "houston": 6231
       }
-    },
+    }
+  ],
+  "upcomingPoints": [
     {
       "ts": "2026-11-01T01:00:00.000Z",
       "totalResourceMW": 21914,
